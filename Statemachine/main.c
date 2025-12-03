@@ -6,7 +6,8 @@ enum flow {
 	Entry, 
 	Exit, 
 	Run};
-enum state {Init, 
+enum state {
+	Init, 
 	Discharge, 
 	Idle, 
 	Charge, 
