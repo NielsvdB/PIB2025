@@ -34,6 +34,7 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
+
 #define BFG_ADDR 0x64
 
 //Read Addresses
