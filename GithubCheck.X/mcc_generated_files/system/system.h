@@ -45,8 +45,7 @@ extern "C" {
 #include "../system/pins.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
-#include "../timer/tca0.h"
-#include "../timer/tcb0.h"
+#include "../i2c_host/twi1.h"
 /**
  * @ingroup systemdriver
  * @brief Initializes the System module. This routine is called only once during system initialization, before calling any other API.

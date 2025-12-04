@@ -34,8 +34,8 @@
 
 #include "../pins.h"
 
-static void (*IO_PA0_InterruptHandler)(void);
-static void (*IO_PA1_InterruptHandler)(void);
+static void (*IO_PF3_InterruptHandler)(void);
+static void (*IO_PF2_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize()
 {
@@ -47,7 +47,7 @@ void PIN_MANAGER_Initialize()
     PORTF.OUT = 0x0;
 
   /* DIR Registers Initialization */
-    PORTA.DIR = 0x3;
+    PORTA.DIR = 0x0;
     PORTC.DIR = 0x0;
     PORTD.DIR = 0x0;
     PORTF.DIR = 0x0;
@@ -99,47 +99,38 @@ void PIN_MANAGER_Initialize()
     PORTMUX.ZCDROUTEA = 0x0;
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
-    IO_PA0_SetInterruptHandler(IO_PA0_DefaultInterruptHandler);
-    IO_PA1_SetInterruptHandler(IO_PA1_DefaultInterruptHandler);
+    IO_PF3_SetInterruptHandler(IO_PF3_DefaultInterruptHandler);
+    IO_PF2_SetInterruptHandler(IO_PF2_DefaultInterruptHandler);
 }
 
 /**
-  Allows selecting an interrupt handler for IO_PA0 at application runtime
+  Allows selecting an interrupt handler for IO_PF3 at application runtime
 */
-void IO_PA0_SetInterruptHandler(void (* interruptHandler)(void)) 
+void IO_PF3_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PA0_InterruptHandler = interruptHandler;
+    IO_PF3_InterruptHandler = interruptHandler;
 }
 
-void IO_PA0_DefaultInterruptHandler(void)
+void IO_PF3_DefaultInterruptHandler(void)
 {
-    // add your IO_PA0 interrupt custom code
-    // or set custom function using IO_PA0_SetInterruptHandler()
+    // add your IO_PF3 interrupt custom code
+    // or set custom function using IO_PF3_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PA1 at application runtime
+  Allows selecting an interrupt handler for IO_PF2 at application runtime
 */
-void IO_PA1_SetInterruptHandler(void (* interruptHandler)(void)) 
+void IO_PF2_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PA1_InterruptHandler = interruptHandler;
+    IO_PF2_InterruptHandler = interruptHandler;
 }
 
-void IO_PA1_DefaultInterruptHandler(void)
+void IO_PF2_DefaultInterruptHandler(void)
 {
-    // add your IO_PA1 interrupt custom code
-    // or set custom function using IO_PA1_SetInterruptHandler()
+    // add your IO_PF2 interrupt custom code
+    // or set custom function using IO_PF2_SetInterruptHandler()
 }
 ISR(PORTA_PORT_vect)
 { 
-    // Call the interrupt handler for the callback registered at runtime
-    if(VPORTA.INTFLAGS & PORT_INT0_bm)
-    {
-       IO_PA0_InterruptHandler(); 
-    }
-    if(VPORTA.INTFLAGS & PORT_INT1_bm)
-    {
-       IO_PA1_InterruptHandler(); 
-    }
     /* Clear interrupt flags */
     VPORTA.INTFLAGS = 0xff;
 }
@@ -158,6 +149,15 @@ ISR(PORTD_PORT_vect)
 
 ISR(PORTF_PORT_vect)
 { 
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTF.INTFLAGS & PORT_INT3_bm)
+    {
+       IO_PF3_InterruptHandler(); 
+    }
+    if(VPORTF.INTFLAGS & PORT_INT2_bm)
+    {
+       IO_PF2_InterruptHandler(); 
+    }
     /* Clear interrupt flags */
     VPORTF.INTFLAGS = 0xff;
 }

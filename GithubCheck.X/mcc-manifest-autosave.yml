@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: GithubCheck
-creation_date: 2025-12-04T12:51:18.541+01:00[Europe/Berlin]
+creation_date: 2025-12-04T16:03:56.262+01:00[Europe/Berlin]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -20,9 +20,10 @@ modules:
 - {name: '@mchp-mcc/avr-8bit', type: MELODY, version: 4.14.2}
 - {name: '@mchp-mcc/avr8-configuration-bits-v1', type: MELODY, version: 4.3.0}
 - {name: '@mchp-mcc/avr8-pin-manager', type: MELODY, version: 4.6.2}
+- {name: '@mchp-mcc/generic-driver-interfaces', type: MELODY, version: 1.0.0}
+- {name: '@mchp-mcc/i2c-host-driver', type: MELODY, version: 1.0.5}
 - {name: '@mchp-mcc/main-manager', type: MELODY, version: 3.1.2}
 - {name: '@mchp-mcc/pin-content-processor', type: MELODY, version: 3.11.0}
 - {name: '@mchp-mcc/scf-avr8-clkctrl-v3', type: MELODY, version: 2.0.10}
 - {name: '@mchp-mcc/scf-avr8-interrupt-v1', type: MELODY, version: 5.0.12}
-- {name: '@mchp-mcc/scf-avr8-tca-v1', type: MELODY, version: 7.1.0}
-- {name: '@mchp-mcc/scf-avr8-tcb-v1', type: MELODY, version: 6.1.1}
+- {name: '@mchp-mcc/scf-avr8-twi-v1', type: MELODY, version: 8.2.0}
