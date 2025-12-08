@@ -38,8 +38,8 @@ enum problemevents {NoEvent,
 enum state CurrentState = Init;
 enum state NextState = Init;
 enum events CurrentEvent = NoEvent;
-enum problemstate CurrentProblemState = NoState;
-enum problemstate NextProblemState = NoState;
+enum problemstates CurrentProblemState = NoState;
+enum problemstates NextProblemState = NoState;
 enum problemevents ProblemEvent = NoEvent;
 enum flow flow = Entry;
 enum flow problemflow = Entry;
