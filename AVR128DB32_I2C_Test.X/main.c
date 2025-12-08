@@ -1,7 +1,6 @@
 //Libraries
 #include "mcc_generated_files/system/system.h"
 #include "I2C.h"
-#include <stdbool.h>
 
 //Designate enums===================================================================
 enum flow {
@@ -107,7 +106,7 @@ void ProblemEntry(bool OnOrOff) {
 	;
 }
 void BFG_Check() {
-	;
+	bool Active_Alerts[7] = Get_Active_Alerts();
 }
 void TempCheck() {
 	;
