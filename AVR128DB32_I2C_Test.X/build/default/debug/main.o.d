@@ -31,12 +31,23 @@ build/default/debug/main.o.d build/default/debug/main.o: main.c \
  mcc_generated_files/system/../system/pins.h \
  mcc_generated_files/system/../system/./port.h \
  mcc_generated_files/system/../system/./utils/compiler.h \
+ mcc_generated_files/system/../vref/vref.h \
+ mcc_generated_files/system/../vref/../system/utils/compiler.h \
  mcc_generated_files/system/../system/interrupt.h \
  mcc_generated_files/system/../system/../system/utils/atomic.h \
+ mcc_generated_files/system/../reset/rstctrl.h \
+ mcc_generated_files/system/../reset/../system/ccp.h \
+ mcc_generated_files/system/../adc/adc0.h \
+ mcc_generated_files/system/../adc/../system/utils/compiler.h \
+ mcc_generated_files/system/../adc/./adc_types.h \
+ mcc_generated_files/system/../i2c_client/twi0.h \
+ mcc_generated_files/system/../i2c_client/i2c_client_types.h \
+ mcc_generated_files/system/../i2c_client/i2c_client_interface.h \
  mcc_generated_files/system/../i2c_host/twi1.h \
  mcc_generated_files/system/../i2c_host/i2c_host_types.h \
  mcc_generated_files/system/../i2c_host/i2c_host_interface.h \
- mcc_generated_files/system/../i2c_host/i2c_host_event_types.h
+ mcc_generated_files/system/../i2c_host/i2c_host_event_types.h \
+ Libraries/I2C.h
 
 mcc_generated_files/system/system.h:
 
@@ -102,9 +113,29 @@ mcc_generated_files/system/../system/./port.h:
 
 mcc_generated_files/system/../system/./utils/compiler.h:
 
+mcc_generated_files/system/../vref/vref.h:
+
+mcc_generated_files/system/../vref/../system/utils/compiler.h:
+
 mcc_generated_files/system/../system/interrupt.h:
 
 mcc_generated_files/system/../system/../system/utils/atomic.h:
+
+mcc_generated_files/system/../reset/rstctrl.h:
+
+mcc_generated_files/system/../reset/../system/ccp.h:
+
+mcc_generated_files/system/../adc/adc0.h:
+
+mcc_generated_files/system/../adc/../system/utils/compiler.h:
+
+mcc_generated_files/system/../adc/./adc_types.h:
+
+mcc_generated_files/system/../i2c_client/twi0.h:
+
+mcc_generated_files/system/../i2c_client/i2c_client_types.h:
+
+mcc_generated_files/system/../i2c_client/i2c_client_interface.h:
 
 mcc_generated_files/system/../i2c_host/twi1.h:
 
@@ -113,3 +144,5 @@ mcc_generated_files/system/../i2c_host/i2c_host_types.h:
 mcc_generated_files/system/../i2c_host/i2c_host_interface.h:
 
 mcc_generated_files/system/../i2c_host/i2c_host_event_types.h:
+
+Libraries/I2C.h:

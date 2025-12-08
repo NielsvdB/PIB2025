@@ -33,8 +33,18 @@ build/default/debug/mcc_generated_files/system/src/system.o.d \
  mcc_generated_files/system/src/../../system/pins.h \
  mcc_generated_files/system/src/../../system/./port.h \
  mcc_generated_files/system/src/../../system/./utils/compiler.h \
+ mcc_generated_files/system/src/../../vref/vref.h \
+ mcc_generated_files/system/src/../../vref/../system/utils/compiler.h \
  mcc_generated_files/system/src/../../system/interrupt.h \
  mcc_generated_files/system/src/../../system/../system/utils/atomic.h \
+ mcc_generated_files/system/src/../../reset/rstctrl.h \
+ mcc_generated_files/system/src/../../reset/../system/ccp.h \
+ mcc_generated_files/system/src/../../adc/adc0.h \
+ mcc_generated_files/system/src/../../adc/../system/utils/compiler.h \
+ mcc_generated_files/system/src/../../adc/./adc_types.h \
+ mcc_generated_files/system/src/../../i2c_client/twi0.h \
+ mcc_generated_files/system/src/../../i2c_client/i2c_client_types.h \
+ mcc_generated_files/system/src/../../i2c_client/i2c_client_interface.h \
  mcc_generated_files/system/src/../../i2c_host/twi1.h \
  mcc_generated_files/system/src/../../i2c_host/i2c_host_types.h \
  mcc_generated_files/system/src/../../i2c_host/i2c_host_interface.h \
@@ -104,9 +114,29 @@ mcc_generated_files/system/src/../../system/./port.h:
 
 mcc_generated_files/system/src/../../system/./utils/compiler.h:
 
+mcc_generated_files/system/src/../../vref/vref.h:
+
+mcc_generated_files/system/src/../../vref/../system/utils/compiler.h:
+
 mcc_generated_files/system/src/../../system/interrupt.h:
 
 mcc_generated_files/system/src/../../system/../system/utils/atomic.h:
+
+mcc_generated_files/system/src/../../reset/rstctrl.h:
+
+mcc_generated_files/system/src/../../reset/../system/ccp.h:
+
+mcc_generated_files/system/src/../../adc/adc0.h:
+
+mcc_generated_files/system/src/../../adc/../system/utils/compiler.h:
+
+mcc_generated_files/system/src/../../adc/./adc_types.h:
+
+mcc_generated_files/system/src/../../i2c_client/twi0.h:
+
+mcc_generated_files/system/src/../../i2c_client/i2c_client_types.h:
+
+mcc_generated_files/system/src/../../i2c_client/i2c_client_interface.h:
 
 mcc_generated_files/system/src/../../i2c_host/twi1.h:
 
