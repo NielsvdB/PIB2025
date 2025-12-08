@@ -1,16 +1,13 @@
-
 /**
- * CLKCTRL Generated Driver API Header File
+ * VREF Generated Driver File.
  *
- * @file clkctrl.h
- *
- * @defgroup clkctrl CLKCTRL
- *
- * @brief This header file provides APIs for the CLKCTRL driver.
- *
- * @version CLKCTRL Driver Version 1.1.4
- *
- * @version Package Version 2.0.10
+ * @file vref.c
+ * 
+ * @ingroup vref 
+ * 
+ * @brief This file contains the API implementation for the VREF module.
+ * 
+ * @version VREF Driver Version 1.0.0
 */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -33,38 +30,18 @@
     THIS SOFTWARE.
 */
 
+#include "../vref.h"
 
-#ifndef CLOCK_H
-#define CLOCK_H
-
-#ifndef F_CPU
-#define F_CPU 8000000UL
-#endif
-
-#include "ccp.h"
-
-/**
- * @ingroup clkctrl
- * @brief Initializes the CLKCTRL module.
- * @param None.
- * @return None.
- */
-void CLOCK_Initialize(void);
-
-/**
- * @ingroup clkctrl
- * @brief Enables the Clock Failure Detection on the main clock.
- * @param CLKCTRL_CFDSRC_t cfd_source - main clock source for CFD 
- * @return None.
- */
-void CFD_Enable(CLKCTRL_CFDSRC_t cfd_source);
-
-/**
- * @ingroup clkctrl
- * @brief Disables the Clock Failure Detection on the main clock.
- * @param None. 
- * @return None.
- */
-void CFD_Disable(void);
-
-#endif // CLOCK_H
+int8_t VREF_Initialize(void)
+{
+    // ALWAYSON disabled; REFSEL Internal 1.024V reference; 
+    VREF.ACREF = 0x0;
+    
+    // ALWAYSON disabled; REFSEL Internal 1.024V reference; 
+    VREF.ADC0REF = 0x0;
+    
+    // ALWAYSON disabled; REFSEL Internal 1.024V reference; 
+    VREF.DAC0REF = 0x0;
+    
+	return 0;
+}

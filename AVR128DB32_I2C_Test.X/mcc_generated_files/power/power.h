@@ -1,17 +1,14 @@
-
 /**
- * CLKCTRL Generated Driver API Header File
+ * POWER Generated API Header File
+ * 
+ * @file power.h
+ * 
+ * @defgroup  power POWER
+ * 
+ * @brief This is the generated header file for the POWER driver.
  *
- * @file clkctrl.h
- *
- * @defgroup clkctrl CLKCTRL
- *
- * @brief This header file provides APIs for the CLKCTRL driver.
- *
- * @version CLKCTRL Driver Version 1.1.4
- *
- * @version Package Version 2.0.10
-*/
+ * @version POWER Driver Version 1.1.0
+ */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
 
@@ -33,38 +30,48 @@
     THIS SOFTWARE.
 */
 
-
-#ifndef CLOCK_H
-#define CLOCK_H
-
-#ifndef F_CPU
-#define F_CPU 8000000UL
-#endif
-
-#include "ccp.h"
+#ifndef POWER_H
+#define POWER_H
 
 /**
- * @ingroup clkctrl
- * @brief Initializes the CLKCTRL module.
- * @param None.
- * @return None.
+  Section: Included Files
  */
-void CLOCK_Initialize(void);
+
+#include <stdbool.h>
+#include <stdint.h>
 
 /**
- * @ingroup clkctrl
- * @brief Enables the Clock Failure Detection on the main clock.
- * @param CLKCTRL_CFDSRC_t cfd_source - main clock source for CFD 
- * @return None.
+  Section: POWER Enumerations
  */
-void CFD_Enable(CLKCTRL_CFDSRC_t cfd_source);
 
 /**
- * @ingroup clkctrl
- * @brief Disables the Clock Failure Detection on the main clock.
- * @param None. 
- * @return None.
+ * @ingroup power
+ * @enum power_mode_t
+ * @brief Contains the available power modes.
  */
-void CFD_Disable(void);
+typedef enum
+{
+    POWER_IDLE_MODE = 0 ,/** Sleep mode: IDLE */
+    POWER_STDBY_MODE = 1 ,/** Sleep mode: STDBY */
+    POWER_PDOWN_MODE = 2 
+} power_mode_t;
 
-#endif // CLOCK_H
+
+
+/**
+  Section: POWER APIs
+ */
+/**
+ * @ingroup power
+ * @brief  Enters and sets the mode in the Power module and puts the device in Sleep mode, depending on the enum entered.
+ * @param powerMode - Selected power mode as specified by an enum of the type power_mode_t
+ * @retval True Enum is invalid
+ * @retval False Enum is valid
+ */ 
+bool POWER_LowPowerModeEnter(power_mode_t powerMode);
+
+
+#endif // POWER_H
+/**
+ End of File
+ */

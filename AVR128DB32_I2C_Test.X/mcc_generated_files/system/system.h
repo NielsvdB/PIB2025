@@ -43,8 +43,12 @@ extern "C" {
 #include "../system/utils/compiler.h"
 #include "config_bits.h"
 #include "../system/pins.h"
+#include "../vref/vref.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
+#include "../reset/rstctrl.h"
+#include "../adc/adc0.h"
+#include "../i2c_client/twi0.h"
 #include "../i2c_host/twi1.h"
 /**
  * @ingroup systemdriver

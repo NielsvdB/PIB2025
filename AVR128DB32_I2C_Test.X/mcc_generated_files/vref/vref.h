@@ -1,16 +1,13 @@
-
 /**
- * CLKCTRL Generated Driver API Header File
+ * VREF Generated Driver API Header File
+ * 
+ * @file vref.h
+ * 
+ * @defgroup vref VREF
+ * 
+ * @brief This file contains the API prototypes for the VREF module.
  *
- * @file clkctrl.h
- *
- * @defgroup clkctrl CLKCTRL
- *
- * @brief This header file provides APIs for the CLKCTRL driver.
- *
- * @version CLKCTRL Driver Version 1.1.4
- *
- * @version Package Version 2.0.10
+ * @version VREF Driver Version 1.0.0
 */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -34,37 +31,25 @@
 */
 
 
-#ifndef CLOCK_H
-#define CLOCK_H
+#ifndef VREF_H_INCLUDED
+#define VREF_H_INCLUDED
 
-#ifndef F_CPU
-#define F_CPU 8000000UL
+#include "../system/utils/compiler.h"
+
+#ifdef __cplusplus
+extern "C" {
 #endif
 
-#include "ccp.h"
-
 /**
- * @ingroup clkctrl
- * @brief Initializes the CLKCTRL module.
+ * @ingroup vref
+ * @brief Initializes the VREF module.
  * @param None.
- * @return None.
+ * @retval 0 - VREF is initialized successfully.
  */
-void CLOCK_Initialize(void);
+int8_t VREF_Initialize(void);
 
-/**
- * @ingroup clkctrl
- * @brief Enables the Clock Failure Detection on the main clock.
- * @param CLKCTRL_CFDSRC_t cfd_source - main clock source for CFD 
- * @return None.
- */
-void CFD_Enable(CLKCTRL_CFDSRC_t cfd_source);
+#ifdef __cplusplus
+}
+#endif
 
-/**
- * @ingroup clkctrl
- * @brief Disables the Clock Failure Detection on the main clock.
- * @param None. 
- * @return None.
- */
-void CFD_Disable(void);
-
-#endif // CLOCK_H
+#endif /* VREF_H_INCLUDED */

@@ -69,7 +69,7 @@
  */
 extern const i2c_host_interface_t LTC2943;
 
-#define TWI1_BAUD(F_SCL, T_RISE)((((((float)4000000 / (float)(F_SCL))) - 10 - ((float)4000000 * (T_RISE) / 1000000))) / 2)
+#define TWI1_BAUD(F_SCL, T_RISE)((((((float)8000000 / (float)(F_SCL))) - 10 - ((float)8000000 * (T_RISE) / 1000000))) / 2)
 
 /**
  * @ingroup i2c_host_interrupt
