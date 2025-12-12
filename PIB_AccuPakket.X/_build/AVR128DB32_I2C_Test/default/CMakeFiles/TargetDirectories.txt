@@ -1,0 +1,5 @@
+C:/MpLabProjects/PIB2025/PIB_AccuPakket.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_assemblePreprocess.dir
+C:/MpLabProjects/PIB2025/PIB_AccuPakket.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir
+C:/MpLabProjects/PIB2025/PIB_AccuPakket.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/AVR128DB32_I2C_Test_default_image_g3j__Who.dir
+C:/MpLabProjects/PIB2025/PIB_AccuPakket.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/edit_cache.dir
+C:/MpLabProjects/PIB2025/PIB_AccuPakket.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/rebuild_cache.dir

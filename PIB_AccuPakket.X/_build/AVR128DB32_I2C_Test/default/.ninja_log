@@ -1,0 +1,20 @@
+# ninja log v7
+78	2086	7872562921681489	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/main.c.o	260b903e5ca19c1d
+99	2099	7872562921888042	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/evsys/src/evsys.c.o	a68a7791b1ba5147
+59	2108	7872562921487040	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_assemblePreprocess.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/system/src/protected_io.S.o	b275d4659693fb99
+110	2116	7872562922008178	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/i2c_client/src/twi0.c.o	d5b19564d34ef619
+145	2126	7872562922347486	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/i2c_host/src/twi1.c.o	92b4f84e76247165
+167	2127	7872562922564814	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/power/src/power.c.o	640da88061f29c
+246	2128	7872562923353223	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/system/src/interrupt.c.o	1b7a6167e4ae5aeb
+254	2129	7872562923435131	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/system/src/pins.c.o	d0c1420cf9c37616
+86	2129	7872562921755232	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/adc/src/adc0.c.o	fdd1f25ff81d6f12
+69	2130	7872562921582987	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/Libraries/src/I2C.c.o	b3865085b434bfe
+153	2131	7872562922477456	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/nvm/src/nvm.c.o	94c5dfbaea66190a
+176	2132	7872562922663950	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/reset/src/rstctrl.c.o	d9990f8591f82ee7
+236	2133	7872562923256428	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/system/src/config_bits.c.o	2e8daf8954d355ba
+226	2134	7872562923156848	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/system/src/clock.c.o	fb57e75198922aa
+2118	2598	7872562942067343	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/vref/src/vref.c.o	cef163b138e4e163
+2090	2617	7872562941798617	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/system/src/system.c.o	b8e6725e89d08583
+2099	2665	7872562941892121	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/timer/src/rtc.c.o	ecc51f3d674a979c
+2108	2682	7872562941974353	CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir/C_/MpLabProjects/PIB2025/PIB_AccuPakket.X/mcc_generated_files/timer/src/tca0.c.o	e992c646b1d9af1f
+2682	3916	7872562947710280	C:/MpLabProjects/PIB2025/PIB_AccuPakket.X/out/AVR128DB32_I2C_Test/default.elf	355d30c518746582

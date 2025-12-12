@@ -73,7 +73,7 @@ void TWI0_Initialize(void)
     TWI0.DBGCTRL = 0x0;
     
     // Client Address
-    TWI0.SADDR = 0x0;
+    TWI0.SADDR = 0x1;
     
     // ADDREN disabled; ADDRMASK 0x0; 
     TWI0.SADDRMASK = 0x0;

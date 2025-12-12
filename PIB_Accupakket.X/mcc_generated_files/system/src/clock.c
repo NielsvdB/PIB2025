@@ -45,10 +45,10 @@ void CLOCK_Initialize(void)
     ccp_write_io((void*)&(CLKCTRL.MCLKCTRLB),CLKCTRL_PDIV_2X_gc   // PDIV 2X
             | (0 << CLKCTRL_PEN_bp)   // PEN disabled
             );
-    ccp_write_io((void*)&(CLKCTRL.OSC32KCTRLA),(0 << CLKCTRL_RUNSTDBY_bp)   // RUNSTDBY disabled
+    ccp_write_io((void*)&(CLKCTRL.OSC32KCTRLA),(1 << CLKCTRL_RUNSTDBY_bp)   // RUNSTDBY enabled
             );
     ccp_write_io((void*)&(CLKCTRL.OSCHFCTRLA),(0 << CLKCTRL_AUTOTUNE_bp)   // AUTOTUNE disabled
-            | CLKCTRL_FRQSEL_4M_gc   // FRQSEL 4 MHz system clock (default)
+            | CLKCTRL_FRQSEL_8M_gc   // FRQSEL 8 MHz system clock
             | (0 << CLKCTRL_RUNSTDBY_bp)   // RUNSTDBY disabled
             );
     ccp_write_io((void*)&(CLKCTRL.OSCHFTUNE),0x0   // TUNE 0x0
@@ -58,7 +58,7 @@ void CLOCK_Initialize(void)
             | CLKCTRL_SOURCE_OSCHF_gc   // SOURCE OSCHF
             );
     ccp_write_io((void*)&(CLKCTRL.XOSC32KCTRLA),CLKCTRL_CSUT_1K_gc   // CSUT 1k cycles
-            | (0 << CLKCTRL_ENABLE_bp)   // ENABLE disabled
+            | (1 << CLKCTRL_ENABLE_bp)   // ENABLE enabled
             | (0 << CLKCTRL_LPMODE_bp)   // LPMODE disabled
             | (0 << CLKCTRL_RUNSTDBY_bp)   // RUNSTDBY disabled
             | (0 << CLKCTRL_SEL_bp)   // SEL disabled

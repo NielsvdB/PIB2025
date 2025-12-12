@@ -1,189 +1,311 @@
-
-/*
- * MAIN Generated Driver File
- * 
- * @file main.c
- * 
- * @defgroup main MAIN
- * 
- * @brief This is the generated driver implementation file for the MAIN driver.
- *
- * @version MAIN Driver Version 1.0.2
- *
- * @version Package Version: 3.1.2
-*/
-
-/*
-© [2025] Microchip Technology Inc. and its subsidiaries.
-
-    Subject to your compliance with these terms, you may use Microchip 
-    software and any derivatives exclusively with Microchip products. 
-    You are responsible for complying with 3rd party license terms  
-    applicable to your use of 3rd party software (including open source  
-    software) that may accompany Microchip software. SOFTWARE IS ?AS IS.? 
-    NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS 
-    SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT,  
-    MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
-    WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY 
-    KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF 
-    MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE 
-    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP?S 
-    TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
-    EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
-    THIS SOFTWARE.
-*/
+#include <stdint.h>
 #include "mcc_generated_files/system/system.h"
 
-#define BFG_ADDR 0x64
-
-//Read Addresses
-#define Status_REG                      0x00 //8 bit
-#define Voltage_REG                     0x08 //16 bit
-#define Current_REG                     0x0E //16 bit
-#define Temperature_REG                 0x14 //16 bit
-
-//Write Addresses
-#define Control_REG                     0x01 //8 bit
-#define Accumulated_Charge_REG          0x02 //16 bit
-#define Charge_Threshold_High_REG       0x04 //16 bit
-#define Charge_Threshold_Low_REG        0x06 //16 bit
-#define Voltage_Threshold_High_REG      0x0A //16 bit
-#define Voltage_Threshold_Low_REG       0x0C //16 bit
-#define Current_Threshold_High_REG      0x10 //16 bit
-#define Current_Threshold_Low_REG       0x12 //16 bit
-#define Temperature_Threshold_High_REG  0x16 //8 bit
-#define Temperature_Threshold_Low_REG   0x17 //8 bit
+#include "Libraries/I2C.h"
 
 
-void Set_BFG_REG_8(uint8_t reg, uint8_t value) {
-    uint8_t data[2] = {reg, value};
-    // Send 2 bytes: [Register Address] [Value]
-    TWI1_Write(BFG_ADDR, data, 2); 
-    while(TWI1_IsBusy()); // Wait for transmission to finish
+//Designate enums===================================================================
+enum flow {
+	F_Entry, 
+	F_Exit, 
+	F_Run};
+enum state {
+	S_Init, 
+	S_Discharge, 
+	S_Idle, 
+	S_Charge, 
+	S_Shutdown};
+enum events {
+	E_NoEvent, 
+	E_Batt_Empty, 
+	E_Batt_Full, 
+	E_Disconnect, 
+	E_Plugin};
+enum problemstates {
+	PS_NoState, 
+	PS_BFG_Alert,  
+	PS_Overtemp, 
+	PS_Cell_Voltage, 
+	PS_Total_Shutdown};
+enum problemevents {
+    PE_NoEvent, 
+	PE_Ext_Balance, 
+	PE_Alert, 
+	PE_Undervolt, 
+	PE_Extreme_Overvolt, 
+	PE_Unbalance, 
+	PE_Overtemp, 
+	PE_scnd_Overtemp, 
+	PE_CountFail,
+	PE_OverCurrent
+};
+
+//Variables
+enum state CurrentState = S_Init;
+enum state NextState = S_Init;
+enum events CurrentEvent = E_NoEvent;
+enum problemstates CurrentProblemState = PS_NoState;
+enum problemstates NextProblemState = PS_NoState;
+enum problemevents ProblemEvent = PE_NoEvent;
+enum flow flow = F_Entry;
+enum flow problemflow = F_Entry;
+
+//Functions ===================================================================
+void PrepareBFG(bool OnOrOff) {
+	Current_LTC2943_ADC_Mode = Automatic_Mode;
+	Current_LTC2943_Prescalar_Mode = M_256;
+	Current_LTC2943_ALCC_Pin_Mode = Alert_Mode;
+	LTC2943_Shutdown = 0;
+	Write_Control_REG();
+}
+enum events SelfCheck() {
+	;
+}
+void EnableInternalNet(bool OnOrOff) {
+	;
+}
+void EnableCharging(bool OnOrOff) {
+	;
+}
+void PrepareCharging(bool OnOrOff) {
+	;
+}
+void Charging() {
+	;
+}
+void PrepareShutdown(bool OnOrOff) {
+	;
+}
+void ProblemEntry(bool OnOrOff) {
+	;
+}
+void BFG_Check() {
+	;
+}
+void TempCheck() {
+	;
+}
+void CellFix() {
+	;
+}
+void PrepareTotalShutdown() {
+	;
 }
 
-void Set_BFG_REG_16(uint8_t reg, uint16_t value) {
-    uint8_t data[3];
-    data[0] = reg;
-    data[1] = (uint8_t)(value >> 8); // MSB
-    data[2] = (uint8_t)(value & 0xFF); // LSB
-    
-    TWI1_Write(BFG_ADDR, data, 3);
-    while(TWI1_IsBusy());
+void FixCountFail(){
+	;
+}
+void ProblemEvents() {
+	switch (ProblemEvent) {
+	case PE_NoEvent:
+		break;
+	case PE_Ext_Balance:
+		problemflow = F_Exit;
+		NextProblemState = PS_Total_Shutdown;
+		break;
+	case PE_Alert:
+		problemflow = F_Exit;
+		NextProblemState = PS_BFG_Alert;
+		break;
+	case PE_Undervolt:
+		problemflow = F_Exit;
+		NextProblemState = PS_Total_Shutdown;
+		break;
+	case PE_Extreme_Overvolt:
+		problemflow = F_Exit;
+		NextProblemState = PS_Total_Shutdown;
+		break;
+	case PE_Unbalance:
+		problemflow = F_Exit;
+		NextProblemState = PS_Cell_Voltage;
+		break;
+	case PE_Overtemp:
+		problemflow = F_Exit;
+		NextProblemState = PS_Overtemp;
+		break;
+	case PE_scnd_Overtemp:
+		problemflow = F_Exit;
+		NextProblemState = PS_Total_Shutdown;
+		break;
+	case PE_CountFail:
+		FixCountFail();
+		break;
+	case PE_OverCurrent:
+		;// Dit moet nog gebeuren.
+	}
+
+
 }
 
-uint8_t Get_BFG_REG_8(uint8_t reg) {
-    uint8_t writeBuf[1] = {reg};
-    uint8_t readBuf[1] = {0};
-    
-    // Send Register Address -> Restart -> Read 1 Byte
-    // If using MCC Classic, use: I2C0_WriteRead(LTC2943_ADDR, writeBuf, 1, readBuf, 1);
-    while(!TWI1_WriteRead(BFG_ADDR, writeBuf, 1, readBuf, 1));
-    
-    while(TWI1_IsBusy()); // Wait for transaction to finish
-    
-    return readBuf[0];
-}
 
-uint16_t Get_BFG_REG_16(uint8_t reg) {
-    uint8_t writeBuf[1] = {reg};
-    uint8_t readBuf[2] = {0, 0};
-    
-    // Send Register Address -> Restart -> Read 2 Bytes
-    // If using MCC Classic, use: I2C0_WriteRead(LTC2943_ADDR, writeBuf, 1, readBuf, 2);
-    while(!TWI1_WriteRead(BFG_ADDR, writeBuf, 1, readBuf, 2));
-    
-    while(TWI1_IsBusy()); // Wait for transaction to finish
-    
-    // Combine the MSB (byte 0) and LSB (byte 1)
-    return (uint16_t)((readBuf[0] << 8) | readBuf[1]);
-}
-
-void Write_BFG_Reg(uint8_t reg, uint16_t data){
-    switch(reg){
-        case Control_REG:
-            Set_BFG_REG_8(reg, data);
-            break;
-        case Accumulated_Charge_REG:
-            Set_BFG_REG_16(reg, data);
-            break;
-        case Charge_Threshold_High_REG:
-            Set_BFG_REG_16(reg, data);
-            break;
-        case Charge_Threshold_Low_REG:
-            Set_BFG_REG_16(reg, data);
-            break;
-        case Voltage_Threshold_High_REG:
-            Set_BFG_REG_16(reg, data);
-            break;
-        case Voltage_Threshold_Low_REG:
-            Set_BFG_REG_16(reg, data);
-            break;
-        case Current_Threshold_High_REG:
-            Set_BFG_REG_16(reg, data);
-            break;
-        case Current_Threshold_Low_REG:
-            Set_BFG_REG_16(reg, data);
-            break;
-        case Temperature_Threshold_High_REG:
-            Set_BFG_REG_8(reg, data);
-            break;
-        case Temperature_Threshold_Low_REG:
-            Set_BFG_REG_8(reg, data);
-            break;
-        default:
-            break;
-            
-    }
-    return();
-}
-
-uint16_t Read_BFG_Reg(uint8_t reg){
-    switch(reg){
-        case Status_REG:
-            return(Get_BFG_REG_8(reg));
-            break;
-        case Voltage_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Current_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Temperature_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Control_REG:
-            return(Get_BFG_REG_8(reg));
-            break;
-        case Accumulated_Charge_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Charge_Threshold_High_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Charge_Threshold_Low_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Voltage_Threshold_High_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Voltage_Threshold_Low_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Current_Threshold_High_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Current_Threshold_Low_REG:
-            return(Get_BFG_REG_16(reg));
-            break;
-        case Temperature_Threshold_High_REG:
-            return(Get_BFG_REG_8(reg));
-            break;
-        case Temperature_Threshold_Low_REG:
-            return(Get_BFG_REG_8(reg));
-            break;
-        default:
-            break;
-    }
+//Main Loop ===============================================================================================
+int main() {
+	SYSTEM_Initialize();
+	while (1) {
+		switch (CurrentState) {
+			case S_Init:
+				switch (flow) {
+					case F_Entry: //Setup
+						CurrentEvent = SelfCheck();
+					case F_Run: //Check
+						break;
+					case F_Exit: //Prepare operation
+						break;
+				}
+				switch (CurrentEvent) {
+					case E_NoEvent:
+						break;
+					case E_Batt_Empty:
+						NextState = S_Shutdown;
+						break;
+					default:
+						break;
+				}
+				break;
+			case S_Discharge:
+				switch (flow) {
+					case F_Entry: //Enable internal nets
+						EnableInternalNet(1);
+					case F_Run://Check status
+						CurrentEvent = SelfCheck();
+						break;
+					case F_Exit: //Disable internal nets
+						EnableInternalNet(0);
+						break;
+				}
+				switch (CurrentEvent) {
+					case E_NoEvent:
+						break;
+					case E_Batt_Empty:
+						NextState = S_Shutdown;
+						break;
+					case E_Plugin:
+						NextState = S_Charge;
+						break;
+					default:
+						break;
+				}
+				break;
+			case S_Idle:
+				switch (flow) {
+					case F_Entry:
+						;
+					case F_Run:
+						CurrentEvent = SelfCheck();
+						break;
+					case F_Exit:
+						break;
+				}
+				switch (CurrentEvent) {
+					case E_NoEvent:
+						break;
+					case E_Disconnect:
+						NextState = S_Discharge;
+						break;
+					default:
+						break;
+				}
+				break;
+			case S_Charge:
+				switch (flow) {
+					case F_Entry: //Enable charging port
+						PrepareCharging(1);
+					case F_Run:
+						Charging();
+						break;
+					case F_Exit: // Disable Charging port
+						PrepareCharging(0);
+						break;
+				}
+				switch (CurrentEvent) {
+					case E_NoEvent:
+						break;
+					case E_Batt_Full:
+						NextState = S_Idle;
+						break;
+					case E_Disconnect:
+						NextState = S_Discharge;
+						break;
+					default:
+						break;
+				}
+				break;
+			case S_Shutdown:
+				switch (flow) {
+					case F_Entry:
+						PrepareShutdown(1);
+						break;
+					case F_Run:
+						break;
+					case F_Exit:
+						PrepareShutdown(0);
+						break;
+				}
+				switch (CurrentEvent) {
+					case E_NoEvent:
+						break;
+					case E_Plugin:
+						NextState = S_Charge;
+						break;
+					default:
+						break;
+				}
+				break;
+		}
+		ProblemEvents();
+		switch (CurrentProblemState) {
+			case PS_NoState:
+				break;
+			case PS_BFG_Alert:
+				switch (problemflow) {
+					case F_Entry:
+						ProblemEntry(1);
+					case F_Run:
+						BFG_Check();
+						break;
+					case F_Exit:
+						ProblemEntry(0);
+						break;
+				}
+				break;
+			case PS_Overtemp:
+				switch (problemflow) {
+					case F_Entry:
+						ProblemEntry(1);
+					case F_Run:
+						TempCheck();
+						break;
+					case F_Exit:
+						ProblemEntry(0);
+						break;
+				}
+				break;
+			case PS_Cell_Voltage:
+				switch (problemflow) {
+					case F_Entry:
+						ProblemEntry(1);
+					case F_Run:
+						CellFix();
+						break;
+					case F_Exit:
+						ProblemEntry(0);
+						break;
+				}
+				break;
+			case PS_Total_Shutdown:
+				switch (problemflow) {
+					case F_Entry:
+						ProblemEntry(1);
+						PrepareTotalShutdown();
+					case F_Run:
+						break;
+					case F_Exit:
+						break;
+				}
+				break;
+		}
+		CurrentState = NextState;
+		CurrentProblemState = NextProblemState;
+	}
+	return 0;
 }

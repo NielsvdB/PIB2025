@@ -3,12 +3,14 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>PIB_Accupakket</name>
-            <creation-uuid>d1537c58-4ee5-49aa-85b6-397368ad756f</creation-uuid>
+            <name>AVR128DB32_I2C_Test</name>
+            <creation-uuid>cf232c3e-444f-4f72-9947-f34f5aebfb81</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>.</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>default</name>

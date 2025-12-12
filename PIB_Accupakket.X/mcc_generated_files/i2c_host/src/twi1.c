@@ -67,7 +67,7 @@ static inline void TWI1_CommandUpdate(TWI_MCMD_t cmd);
 static void (*TWI1_Callback)(void);
 volatile i2c_event_status_t twi1_Status = {0};
 
-const i2c_host_interface_t I2C1_Host = 
+const i2c_host_interface_t LTC2943 = 
 {
     .Initialize = TWI1_Initialize,
     .Deinitialize = TWI1_Deinitialize,
@@ -107,7 +107,7 @@ void TWI1_Initialize(void)
     TWI1.DBGCTRL = 0x0;
 
     // Host Baud Rate Control
-    TWI1.MBAUD = (uint8_t)TWI1_BAUD(104166, 0.1);
+    TWI1.MBAUD = (uint8_t)TWI1_BAUD(425531, 0.1);
 
     // Host Address
     TWI1.MADDR = 0x0;
@@ -139,7 +139,7 @@ void TWI1_Deinitialize(void)
     TWI1.DBGCTRL = 0x00;
     
     // Host Baud Rate Control
-    TWI1.MBAUD = (uint8_t)TWI1_BAUD(104166, 0.1);
+    TWI1.MBAUD = (uint8_t)TWI1_BAUD(425531, 0.1);
     
     // ENABLE enabled; QCEN disabled; RIEN enabled; SMEN disabled; TIMEOUT DISABLED; WIEN enabled; 
     TWI1.MCTRLA = 0x00;

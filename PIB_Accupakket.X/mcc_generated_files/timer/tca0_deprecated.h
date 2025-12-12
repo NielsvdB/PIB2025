@@ -3,11 +3,11 @@
  * 
  * @file tca0.h
  * 
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * 
  * @brief This file contains the deprecated macros or APIs for the TCA0 driver.
  *
- * @version TCA0 Driver Version 3.0.1
+ * @version TCA0 Driver Version 3.0.0
  *
  * @version Package Version 7.1.0
 */
@@ -39,107 +39,93 @@
 
 /**
  * @misradeviation{@advisory,2.5}
- * MCC Melody drivers provide macros that can be added to an application. 
+ * MPLAB® Code Configurator (MCC) Melody drivers provide macros that can be added to an application.
  * It depends on the application whether a macro is used or not. 
  */
  
 /**
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_ReadHighCount will be deprecated in the future release. Use TCA0_HighCounterGet instead.
+ *        The TCA0_Read will be deprecated in the future release. Use TCA0_CounterGet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_ReadHighCount TCA0_HighCounterGet
+#define TCA0_Read TCA0_CounterGet
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_WriteHighCount will be deprecated in the future release. Use TCA0_HighCounterSet instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_PeriodSet API. 
+ *        The TCA0_Write will be deprecated in the future release. Use TCA0_PeriodSet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_WriteHighCount TCA0_HighCounterSet
+#define TCA0_Write TCA0_PeriodSet
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_ReadLowCount will be deprecated in the future release. Use TCA0_LowCounterGet instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_InterruptEnable API. 
+ *        The TCA0_EnableInterrupt will be deprecated in the future release. Use TCA0_InterruptEnable instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_ReadLowCount TCA0_LowCounterGet
+#define TCA0_EnableInterrupt TCA0_InterruptEnable
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_WriteLowCount will be deprecated in the future release. Use TCA0_LowCounterSet instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_InterruptDisable API. 
+ *        The TCA0_DisableInterrupt will be deprecated in the future release. Use TCA0_InterruptDisable instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_WriteLowCount TCA0_LowCounterSet
+#define TCA0_DisableInterrupt TCA0_InterruptDisable
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_ClearHUNFInterruptFlag will be deprecated in the future release. Use TCA0_HUNFInterruptFlagClear instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_FrequencySet API. 
+ *        The TCA0_WaveformFreqRegCountSet will be deprecated in the future release. Use TCA0_FrequencySet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_ClearHUNFInterruptFlag TCA0_HUNFInterruptFlagClear
+#define TCA0_WaveformFreqRegCountSet TCA0_FrequencySet
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_IsHUNFInterruptFlagSet will be deprecated in the future release. Use TCA0_HUNFInterruptStatusGet instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_FrequencyGet API. 
+ *        The TCA0_WaveformFreqRegCountGet will be deprecated in the future release. Use TCA0_FrequencyGet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_IsHUNFInterruptFlagSet TCA0_HUNFInterruptStatusGet
+#define TCA0_WaveformFreqRegCountGet TCA0_FrequencyGet
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_ClearLUNFInterruptFlag will be deprecated in the future release. Use TCA0_LUNFInterruptFlagClear instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_WO1OffsetSet API. 
+ *        The TCA0_WO1OffsetRegCountSet will be deprecated in the future release. Use TCA0_WO1OffsetSet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_ClearLUNFInterruptFlag TCA0_LUNFInterruptFlagClear
+#define TCA0_WO1OffsetRegCountSet TCA0_WO1OffsetSet
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_IsLUNFInterruptFlagSet will be deprecated in the future release. Use TCA0_LUNFInterruptStatusGet instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_WO1OffsetGet API. 
+ *        The TCA0_WO1OffsetRegCountGet will be deprecated in the future release. Use TCA0_WO1OffsetGet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_IsLUNFInterruptFlagSet TCA0_LUNFInterruptStatusGet
+#define TCA0_WO1OffsetRegCountGet TCA0_WO1OffsetGet
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_ClearLCMP0InterruptFlag will be deprecated in the future release. Use TCA0_LCMP0InterruptFlagClear instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_WO2OffsetSet API. 
+ *        The TCA0_WO2OffsetRegCountSet will be deprecated in the future release. Use TCA0_WO2OffsetSet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_ClearLCMP0InterruptFlag TCA0_LCMP0InterruptFlagClear
+#define TCA0_WO2OffsetRegCountSet TCA0_WO2OffsetSet
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_IsLCMP0InterruptFlagSet will be deprecated in the future release. Use TCA0_LCMP0InterruptStatusGet instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_WO2OffsetGet API. 
+ *        The TCA0_WO2OffsetRegCountGet will be deprecated in the future release. Use TCA0_WO2OffsetGet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_IsLCMP0InterruptFlagSet TCA0_LCMP0InterruptStatusGet
+#define TCA0_WO2OffsetRegCountGet TCA0_WO2OffsetGet
 /**
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_ClearLCMP1InterruptFlag will be deprecated in the future release. Use TCA0_LCMP1InterruptFlagClear instead.
+ *        The TCA0CounterGet will be deprecated in the future release. Use TCA0_CounterGet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_ClearLCMP1InterruptFlag TCA0_LCMP1InterruptFlagClear
+#define TCA0CounterGet TCA0_CounterGet
 /**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_IsLCMP1InterruptFlagSet will be deprecated in the future release. Use TCA0_LCMP1InterruptStatusGet instead.
+ * @ingroup tca0_normal
+ * @brief Defines the Custom Name for the \ref TCA0_CounterSet API. 
+ *        The TCA0CounterSet will be deprecated in the future release. Use TCA0_CounterSet instead.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_IsLCMP1InterruptFlagSet TCA0_LCMP1InterruptStatusGet
-/**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_ClearHUNFInterruptFlag will be deprecated in the future release. Use TCA0_LCMP2InterruptFlagClear instead.
- */
-/* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_ClearLCMP2InterruptFlag TCA0_LCMP2InterruptFlagClear
-/**
- * @ingroup tca0_split
- * @brief Defines the Custom Name for the \ref TCA0_CounterGet API. 
- *        The TCA0_IsLCMP2InterruptFlagSet will be deprecated in the future release. Use TCA0_LCMP2InterruptStatusGet instead.
- */
-/* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_IsLCMP2InterruptFlagSet TCA0_LCMP2InterruptStatusGet
+#define TCA0CounterSet TCA0_CounterSet
 
 #endif //TCA0_DEPRECATED_H

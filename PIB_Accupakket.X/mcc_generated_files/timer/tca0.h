@@ -3,11 +3,11 @@
  *
  * @file tca0.h
  *
- * @defgroup tca0_split TCA0 in Split Mode
+ * @defgroup tca0_normal TCA0 in Normal Mode
  *
- * @brief This file contains API prototypes for the TCA0 driver in Split (8-bit) mode.
+ * @brief This file contains the API prototypes for the TCA0 driver in Normal (16-bit) mode.
  *
- * @version TCA0 Driver Version 3.0.1
+ * @version TCA0 Driver Version 3.1.0
  *
  * @version Package Version 7.1.0
  */
@@ -42,32 +42,32 @@
 
 /**
  * @misradeviation{@advisory,2.5}
- * MCC Melody drivers provide macros that can be added to an application. 
+ * MPLAB® Code Configurator (MCC) Melody drivers provide macros that can be added to an application. 
  * It depends on the application whether a macro is used or not. 
  */
 
 /**
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * @brief Defines the maximum count of the timer.
  */
-#define TCA0_MAX_COUNT (255U)
+#define TCA0_MAX_COUNT (65535U)
 /**
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * @brief Defines the timer prescaled clock frequency in hertz.
  */
  /* cppcheck-suppress misra-c2012-2.5 */  
-#define TCA0_CLOCK_FREQ (3906UL)
+#define TCA0_CLOCK_FREQ (7812UL)
 
 /**
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * @typedef TCA0_cb_t
- * @brief Function pointer to the callback function called by TCA while operating in Split mode.
+ * @brief Function pointer to the callback function called by TCA while operating in Normal mode.
  *        The default value is set to NULL, which means that no callback function will be used.
  */
-typedef void (*TCA0_cb_t)(void);  
+typedef void (*TCA0_cb_t)(void);
 
 /**
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * @brief Initializes the TCA0 module.
  * @param None.
  * @return None.
@@ -75,7 +75,7 @@ typedef void (*TCA0_cb_t)(void);
 void TCA0_Initialize(void);
 
 /**
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * @brief Deinitializes the TCA0 module.
  * @param None.
  * @return None.
@@ -83,7 +83,7 @@ void TCA0_Initialize(void);
 void TCA0_Deinitialize(void);
 
 /**
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * @brief Starts the TCA0.
  * @param None.
  * @return None.
@@ -91,7 +91,7 @@ void TCA0_Deinitialize(void);
 void TCA0_Start(void);
 
 /**
- * @ingroup tca0_split
+ * @ingroup tca0_normal
  * @brief Stops the TCA0.
  * @param None.
  * @return None.
@@ -99,206 +99,174 @@ void TCA0_Start(void);
 void TCA0_Stop(void);
 
 /**
- * @ingroup tca0_split
- * @brief Sets the counter value for the Low Byte Timer.
- * @param timerVal - Counter value to be written to the LCNT register
+ * @ingroup tca0_normal
+ * @brief Returns the current counter value.
+ * @param None.
+ * @return Current count value from the CNT register
+ */
+uint16_t TCA0_CounterGet(void);
+
+/**
+ * @ingroup tca0_normal
+ * @brief Sets the counter value.
+ * @param count - Counter value to be written to the CNT register
  * @return None.
  */
-void TCA0_LowCounterSet(uint8_t timerVal); 
+void TCA0_CounterSet(uint16_t count);
 
 /**
- * @ingroup tca0_split
- * @brief Returns the Low Byte Timer counter value.
+ * @ingroup tca0_normal
+ * @brief Returns the current period value.
+ * @pre Initialize the TCA0 with TCA0__Initialize() before calling this API.
  * @param None.
- * @return Counter value from the LCNT register
+ * @return Period value from the PER register
  */
-uint8_t TCA0_LowCounterGet(void);
+uint16_t TCA0_PeriodGet(void);
 
 /**
- * @ingroup tca0_split
- * @brief Returns the High Byte Timer counter value.
- * @param None.
- * @return Counter value from the HCNT register
- */
-uint8_t TCA0_HighCounterGet(void);
-
-/**
- * @ingroup tca0_split
- * @brief Sets the counter value for the High Byte Timer.
- * @param timerVal - Counter value to be written to the HCNT register
+ * @ingroup tca0_normal
+ * @brief Sets the period value.
+ * @pre Initialize the TCA0 with TCA0__Initialize() before calling this API.
+ * @param periodVal - Period count value written to the PER register
  * @return None.
  */
-void TCA0_HighCounterSet(uint8_t timerVal);
+void TCA0_PeriodSet(uint16_t periodVal);
 
 /**
- * @ingroup tca0_split
- * @brief Sets the period count value for the High Byte Timer.
- * @param periodVal - Period count value written to the HPER register
+ * @ingroup tca0_normal
+ * @brief Sets the period value in the Period Buffer (PERBUF) register.
+ * @pre Initialize the TCA0 with TCA0__Initialize() before calling this API.
+ * @param periodVal - Period count value written to the PERBUF register
  * @return None.
  */
-void TCA0_HighPeriodSet(uint8_t periodVal);
+void TCA0_PeriodBufferSet(uint16_t periodVal);
 
 /**
- * @ingroup tca0_split
- * @brief Sets the period count value for the Low Byte Timer.
- * @param periodVal - Period count value written to the LPER register
+ * @ingroup tca0_normal
+ * @brief Sets the Compare 0 (CMP0) count value.
+ * @pre Initialize the TCA0 with TCA0__Initialize() before calling this API.
+ * @param value - Count value written to the CMP0 register
  * @return None.
  */
-void TCA0_LowPeriodSet(uint8_t periodVal);
+void TCA0_Compare0Set(uint16_t value);
 
 /**
- * @ingroup tca0_split
- * @brief Returns the period count value of the High Byte Timer.
- * @param None.
- * @return Period count value from the HPER register
+ * @ingroup tca0_normal
+ * @brief Sets the Compare 0 (CMP0) buffer value.
+ * @pre Initialize the TCA0 with TCA0__Initialize() before calling this API.
+ * @param value - Count value written to the CMP0BUF register
+ * @return None.
  */
-uint8_t TCA0_HighPeriodGet(void);
+void TCA0_Compare0BufferSet(uint16_t value);
 
 /**
- * @ingroup tca0_split
- * @brief Returns the period count value of the Low Byte Timer.
- * @param None.
- * @return Period count value from the LPER register
+ * @ingroup tca0_normal
+ * @brief Sets the Compare 1 (CMP1) count value.
+ * @pre Initialize the TCA0 with TCA0__Initialize() before calling this API.
+ * @param value - Count value written to the CMP1 register
+ * @return None.
  */
-uint8_t TCA0_LowPeriodGet(void);
+void TCA0_Compare1Set(uint16_t value);
 
 /**
- * @ingroup tca0_split
- * @brief Returns the maximum timer count value.
+ * @ingroup tca0_normal
+ * @brief Sets the Compare 1 (CMP1) buffer value.
+ * @pre Initialize the TCA0 with TCA0__Initialize() before calling this API.
+ * @param value - Count value written to the CMP1BUF register
+ * @return None.
+ */
+void TCA0_Compare1BufferSet(uint16_t value);
+
+/**
+ * @ingroup tca0_normal
+ * @brief Sets the Compare 2 (CMP2) count value.
+ * @pre Initialize the TCA0 with TCA0__Initialize() before calling this API.
+ * @param value - Count value written to the CMP2 register
+ * @return None.
+ */
+void TCA0_Compare2Set(uint16_t value);
+
+/**
+ * @ingroup tca0_normal
+ * @brief Sets the Compare 2 (CMP2) buffer value.
+ * @pre Initialize the TCA0 with TCA0_Initialize() before calling this API.
+ * @param value - Count value written to the CMP2BUF register
+ * @return None.
+ */
+void TCA0_Compare2BufferSet(uint16_t value);
+
+/**
+ * @ingroup tca0_normal
+ * @brief Returns the maximum count value.
  * @param None.
  * @return Maximum count value
  */
-uint8_t TCA0_MaxCountGet(void);
+uint16_t TCA0_MaxCountGet(void);
 
 /**
- * @ingroup tca0_split
- * @brief Clears the High Byte Timer Underflow interrupt flag.
+ * @ingroup tca0_normal
+ * @brief Sets the Waveform Generation mode.
+ * @pre Initialize the TCA0 with TCA0__Initialize() before calling this API.
+ * @param TCA_SINGLE_WGMODE_t mode:
+ * - @c TCA_SINGLE_WGMODE_NORMAL_gc      @c  -     Normal mode
+ * - @c TCA_SINGLE_WGMODE_FRQ_gc         @c  -     Frequency Generation mode
+ * - @c TCA_SINGLE_WGMODE_SINGLESLOPE_gc @c  -     Single-Slope PWM
+ * - @c TCA_SINGLE_WGMODE_DSTOP_gc       @c  -     Dual-Slope PWM, overflow on TOP
+ * - @c TCA_SINGLE_WGMODE_DSBOTH_gc      @c  -     Dual-Slope PWM, overflow on TOP and BOTTOM
+ * - @c TCA_SINGLE_WGMODE_DSBOTTOM_gc    @c  -     Dual-Slope PWM, overflow on BOTTOM
+ * @return None.
+ *
+ */
+void TCA0_ModeSet(TCA_SINGLE_WGMODE_t mode) __attribute__((deprecated("This function is deprecated.")));;
+
+/**
+ * @ingroup tca0_normal
+ * @brief Enables the TCA0 interrupts.
  * @param None.
  * @return None.
  */
-void TCA0_HUNFInterruptFlagClear(void);
+void TCA0_InterruptEnable(void);
 
 /**
- * @ingroup tca0_split
- * @brief Returns the status of the High Byte Timer Underflow interrupt flag.
- * @param None.
- * @retval True  - High Byte Underflow interrupt flag is set
- * @retval False - High Byte Underflow interrupt flag is not set
- */
-bool TCA0_HUNFInterruptStatusGet(void);
-
-/**
- * @ingroup tca0_split
- * @brief Clears the Low Byte Timer Underflow interrupt flag.
+ * @ingroup tca0_normal
+ * @brief Disables the TCA0 interrupts.
  * @param None.
  * @return None.
  */
-void TCA0_LUNFInterruptFlagClear(void);
+void TCA0_InterruptDisable(void);
 
 /**
- * @ingroup tca0_split
- * @brief Returns the status of the Low Byte Timer Underflow interrupt flag.
- * @param None.
- * @retval True  - Low Byte Underflow interrupt flag is set
- * @retval False - Low Byte Underflow interrupt flag is not set
- */
-bool TCA0_LUNFInterruptStatusGet(void);
-
-/**
- * @ingroup tca0_split
- * @brief Clears the Low Byte Timer Compare Channel 0 Match interrupt flag.
- * @param None.
- * @return None.
- */
-void TCA0_LCMP0InterruptFlagClear(void);
-
-/**
- * @ingroup tca0_split
- * @brief Returns the status of the Low Byte Timer Compare Channel 0 Match interrupt flag.
- * @param None.
- * @retval True  - Low Byte Timer Compare Channel 0 Match interrupt flag is set
- * @retval False - Low Byte Timer Compare Channel 0 Match interrupt flag is not set
- */
-
-bool TCA0_LCMP0InterruptStatusGet(void);
-/**
- * @ingroup tca0_split
- * @brief Clears the Low Byte Timer Compare Channel 1 Match interrupt flag.
- * @param None.
- * @return None.
- */
-void TCA0_LCMP1InterruptFlagClear(void);
-
-/**
- * @ingroup tca0_split
- * @brief Returns the status of the Low Byte Timer Compare Channel 1 Match interrupt flag.
- * @param None.
- * @retval True  - Low Byte Timer Compare Channel 1 Match interrupt flag is set
- * @retval False - Low Byte Timer Compare Channel 1 Match interrupt flag is not set
- */
-bool TCA0_LCMP1InterruptStatusGet(void);
-
-/**
- * @ingroup tca0_split
- * @brief Clears the Low Byte Timer Compare Channel 2 Match interrupt flag.
- * @param None.
- * @return None.
- */
-void TCA0_LCMP2InterruptFlagClear(void);
-
-/**
- * @ingroup tca0_split
- * @brief Returns the status of the Low Byte Timer Compare Channel 2 Match interrupt flag.
- * @param None.
- * @retval True  - Low Byte Timer Compare Channel 2 Match interrupt flag is set
- * @retval False - Low Byte Timer Compare Channel 2 Match interrupt flag is not set
- */
-bool TCA0_LCMP2InterruptStatusGet(void);
-/**
- * @ingroup tca0_split
- * @brief Registers a callback function for the High Byte Timer underflow event.
+ * @ingroup tca0_normal
+ * @brief Registers a callback function for the TCA0 overflow or underflow event.
  * @param CallbackHandler - Address to the custom callback function
  * @return None.
  */ 
-void TCA0_HighCountCallbackRegister(TCA0_cb_t CallbackHandler);
+
+void TCA0_OverflowCallbackRegister(TCA0_cb_t CallbackHandler);
 
 /**
- * @ingroup tca0_split
- * @brief Registers a callback function for the Low Byte Timer Compare 0 match event.
+ * @ingroup tca0_normal
+ * @brief Registers a callback function for the TCA0 Compare 0 match event.
  * @param CallbackHandler - Address to the custom callback function
  * @return None.
  */ 
-void TCA0_LowCompare0CallbackRegister(TCA0_cb_t CallbackHandler);
+void TCA0_Compare0CallbackRegister(TCA0_cb_t CallbackHandler);
 
 /**
- * @ingroup tca0_split
- * @brief Registers a callback function for the Low Byte Timer Compare 1 match event.
+ * @ingroup tca0_normal
+ * @brief Registers a callback function for the TCA0 Compare 1 match event.
  * @param CallbackHandler - Address to the custom callback function
  * @return None.
  */ 
-void TCA0_LowCompare1CallbackRegister(TCA0_cb_t CallbackHandler);
+void TCA0_Compare1CallbackRegister(TCA0_cb_t CallbackHandler);
 
 /**
- * @ingroup tca0_split
- * @brief Registers a callback function for the Low Byte Timer Compare 2 match event. 
+ * @ingroup tca0_normal
+ * @brief Registers a callback function for the TCA0 Compare 2 match event.
  * @param CallbackHandler - Address to the custom callback function
  * @return None.
  */ 
-void TCA0_LowCompare2CallbackRegister(TCA0_cb_t CallbackHandler);
+void TCA0_Compare2CallbackRegister(TCA0_cb_t CallbackHandler);
 
-/**
- * @ingroup tca0_split
- * @brief Registers a callback function for the Low Byte Timer underflow event.
- * @param CallbackHandler - Address to the custom callback function
- * @return None.
- */ 
-void TCA0_LowCountCallbackRegister(TCA0_cb_t CallbackHandler);
-/**
- * @ingroup tca0_split
- * @brief Performs tasks to be executed during the timer interrupt events.
- * @param None.
- * @return None.
- */
-void TCA0_Tasks(void);
 
 #endif /* TCA0_H_INCLUDED */

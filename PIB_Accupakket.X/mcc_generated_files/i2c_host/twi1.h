@@ -51,25 +51,25 @@
 #include "i2c_host_interface.h"
 #include "i2c_host_event_types.h"
 
-#define i2c1_host_host_interface I2C1_Host
+#define ltc2943_host_interface LTC2943
 
 
-#define I2C1_Host_Initialize TWI1_Initialize
-#define I2C1_Host_Deinitialize TWI1_Deinitialize
-#define I2C1_Host_Write TWI1_Write
-#define I2C1_Host_Read TWI1_Read
-#define I2C1_Host_WriteRead TWI1_WriteRead
-#define I2C1_Host_ErrorGet TWI1_ErrorGet
-#define I2C1_Host_IsBusy TWI1_IsBusy
-#define I2C1_Host_CallbackRegister TWI1_CallbackRegister
+#define LTC2943_Initialize TWI1_Initialize
+#define LTC2943_Deinitialize TWI1_Deinitialize
+#define LTC2943_Write TWI1_Write
+#define LTC2943_Read TWI1_Read
+#define LTC2943_WriteRead TWI1_WriteRead
+#define LTC2943_ErrorGet TWI1_ErrorGet
+#define LTC2943_IsBusy TWI1_IsBusy
+#define LTC2943_CallbackRegister TWI1_CallbackRegister
 
 /**
  * @ingroup I2C_HOST
  * @brief Represents an instance of the portable interface structure designed for TWI1 host.
  */
-extern const i2c_host_interface_t I2C1_Host;
+extern const i2c_host_interface_t LTC2943;
 
-#define TWI1_BAUD(F_SCL, T_RISE)((((((float)4000000 / (float)(F_SCL))) - 10 - ((float)4000000 * (T_RISE) / 1000000))) / 2)
+#define TWI1_BAUD(F_SCL, T_RISE)((((((float)8000000 / (float)(F_SCL))) - 10 - ((float)8000000 * (T_RISE) / 1000000))) / 2)
 
 /**
  * @ingroup i2c_host_interrupt
