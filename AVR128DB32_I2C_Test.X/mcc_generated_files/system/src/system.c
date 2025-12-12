@@ -50,7 +50,11 @@ void SYSTEM_Initialize(void)
     ADC0_Initialize();
     I2C0_Client_Initialize();
     LTC2943_Initialize();
+    TCA0_Initialize();
     BOD_Initialize();
+    EVSYS_Initialize();
+    NVM_Initialize();
+    RTC_Initialize();
     SLPCTRL_Initialize();
     VREF_Initialize();
     WDT_Initialize();
@@ -96,8 +100,8 @@ ISR(BOD_VLM_vect)
 
 int8_t SLPCTRL_Initialize()
 {
-    //SEN enabled; SMODE IDLE; 
-    ccp_write_io((void*)&(SLPCTRL.CTRLA),0x1);
+    //SEN enabled; SMODE STDBY; 
+    ccp_write_io((void*)&(SLPCTRL.CTRLA),0x3);
     
     //HTLLEN OFF; PMODE AUTO; 
     ccp_write_io((void*)&(SLPCTRL.VREGCTRL),0x0);

@@ -51,7 +51,7 @@ void ADC0_Initialize(void)
     ADC0_ThresholdCallback = NULL;
 
     // Configure ADC0 module registers
-    ADC0.CTRLB = (ADC_SAMPNUM_ACC4_gc);             /* SAMPNUM (4 results accumulated) */
+    ADC0.CTRLB = (ADC_SAMPNUM_ACC16_gc);            /* SAMPNUM (16 results accumulated) */
     ADC0.CTRLC = (ADC_PRESC_DIV256_gc);             /* PRESC (CLK_PER divided by 256) */
     ADC0.CTRLD = (ADC_INITDLY_DLY32_gc)             /* INITDLY (DLY32) */
 				|(ADC_SAMPDLY_DLY4_gc);             /* SAMPDLY (DLY4) */

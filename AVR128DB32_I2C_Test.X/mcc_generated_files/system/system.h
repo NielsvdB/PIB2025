@@ -43,6 +43,9 @@ extern "C" {
 #include "../system/utils/compiler.h"
 #include "config_bits.h"
 #include "../system/pins.h"
+#include "../evsys/evsys.h"
+#include "../nvm/nvm.h"
+#include "../timer/rtc.h"
 #include "../vref/vref.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
@@ -50,6 +53,7 @@ extern "C" {
 #include "../adc/adc0.h"
 #include "../i2c_client/twi0.h"
 #include "../i2c_host/twi1.h"
+#include "../timer/tca0.h"
 /**
  * @ingroup systemdriver
  * @brief Initializes the System module. This routine is called only once during system initialization, before calling any other API.

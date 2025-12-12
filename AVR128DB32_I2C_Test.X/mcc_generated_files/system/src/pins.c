@@ -34,6 +34,7 @@
 
 #include "../pins.h"
 
+static void (*Lader_Input_InterruptHandler)(void);
 static void (*IO_PF3_InterruptHandler)(void);
 static void (*IO_PF2_InterruptHandler)(void);
 static void (*IO_PC3_InterruptHandler)(void);
@@ -48,7 +49,6 @@ static void (*IO_PD7_InterruptHandler)(void);
 static void (*IO_PF0_InterruptHandler)(void);
 static void (*IO_PF1_InterruptHandler)(void);
 static void (*BFG_Alert_InterruptHandler)(void);
-static void (*Lader_Input_InterruptHandler)(void);
 static void (*EN_EXT_Balance_InterruptHandler)(void);
 static void (*Drain_Cell_1_InterruptHandler)(void);
 static void (*Drain_Cell_2_InterruptHandler)(void);
@@ -71,7 +71,7 @@ void PIN_MANAGER_Initialize()
 
   /* DIR Registers Initialization */
     PORTA.DIR = 0xEF;
-    PORTC.DIR = 0x1;
+    PORTC.DIR = 0x3;
     PORTD.DIR = 0x0;
     PORTF.DIR = 0x10;
 
@@ -114,7 +114,7 @@ void PIN_MANAGER_Initialize()
     PORTMUX.CCLROUTEA = 0x0;
     PORTMUX.EVSYSROUTEA = 0x0;
     PORTMUX.SPIROUTEA = 0x0;
-    PORTMUX.TCAROUTEA = 0x0;
+    PORTMUX.TCAROUTEA = 0x2;
     PORTMUX.TCBROUTEA = 0x0;
     PORTMUX.TCDROUTEA = 0x0;
     PORTMUX.TWIROUTEA = 0x2;
@@ -122,6 +122,7 @@ void PIN_MANAGER_Initialize()
     PORTMUX.ZCDROUTEA = 0x0;
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
+    Lader_Input_SetInterruptHandler(Lader_Input_DefaultInterruptHandler);
     IO_PF3_SetInterruptHandler(IO_PF3_DefaultInterruptHandler);
     IO_PF2_SetInterruptHandler(IO_PF2_DefaultInterruptHandler);
     IO_PC3_SetInterruptHandler(IO_PC3_DefaultInterruptHandler);
@@ -136,7 +137,6 @@ void PIN_MANAGER_Initialize()
     IO_PF0_SetInterruptHandler(IO_PF0_DefaultInterruptHandler);
     IO_PF1_SetInterruptHandler(IO_PF1_DefaultInterruptHandler);
     BFG_Alert_SetInterruptHandler(BFG_Alert_DefaultInterruptHandler);
-    Lader_Input_SetInterruptHandler(Lader_Input_DefaultInterruptHandler);
     EN_EXT_Balance_SetInterruptHandler(EN_EXT_Balance_DefaultInterruptHandler);
     Drain_Cell_1_SetInterruptHandler(Drain_Cell_1_DefaultInterruptHandler);
     Drain_Cell_2_SetInterruptHandler(Drain_Cell_2_DefaultInterruptHandler);
@@ -149,6 +149,19 @@ void PIN_MANAGER_Initialize()
     LED_SetInterruptHandler(LED_DefaultInterruptHandler);
 }
 
+/**
+  Allows selecting an interrupt handler for Lader_Input at application runtime
+*/
+void Lader_Input_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    Lader_Input_InterruptHandler = interruptHandler;
+}
+
+void Lader_Input_DefaultInterruptHandler(void)
+{
+    // add your Lader_Input interrupt custom code
+    // or set custom function using Lader_Input_SetInterruptHandler()
+}
 /**
   Allows selecting an interrupt handler for IO_PF3 at application runtime
 */
@@ -332,19 +345,6 @@ void BFG_Alert_DefaultInterruptHandler(void)
     // or set custom function using BFG_Alert_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for Lader_Input at application runtime
-*/
-void Lader_Input_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    Lader_Input_InterruptHandler = interruptHandler;
-}
-
-void Lader_Input_DefaultInterruptHandler(void)
-{
-    // add your Lader_Input interrupt custom code
-    // or set custom function using Lader_Input_SetInterruptHandler()
-}
-/**
   Allows selecting an interrupt handler for EN_EXT_Balance at application runtime
 */
 void EN_EXT_Balance_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -516,6 +516,10 @@ ISR(PORTA_PORT_vect)
 ISR(PORTC_PORT_vect)
 { 
     // Call the interrupt handler for the callback registered at runtime
+    if(VPORTC.INTFLAGS & PORT_INT1_bm)
+    {
+       Lader_Input_InterruptHandler(); 
+    }
     if(VPORTC.INTFLAGS & PORT_INT3_bm)
     {
        IO_PC3_InterruptHandler(); 
@@ -523,10 +527,6 @@ ISR(PORTC_PORT_vect)
     if(VPORTC.INTFLAGS & PORT_INT2_bm)
     {
        IO_PC2_InterruptHandler(); 
-    }
-    if(VPORTC.INTFLAGS & PORT_INT1_bm)
-    {
-       Lader_Input_InterruptHandler(); 
     }
     if(VPORTC.INTFLAGS & PORT_INT0_bm)
     {
