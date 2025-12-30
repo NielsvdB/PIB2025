@@ -22,7 +22,7 @@
 #define Temp_Cell_2 	0x06	//PD7
 #define Temp_Cell_3 	0x05	//PD6
 #define Temp_Cell_4 	0x04	//PD5
-#define Check_3v3 		0x08	//PF1
+#define Check_3v3 		0x08	//PF1 Must be changed to enable internal nets, because of broken pin============================================
 #define Cell_Voltage_1 	0x01	//PD2
 #define Cell_Voltage_2 	0x00	//PD1
 #define Cell_Voltage_3 	0x03	//PD4
@@ -98,18 +98,18 @@ enum flow problemflow = F_Entry;
 
 //Functions ===================================================================
 uint16_t ADC0RES_to_mV(uint16_t ADCRES) {//Convert ADC result to mV
-	return (ADCRES * 3300) / 4095;//3300mV reference, 12 bit ADC
+	return (ADCRES * 4096) / 3300;//3300mV reference, 12 bit ADC
 }
 uint16_t mV_to_CellVoltage(uint16_t mV){//Convert input to real cell voltage
-	return (mV/1.2)+3000;
+	return (mV/1.2)+3000; //Voltage multiplier of 1.2, subtraction of 3000mV
 }
-uint16_t BFG_Result_to_Voltage(uint16_t BFGRES){//Convert BFG LTC2943 result to voltage in mV
-	return (23.6*(BFGRES/65535));
+uint16_t BFG_Result_to_Voltage(uint16_t BFG_RES){//Convert BFG LTC2943 result to voltage in mV
+	return (23.6*(BFG_RES/65535));
 }
-void EnableExternalBalancer(){
+void Enable_External_Balancer_Interrupt_Handler(){ //Interupt of external balancer pin
 	problemevents = PE_Ext_Balance;
 }
-void BFG_Alert_Interrupt_Handler(){
+void BFG_Alert_Interrupt_Handler(){ //Alert from BFG LTC2943
 	ProblemEvent = PE_Alert;
 }
 
@@ -182,7 +182,7 @@ void PrepareBFG(enum LTC2943_ADC_Mode ADC_Mode, enum LTC2943_Prescalar_Mode Pres
 }
 enum problemevents SelfCheck() {
 	Batt_Percentage = CheckAccumulatedCharge();
-	if (Batt_Percentage <= Lowest_Allowed_Charge){
+	if (Batt_Percentage <= Lowest_Allowed_Charge_Normal_Operation){
 		CurrentEvent = E_Batt_Empty;
 		return PE_NoEvent;
 	}
@@ -203,23 +203,16 @@ enum problemevents SelfCheck() {
 		return PE_NoEvent;
 	}
 }
-bool fixOvertemp(){
-	if(TempCheck()){
-		return 1;
-	}
-	else{
-		return 0;
-	}
-}
+
 enum problemevents Overtemp(){
 	enum problemevents selfcheckresult = SelfCheck();
 	if(selfcheckresult == PE_NoEvent){
 		return PE_NoEvent;
 	}
 	else if(selfcheckresult == PE_Overtemp){
-		if(fixOvertemp();){
-			return PE_NoEvent;
+		if(!TempCheck()){
 			Overtemp_Count++;
+			return PE_NoEvent;
 		}
 		else{
 			return PE_Overtemp;
@@ -365,6 +358,7 @@ void FixCountFail(){
 void ProblemEvents() {
 	switch (ProblemEvent) {
 	case PE_NoEvent:
+		
 		problemflow = F_Exit;
 		NextProblemState = PS_NoState;
 		break;
@@ -408,6 +402,7 @@ void ProblemEvents() {
 		NextProblemState = PS_Cell_Voltage;
 		break;
 	}
+	Set_Error_Pattern(NextProblemState);
 
 
 }
@@ -416,7 +411,7 @@ void ProblemEvents() {
 //Main Loop ===============================================================================================
 int main() {
 	SYSTEM_Initialize();
-
+	Setup_Timed_Functions();
 	ADC0_ConversionDoneCallbackRegister(ADC0_Conversion_Done);
 	EN_EXT_Balance_DefaultInterruptHandler(Enable_External_Balancer_Interrupt_Handler);
 	BFG_Alert_DefaultInterruptHandler(BFG_Alert_Interrupt_Handler);
@@ -492,11 +487,13 @@ int main() {
 				switch (flow) {
 					case F_Entry: //Enable charging port
 						PrepareCharging(1);
+						Set_Error_Pattern(PE_Ext_Balance);
 					case F_Run:
 						Charging();
 						break;
 					case F_Exit: // Disable Charging port
 						PrepareCharging(0);
+						Set_Error_Pattern(PE_NoEvent);
 						break;
 				}
 				switch (CurrentEvent) {
@@ -537,6 +534,17 @@ int main() {
 		ProblemEvents();
 		switch (CurrentProblemState) {
 			case PS_NoState:
+				switch (problemflow) {
+						case F_Entry:
+							;
+						case F_Run:
+							;
+							break;
+						case F_Exit:
+							;
+							problemflow = F_Entry;
+							break;
+					}
 				break;
 			case PS_BFG_Alert:
 				switch (problemflow) {
@@ -547,6 +555,7 @@ int main() {
 						break;
 					case F_Exit:
 						ProblemEntry(0);
+						problemflow = F_Entry;
 						break;
 				}
 				break;
@@ -559,6 +568,7 @@ int main() {
 						break;
 					case F_Exit:
 						ProblemEntry(0);
+						problemflow = F_Entry;
 						break;
 				}
 				break;
@@ -571,6 +581,7 @@ int main() {
 						break;
 					case F_Exit:
 						ProblemEntry(0);
+						problemflow = F_Entry;
 						break;
 				}
 				break;
