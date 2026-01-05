@@ -1,0 +1,4 @@
+C:/Git_repositories/PIB2025/Test/_build/Test/default/CMakeFiles/Test_default_default_XC8_compile.dir
+C:/Git_repositories/PIB2025/Test/_build/Test/default/CMakeFiles/Test_default_image_hY7rwMBo.dir
+C:/Git_repositories/PIB2025/Test/_build/Test/default/CMakeFiles/edit_cache.dir
+C:/Git_repositories/PIB2025/Test/_build/Test/default/CMakeFiles/rebuild_cache.dir

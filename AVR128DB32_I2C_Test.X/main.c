@@ -435,7 +435,7 @@ enum problemevents BFG_Check() {
 	if (LTC2943_Error_Status_Array[0]){ //Undervoltage Lockout Alert
 		return PE_Ext_Balance; //Output of BFG not trustworthy, use external balancer
 	}
-    else{
+    else {
         return PE_NoEvent;
     }
 }

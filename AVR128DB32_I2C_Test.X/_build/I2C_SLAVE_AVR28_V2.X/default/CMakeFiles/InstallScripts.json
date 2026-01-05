@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/I2C_SLAVE_AVR28_V2.X/default/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
