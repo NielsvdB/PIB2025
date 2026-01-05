@@ -17,6 +17,7 @@ endforeach()
 
 set(AVR128DB32_I2C_Test_default_default_XC8_FILE_TYPE_compile
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Libraries/src/I2C.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../Libraries/src/Timed_Functions.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../main.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../mcc_generated_files/adc/src/adc0.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../mcc_generated_files/evsys/src/evsys.c"
