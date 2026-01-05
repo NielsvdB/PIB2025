@@ -1,46 +1,34 @@
-//Designate enums===================================================================
-enum flow {
-	F_Entry, 
-	F_Exit, 
-	F_Run};
-enum state {
-	S_NoState,
-	S_Init, 
-	S_Discharge, 
-	S_Idle, 
-	S_Charge, 
-	S_Shutdown};
-enum events {
-	E_NoEvent, 
-	E_Batt_Empty, 
-	E_Batt_Full, 
-	E_Disconnect, 
-	E_Plugin};
-enum problemstates {
-	PS_NoState, 
-	PS_BFG_Alert,  
-	PS_Overtemp, 
-	PS_Cell_Voltage, 
-	PS_Total_Shutdown};
-enum problemevents {
-    PE_NoEvent, 
-	PE_Ext_Balance, 
-	PE_Alert, 
-	PE_Undervolt, 
-	PE_Extreme_Overvolt, 
-	PE_Unbalance, 
-	PE_Overtemp, 
-	PE_scnd_Overtemp, 
-	PE_CountFail,
-	PE_OverCurrent,
-	PE_Overvoltage,
-	PE_BFG_Overtemp
+// Typedefs for statemachine====================================================================================================
+#include "mcc_generated_files/system/pins.h"
+enum States {
+	S_Error, //State waarin de problemstatemachine handelt en de normale state machine niks mag doen
+	S_Init, //Opstart state
+	S_Discharge, //Normale operatie
+	S_Shutdown, //Batterij is leegg
+	S_Charge, //Batterij aan het laden
+	S_Batt_Full //Batterij vol, maar aan de lader
+};
+enum Events {
+	E_Error,
+	E_Error_Handled, //Probleem is afgehandelt door de problemstatemachine, normale statemachine mag opnieuw opstarten
+	E_Init_Done, //Opstarten is afgelopen, klaar voor normale operatie
+	E_No_Event, //Er gebeurt niks, doorgaan zoals net
+	E_Batt_Empty, //Batterij is leeg, Accu moet uit
+	E_Charger_Connected, //Lader is aangesloten, ga opladen
+	E_Charger_Disconnected, //Lader is losgehaald, ga naar normale operatie
+	E_Batt_Full //Batterij is volledig opgeladen ga naar S_Batt_Full
+};
+enum Flow { //Flow wordt gebruikt om de verschillende states aan elkaar te verbinden zonder dat er dingen fout gaan
+	F_Entry,
+	F_Run,
+	F_Exit
 };
 
-//Includes
+//Includes=============================================================================================================================
 #include <avr/io.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <avr/sleep.h>
 #include "mcc_generated_files/adc/adc0.h"
 #include "mcc_generated_files/system/system.h"
 #include "mcc_generated_files/power/power.h"
@@ -48,149 +36,34 @@ enum problemevents {
 #include "Libraries/I2C.h"
 #include "Libraries/Timed_Functions.h"
 
-//Slave Defines
-#define NUM_REGISTERS 4
-static uint8_t register_data[NUM_REGISTERS] = {0, 0, 0, 0};
-static uint8_t register_selected = 0;
-static uint8_t rx_byte_count = 0; // NIEUWE TELLER: Aantal ontvangen data bytes (exclusief Adres)
-
-typedef enum {
-    HOME_STATUS   = 0x00,
-    HOME_COMMAND  = 0x01,
-    HOME_DATA_IN  = 0x02,
-    HOME_DATA_OUT = 0x03
-} HomeReg;
-
-//Maximum Parameters
-#define TempRatio 0.3327 //R(T)/R(25C). In datasheet NTC, Thermistors 10KOhm 5%, Mouser number: 581-NB20K00103JBA.
-#define MaxTemp 22440/(6800+3786*TempRatio) // Conversion from resistance to temperature using Tempratio
-#define Amount_Of_Overtemps_Allowed 2 //Number of allowed overtemps
-
-//BFG charge defines
-#define Charge_Scale 0.340*(50/5)*(256/4096) //Each bit represents 0.2125mAh
-#define Batt_Capacity_mAh 3200 //Battery capacity in mAh
-#define Lowest_Allowed_Charge_Normal_Operation 20 //Lowest allowed charge percentage before shutdown (Within normal operation)
-#define Absolute_Lowest_Allowed_Charge 15 //Absolute lowest allowed charge percentage before shutdown
-//ADC0_MOXPOS Defines
+//ADC0_MOXPOS Defines==================================================================================================================
 #define Temp_Cell_1 	0x07	//PF0
 #define Temp_Cell_2 	0x06	//PD7
 #define Temp_Cell_3 	0x05	//PD6
 #define Temp_Cell_4 	0x04	//PD5
-#define Check_3v3 		0x08	//PF1 Must be changed to enable internal nets, because of broken pin============================================
 #define Cell_Voltage_1 	0x01	//PD2
 #define Cell_Voltage_2 	0x00	//PD1
 #define Cell_Voltage_3 	0x03	//PD4
 #define Cell_Voltage_4 	0x02	//PD3
 
-//ADC0_Result Variables
+//Variables for statemachine============================================================================================================
+enum States CurrentState = S_Init;
+enum States NextState = S_Init; 
+enum Events CurrentEvent = E_No_Event;
+enum Flow CurrentFlow = F_Entry;
+
+//ADC0_Result Variables===============================================================================================================
 volatile uint16_t Temp_Cell_1_Result = 0;
 volatile uint16_t Temp_Cell_2_Result = 0;
 volatile uint16_t Temp_Cell_3_Result = 0;
 volatile uint16_t Temp_Cell_4_Result = 0;
-volatile uint16_t Check_3v3_Result = 0;
 volatile uint16_t Cell_Voltage_1_Result = 0;
 volatile uint16_t Cell_Voltage_2_Result = 0;
 volatile uint16_t Cell_Voltage_3_Result = 0;
 volatile uint16_t Cell_Voltage_4_Result = 0;
 volatile bool ADC0_Filled_All_Values = false;
 
-
-
-
-//Amount of overtemps
-volatile uint8_t Overtemp_Count = 0;
-//Acumulated Charge Variables
-volatile uint16_t Accumulated_Charge = 0;
-
-//Variables
-enum state CurrentState = S_Init;
-enum state NextState = S_Init;
-enum events CurrentEvent = E_NoEvent;
-enum problemstates CurrentProblemState = PS_NoState;
-enum problemstates NextProblemState = PS_NoState;
-enum problemevents ProblemEvent = PE_NoEvent;
-enum flow flow = F_Entry;
-enum flow problemflow = F_Entry;
-
-
-
-//Functions ===================================================================
-void set_home_status(uint8_t status_value) {
-    if (status_value <= 4) {
-        register_data[HOME_STATUS] = status_value;
-    }
-}
-void process_command(uint8_t command) {
-    switch (command) {
-        case 10:
-            CurrentEvent = E_Batt_Empty;
-            break;
-        case 6:
-            //Code voor starten met opladen
-			set_home_status(1);
-            break;
-        case 7:
-            //Code voor stoppen met opladen
-			CurrentEvent = E_Batt_Full;
-			set_home_status(1);
-            break;
-        default:
-            //Code voor onbekende commando
-            break;
-    }
-}
-bool TWI0_EventHandler(i2c_client_transfer_event_t event) {
-    switch(event) {
-        case I2C_CLIENT_TRANSFER_EVENT_ADDR_MATCH:
-            // Reset de teller voor een nieuwe Write/Read transactie.
-            rx_byte_count = 0;
-            return true; // Altijd ACK de adres-match
-
-        case I2C_CLIENT_TRANSFER_EVENT_RX_READY: {
-            uint8_t received = TWI0_ReadByte();
-            rx_byte_count++; // Tel de ontvangen data byte
-
-            // 1. REGISTER SELECTIE & COMMANDO/DATA ONTVANGEN (MASTER WRITE)
-            if (rx_byte_count == 1) { 
-                // Eerste data byte (het Register-adres)
-                register_selected = received;
-                // printf("Slave selecteert Register: 0x%X\n", register_selected);
-            } else {
-                // Tweede data byte (de Data voor het Register)
-                if (register_selected < NUM_REGISTERS) {
-                    register_data[register_selected] = received;
-                    // printf("Slave ontvangt data voor 0x%X: %u\n", register_selected, received);
-                    
-                    if (register_selected == HOME_COMMAND) {
-                        process_command(received);
-                    }
-                }
-            }
-            return true; // Altijd ACK om de volgende byte te ontvangen
-        }
-
-        case I2C_CLIENT_TRANSFER_EVENT_TX_READY: {
-            // 2. DATA ZENDEN (MASTER READ)
-            if (register_selected < NUM_REGISTERS) {
-                uint8_t data_to_send = register_data[register_selected];
-                TWI0_WriteByte(data_to_send);
-                // printf("Slave stuurt Register 0x%X: %u\n", register_selected, data_to_send);
-            } else {
-                TWI0_WriteByte(0xFF);
-            }
-            return true;
-        }
-
-        case I2C_CLIENT_TRANSFER_EVENT_STOP_BIT_RECEIVED:
-            // De transactie is volledig afgesloten, geen verdere actie nodig
-            return true;
-
-        default:
-            return true;
-    }
-}
-
-
+//Conversion Functions=================================================================================================================
 uint16_t ADC0RES_to_mV(uint16_t ADCRES) {//Convert ADC result to mV
 	return (ADCRES * 4096) / 3300;//3300mV reference, 12 bit ADC
 }
@@ -200,18 +73,30 @@ uint16_t mV_to_CellVoltage(uint16_t mV){//Convert input to real cell voltage
 uint16_t BFG_Result_to_Voltage(uint16_t BFG_RES){//Convert BFG LTC2943 result to voltage in mV
 	return (23.6*(BFG_RES/65535));
 }
-void Enable_External_Balancer_Interrupt_Handler(){ //Interupt of external balancer pin
-	ProblemEvent = PE_Ext_Balance;
+
+//Hardware Functions=================================================================================================================
+void ShutdownAllPins(){ //Zet alle output pinnen uit
+	Drain_Cell_1_SetLow();
+	Drain_Cell_2_SetLow();
+	Drain_Cell_3_SetLow();
+	Drain_Cell_4_SetLow();
+	EN_Batt_SetLow();
+	EN_Lader_SetLow();
 }
-void BFG_Alert_Interrupt_Handler(){ //Alert from BFG LTC2943
-	ProblemEvent = PE_Alert;
+void PrepareBFG(enum LTC2943_ADC_Mode ADC_Mode, enum LTC2943_Prescalar_Mode Prescalar_Mode, enum LTC2943_ALCC_Pin_Mode ALCC_Pin_Mode) {//Zet de BFG in de goed modus
+	Current_LTC2943_ADC_Mode = ADC_Mode;
+	Current_LTC2943_Prescalar_Mode = Prescalar_Mode;
+	Current_LTC2943_ALCC_Pin_Mode = ALCC_Pin_Mode;
+	LTC2943_Shutdown = 0;
+	Write_Control_REG();
 }
 
-void ADC0_Conversion_Done(){//Callback function when ADC conversion is done
+//Interrupt handlers================================================================================================================
+void ADC0_Conversion_Done_ISR () { //Lees ADC uit
 	switch (ADC0_MUXPOS) {
 		case Temp_Cell_1:
-			Temp_Cell_1_Result = ADC0RES_to_mV(ADC0.RES);
-			ADC0_ChannelSelect(Temp_Cell_2);
+			Temp_Cell_1_Result = ADC0RES_to_mV(ADC0.RES); //Schrijf ADC waarde naar een globale variabele
+			ADC0_ChannelSelect(Temp_Cell_2); //Selecteer het volgende kanaal
 			break;
 		case Temp_Cell_2:
 			Temp_Cell_2_Result = ADC0RES_to_mV(ADC0.RES);
@@ -222,11 +107,8 @@ void ADC0_Conversion_Done(){//Callback function when ADC conversion is done
 			ADC0_ChannelSelect(Temp_Cell_4);
 			break;
 		case Temp_Cell_4:
+			VREF.ADC0REF = 0x0; //Zet vref naar 1.024V
 			Temp_Cell_4_Result = ADC0RES_to_mV(ADC0.RES);
-			ADC0_ChannelSelect(Check_3v3);
-			break;
-		case Check_3v3:
-			Check_3v3_Result = ADC0RES_to_mV(ADC0.RES);
 			ADC0_ChannelSelect(Cell_Voltage_1);
 			break;
 		case Cell_Voltage_1:
@@ -242,470 +124,252 @@ void ADC0_Conversion_Done(){//Callback function when ADC conversion is done
 			ADC0_ChannelSelect(Cell_Voltage_4);
 			break;
 		case Cell_Voltage_4:
+			VREF.ADC0REF = 0x5; //Zet vref naar VDD
 			Cell_Voltage_4_Result = mV_to_CellVoltage(ADC0RES_to_mV(ADC0.RES));
 			ADC0_ChannelSelect(Temp_Cell_1);
 			if (!ADC0_Filled_All_Values){
 				ADC0_Filled_All_Values = true;
 			}
 			break;
-		default://Only at startup
+		default://Alleen bij opstarten, want Channel nog niet geselecteerd
 			ADC0_ChannelSelect(Temp_Cell_1);
 			break;
-	}
-}
-
-
-uint16_t CheckAccumulatedCharge(){
-	Accumulated_Charge = Get_LTC2943_REG(Accumulated_Charge_REG);	
-	return Accumulated_Charge;
-}
-
-bool TempCheck() {//Check if any temperature is above maximum
-	if(Temp_Cell_1_Result > MaxTemp || Temp_Cell_2_Result > MaxTemp || Temp_Cell_3_Result > MaxTemp || Temp_Cell_4_Result > MaxTemp) {
-		return 1;
-	}else {
-		return 0;
-	}
-}
-void PrepareBFG(enum LTC2943_ADC_Mode ADC_Mode, enum LTC2943_Prescalar_Mode Prescalar_Mode, enum LTC2943_ALCC_Pin_Mode ALCC_Pin_Mode) {//Prepare BFG LTC2943 for operation
-	Current_LTC2943_ADC_Mode = ADC_Mode;
-	Current_LTC2943_Prescalar_Mode = Prescalar_Mode;
-	Current_LTC2943_ALCC_Pin_Mode = ALCC_Pin_Mode;
-	LTC2943_Shutdown = 0;
-	Write_Control_REG();
-}
-enum problemevents SelfCheck() {
-	uint16_t Batt_Percentage = CheckAccumulatedCharge();
-	if (Batt_Percentage <= Lowest_Allowed_Charge_Normal_Operation){
-		CurrentEvent = E_Batt_Empty;
-		return PE_NoEvent;
-	}
-	else if (Batt_Percentage < Absolute_Lowest_Allowed_Charge){
-		return PE_Undervolt;
-	}
-
-	while(!ADC0_Filled_All_Values){;};
-	if(TempCheck()){
-		if(Overtemp_Count >= Amount_Of_Overtemps_Allowed){
-			return PE_scnd_Overtemp;
 		}
-		else {
-			return PE_Overtemp;
-		}
+}
+void Enable_External_Balancer_ISR () { //Microcontroller mag niet bemoeien met externe lader, dus alles uit
+	DISABLE_INTERRUPTS();
+	ShutdownAllPins();
+	while(1){sleep_mode();};
+}
+void BFG_Alert_ISR () {
+	;
+}
+void Charger_Connect_ISR (){ //De interupt handler voor het aansluiten en loshalen van de lader
+	if(Lader_Output_GetValue()){ // Dit kan misgaan door contactdender!!!
+		CurrentEvent = E_Charger_Connected;
 	}
 	else {
-		return PE_NoEvent;
+		CurrentEvent = E_Charger_Disconnected;
 	}
 }
 
-enum problemevents Overtemp(){
-	enum problemevents selfcheckresult = SelfCheck();
-	if(selfcheckresult == PE_NoEvent){
-		return PE_NoEvent;
-	}
-	else if(selfcheckresult == PE_Overtemp){
-		if(!TempCheck()){
-			Overtemp_Count++;
-			return PE_NoEvent;
-		}
-		else{
-			return PE_Overtemp;
-		}
-	}
-	else if(selfcheckresult == PE_scnd_Overtemp){
-		return PE_scnd_Overtemp;
-	}
-    else{
-        return PE_NoEvent;
-    }
+
+// Statemachine Functions============================================================================================================
+void Switch_State (){ //Schakel naar nieuwe state
+	CurrentState = NextState;
+	CurrentFlow = F_Entry;
 }
-void EnableInternalNet(bool OnOrOff) {
-	if (OnOrOff){
-		//EN_Buck_SetHigh();
-		EN_Batt_SetHigh();
-	}
-	else{
-		//EN_Buck_SetLow();
-		EN_Batt_SetLow();
-	}
-	
+void Error_Entry (){
+	ShutdownAllPins();
 }
-void SetVBatt(bool OnOrOff) {
-	if(OnOrOff){
-		EN_Batt_SetHigh();
-	}
-	else{
-		EN_Batt_SetLow();
-	}
+enum Events Init_Run(){
+	PrepareBFG(Automatic_Mode, M_256, Alert_Mode);
+	// Set_LTC2943_REG(uint8_t Address, uint16_t Data); Limieten voor de BFG moeten nog worden ingesteld.
+
+	return E_Init_Done;
 }
-void EnableCharging(bool OnOrOff) {
-	if( OnOrOff){
-		EN_Lader_SetHigh();
-	}
-	else{
-		EN_Lader_SetLow();
-	}
+enum Events Discharge_Entry(){
+	return E_No_Event;
 }
-void PrepareCharging(bool OnOrOff) {
+enum Events Discharge_Run(){
+	return E_No_Event;
+}
+void Discharge_Exit(){
 	;
 }
-void Charging() {
-	ProblemEvent = SelfCheck();
+enum Events Charge_Entry(){
+	return E_No_Event;
 }
-void PrepareShutdown(bool OnOrOff) {
-	POWER_LowPowerModeEnter(POWER_STDBY_MODE);
+enum Events Charge_Run(){
+	return E_No_Event;
 }
-void ProblemEntry(bool OnOrOff) {
-	if(OnOrOff){
-		EnableCharging(0);
-		EnableInternalNet(0);
-		CurrentState = S_NoState;
-	}
-	else{
-		EnableCharging(1);
-		EnableInternalNet(1);
-		CurrentState = S_Init;
-	}
+void Charge_Exit(){
+	;
 }
-
-void DischargeCell(){//Discharge cells that are above 3.65V with hysteresis of 0.27V
-	//Drain cell 1
-	if(Cell_Voltage_1_Result > 3650){
-		Drain_Cell_1_SetHigh();
-	}
-	else if (Cell_Voltage_1_Result <= 3380){
-		Drain_Cell_1_SetLow();
-	}
-	//Drain cell 2
-	if(Cell_Voltage_2_Result > 3650){
-		Drain_Cell_2_SetHigh();
-	}
-	else if (Cell_Voltage_2_Result <= 3380){
-		Drain_Cell_2_SetLow();
-	}
-	//Drain cell 3
-	if(Cell_Voltage_3_Result > 3650){
-		Drain_Cell_3_SetHigh();
-	}
-	else if (Cell_Voltage_3_Result <= 3380){
-		Drain_Cell_3_SetLow();
-	}
-	//Drain cell 4
-	if(Cell_Voltage_4_Result > 3650){
-		Drain_Cell_4_SetHigh();
-	}
-	else if (Cell_Voltage_4_Result <= 3380){
-		Drain_Cell_4_SetLow();
-	}
+enum Events Batt_Full_Entry(){
+	return E_No_Event;
 }
-enum problemevents BFG_Check() {
-	Get_Active_Alerts();
-	if(LTC2943_Error_Status_Array[6]){ //Current Alert
-		return PE_OverCurrent;
-	}
-	if(LTC2943_Error_Status_Array[1]){ //Voltage Alert
-		uint16_t Voltage = BFG_Result_to_Voltage(Get_LTC2943_REG(Voltage_REG));
-		if(Voltage <12800){//If voltage is below 12.8V
-			return PE_Undervolt;
-		}
-		else if (Voltage >14600 && Voltage < 14800){//If voltage is above 14.6V and below 14.8V
-			DischargeCell();
-		}
-		else if (Voltage >=14800){//If voltage is above 14.8V
-			return PE_Extreme_Overvolt;
-		}
-		else {// If nothing seems to be wrong
-			return PE_NoEvent;
-		}
-	}
-	if(LTC2943_Error_Status_Array[4]){ //Temperature Alert
-		return PE_BFG_Overtemp;
-	}
-	if(LTC2943_Error_Status_Array[2]){ //Charge Alert Low
-		CurrentEvent = E_Batt_Empty;
-		return PE_NoEvent;
-	}
-	if (LTC2943_Error_Status_Array[3]){ //Charge Alert High
-		CurrentEvent = E_Batt_Full;
-		return PE_NoEvent;
-	}
-	if (LTC2943_Error_Status_Array[5]){ //Accumulated Charge Overflow/ Underflow
-		return PE_CountFail;
-	}
-	if (LTC2943_Error_Status_Array[0]){ //Undervoltage Lockout Alert
-		return PE_Ext_Balance; //Output of BFG not trustworthy, use external balancer
-	}
-    else {
-        return PE_NoEvent;
-    }
+enum Events Batt_Full_Run(){
+	return E_No_Event;
 }
-
-
-void PrepareTotalShutdown() {
+void Batt_Full_Exit(){
+	;
+}
+enum Events Shutdown_Entry(){
+	return E_No_Event;
+}
+enum Events Shutdown_Run(){
+	return E_No_Event;
+}
+void Shutdown_Exit(){
 	;
 }
 
-void FixCountFail(){
-	if (CurrentState == S_Charge){//Asuming counter overflowed, reset charge to full charge, because counter can only overflow when charging.
-		Set_LTC2943_REG(Accumulated_Charge, 0xFFFF);
-	}
-	else{//Asuming counter underflowed, reset charge to empty charge, because counter can only underflow when discharging.
-		Set_LTC2943_REG(Accumulated_Charge, 0x0000);
-	}
-}
-void ProblemEvents() {
-	switch (ProblemEvent) {
-	case PE_NoEvent:
-		
-		problemflow = F_Exit;
-		NextProblemState = PS_NoState;
-		break;
-	case PE_Ext_Balance:
-		problemflow = F_Exit;
-		NextProblemState = PS_Total_Shutdown;
-		break;
-	case PE_Alert:
-		problemflow = F_Exit;
-		NextProblemState = PS_BFG_Alert;
-		break;
-	case PE_Undervolt:
-		problemflow = F_Exit;
-		NextProblemState = PS_Total_Shutdown;
-		break;
-	case PE_Extreme_Overvolt:
-		problemflow = F_Exit;
-		NextProblemState = PS_Total_Shutdown;
-		break;
-	case PE_Unbalance:
-		problemflow = F_Exit;
-		NextProblemState = PS_Cell_Voltage;
-		break;
-	case PE_Overtemp:
-		problemflow = F_Exit;
-		NextProblemState = PS_Overtemp;
-		break;
-	case PE_scnd_Overtemp:
-		problemflow = F_Exit;
-		NextProblemState = PS_Total_Shutdown;
-		break;
-	case PE_CountFail:
-		FixCountFail();
-		break;
-	case PE_OverCurrent:
-		problemflow = F_Exit;
-		NextProblemState = PS_Total_Shutdown;
-		break;
-	case PE_Overvoltage:
-		problemflow = F_Exit;
-		NextProblemState = PS_Cell_Voltage;
-		break;
-	case PE_BFG_Overtemp:
-		problemflow = F_Exit;
-		NextProblemState = PS_Total_Shutdown;
-		break;
-	default:
-		break;
-	}
-	Set_Error_Pattern(NextProblemState);
 
 
-}
-
-
-//Main Loop ===============================================================================================
-int main() {
+//Main Function=========================================================================================================================
+int main () {
 	SYSTEM_Initialize();
 	Setup_Timed_Functions();
-	ADC0_ConversionDoneCallbackRegister(ADC0_Conversion_Done);
-	EN_EXT_Balance_SetInterruptHandler(Enable_External_Balancer_Interrupt_Handler);
-	BFG_Alert_SetInterruptHandler(BFG_Alert_Interrupt_Handler);
-	while (1) {
-		switch (CurrentState) {
-			case S_NoState:
-				break;
+	ADC0_ConversionDoneCallbackRegister(ADC0_Conversion_Done_ISR);
+	EN_EXT_Balance_SetInterruptHandler(Enable_External_Balancer_ISR);
+	BFG_Alert_SetInterruptHandler(BFG_Alert_ISR);
+	Lader_Output_SetInterruptHandler(Charger_Connect_ISR);
+	while(1) {
+		switch (CurrentState){
+			case S_Error:
+				switch (CurrentEvent){
+					case E_Error_Handled:
+						NextState = S_Init;
+						CurrentFlow = F_Exit;
+						break;
+					default:
+						break;
+				}
+				switch (CurrentFlow){
+					case F_Entry:
+					case F_Run:
+						break;
+					case F_Exit:
+						Switch_State ();
+						break;
+				}
 			case S_Init:
-				switch (flow) {
-					case F_Entry: //Setup
-						PrepareBFG(Automatic_Mode, M_256, Alert_Mode);
-						ProblemEvent = SelfCheck();
-					case F_Run: //Check
+				switch (CurrentEvent){
+					case E_Init_Done:
+						NextState = S_Discharge;
+						CurrentFlow = F_Exit;
 						break;
-					case F_Exit: //Prepare operation
-						break;
-				}
-				switch (CurrentEvent) {
-					case E_NoEvent:
-						break;
-					case E_Batt_Empty:
-						NextState = S_Shutdown;
+					case E_Error:
+						NextState = S_Error;
+						CurrentFlow = F_Exit;
 						break;
 					default:
 						break;
+
 				}
-				break;
+				switch (CurrentFlow){
+					case F_Entry:
+					case F_Run:
+						CurrentEvent = Init_Run();
+						break;
+					case F_Exit:
+						Switch_State ();
+						break;
+				}
 			case S_Discharge:
-				switch (flow) {
-					case F_Entry: //Enable internal nets
-						EnableInternalNet(1);
-					case F_Run://Check status
-						CurrentEvent = SelfCheck();
-						break;
-					case F_Exit: //Disable internal nets
-						EnableInternalNet(0);
-						break;
-				}
-				switch (CurrentEvent) {
-					case E_NoEvent:
+				switch (CurrentEvent){
+					case E_Charger_Connected:
+						NextState = S_Charge;
+						CurrentFlow = F_Exit;
 						break;
 					case E_Batt_Empty:
 						NextState = S_Shutdown;
+						CurrentFlow = F_Exit;
 						break;
-					case E_Plugin:
-						NextState = S_Charge;
+					case E_Error:
+						NextState = S_Error;
+						CurrentFlow = F_Exit;
 						break;
 					default:
 						break;
 				}
-				break;
-			case S_Idle:
-				switch (flow) {
+				switch (CurrentFlow){
 					case F_Entry:
-						;
+						CurrentEvent = Discharge_Entry();
+						break;
 					case F_Run:
-						CurrentEvent = SelfCheck();
+						CurrentEvent = Discharge_Run();
 						break;
 					case F_Exit:
+						Discharge_Exit();
+						Switch_State ();
 						break;
 				}
-				switch (CurrentEvent) {
-					case E_NoEvent:
-						break;
-					case E_Disconnect:
-						NextState = S_Discharge;
-						break;
-					default:
-						break;
-				}
-				break;
 			case S_Charge:
-				switch (flow) {
-					case F_Entry: //Enable charging port
-						PrepareCharging(1);
-						Set_Error_Pattern(PE_Ext_Balance);
-					case F_Run:
-						Charging();
-						break;
-					case F_Exit: // Disable Charging port
-						PrepareCharging(0);
-						Set_Error_Pattern(PE_NoEvent);
-						break;
-				}
-				switch (CurrentEvent) {
-					case E_NoEvent:
-						break;
+				switch (CurrentEvent){
 					case E_Batt_Full:
-						NextState = S_Idle;
+						NextState = S_Batt_Full;
+						CurrentFlow = F_Exit;
 						break;
-					case E_Disconnect:
+					case E_Charger_Disconnected:
 						NextState = S_Discharge;
+						CurrentFlow = F_Exit;
+						break;
+					case E_Error:
+						NextState = S_Error;
+						CurrentFlow = F_Exit;
 						break;
 					default:
 						break;
 				}
-				break;
-			case S_Shutdown:
-				switch (flow) {
+				switch (CurrentFlow){
 					case F_Entry:
-						PrepareShutdown(1);
+						CurrentEvent = Charge_Entry();
 						break;
 					case F_Run:
+						CurrentEvent = Charge_Run();
 						break;
 					case F_Exit:
-						PrepareShutdown(0);
+						Charge_Exit();
+						Switch_State ();
 						break;
 				}
-				switch (CurrentEvent) {
-					case E_NoEvent:
+			case S_Batt_Full:
+				switch (CurrentEvent){
+					case E_Charger_Disconnected:
+						NextState = S_Discharge;
+						CurrentFlow = F_Exit;
 						break;
-					case E_Plugin:
+					case E_Batt_Empty:
 						NextState = S_Charge;
+						CurrentFlow = F_Exit;
+						break;
+					case E_Error:
+						NextState = S_Error;
+						CurrentFlow = F_Exit;
 						break;
 					default:
 						break;
 				}
-				break;
-		}
-		ProblemEvents();
-		switch (CurrentProblemState) {
-			case PS_NoState:
-				switch (problemflow) {
-						case F_Entry:
-							;
-						case F_Run:
-							;
-							break;
-						case F_Exit:
-							;
-							problemflow = F_Entry;
-							break;
-					}
-				break;
-			case PS_BFG_Alert:
-				switch (problemflow) {
+				switch (CurrentFlow){
 					case F_Entry:
-						ProblemEntry(1);
+						CurrentEvent = Batt_Full_Entry();
+						break;
 					case F_Run:
-						BFG_Check();
+						CurrentEvent = Batt_Full_Run();
 						break;
 					case F_Exit:
-						ProblemEntry(0);
-						problemflow = F_Entry;
+						Batt_Full_Exit();
+						Switch_State ();
 						break;
 				}
-				break;
-			case PS_Overtemp:
-				switch (problemflow) {
+			case S_Shutdown:
+				switch (CurrentEvent){
+					case E_Charger_Connected:
+						NextState = S_Charge;
+						CurrentFlow = F_Exit;
+						break;
+					case E_Error:
+						NextState = S_Error;
+						CurrentFlow = F_Exit;
+						break;
+					default:
+						break;
+				}
+				switch (CurrentFlow){
 					case F_Entry:
-						ProblemEntry(1);
+						CurrentEvent = Shutdown_Entry();
+						break;
 					case F_Run:
-						Overtemp();
+						CurrentEvent = Shutdown_Run();
 						break;
 					case F_Exit:
-						ProblemEntry(0);
-						problemflow = F_Entry;
+						Shutdown_Exit();
+						Switch_State ();
 						break;
 				}
-				break;
-			case PS_Cell_Voltage:
-				switch (problemflow) {
-					case F_Entry:
-						ProblemEntry(1);
-					case F_Run:
-						DischargeCell();
-						break;
-					case F_Exit:
-						ProblemEntry(0);
-						problemflow = F_Entry;
-						break;
-				}
-				break;
-			case PS_Total_Shutdown:
-				switch (problemflow) {
-					case F_Entry:
-						ProblemEntry(1);
-						PrepareTotalShutdown();
-					case F_Run:
-						break;
-					case F_Exit:
-						break;
-				}
-				break;
-		}
-		CurrentState = NextState;
-		CurrentProblemState = NextProblemState;
-		if(ProblemEvent == PE_NoEvent){
-			POWER_LowPowerModeEnter(POWER_IDLE_MODE);
 		}
 	}
-    return 1;
+	return 0;
 }

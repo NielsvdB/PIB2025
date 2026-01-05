@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="C:\Git_repositories\PIB2025\AVR128DB48DEEBUUG\AVR128DB48_I2C_Test.X\out\AVR128DB32_I2C_Test\default.elf">                 
+    <memory name="program">              
+      <units>bytes</units>                 
+      <length>131072</length>                 
+      <used>9613</used>                     
+      <free>121459</free>                     
+    </memory>                              
+    <memory name="data">                 
+      <units>bytes</units>                 
+      <length>16384</length>                 
+      <used>163</used>                     
+      <free>16221</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
