@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/daanv/MPLABXProjects/AVR128DB32_I2C_Test.X/Libraries/Timed_Functions.h</file>
             <file>file:/C:/Users/daanv/MPLABXProjects/AVR128DB32_I2C_Test.X/main.c</file>
             <file>file:/C:/Users/daanv/MPLABXProjects/AVR128DB32_I2C_Test.X/Libraries/I2C.h</file>
             <file>file:/C:/Users/daanv/MPLABXProjects/AVR128DB32_I2C_Test.X/Libraries/src/I2C.c</file>
+            <file>file:/C:/Users/daanv/MPLABXProjects/AVR128DB32_I2C_Test.X/mcc_generated_files/system/system.h</file>
             <file>file:/C:/Users/daanv/MPLABXProjects/AVR128DB32_I2C_Test.X/mcc_generated_files/system/src/system.c</file>
+            <file>file:/C:/Users/daanv/MPLABXProjects/AVR128DB32_I2C_Test.X/Libraries/src/Timed_Functions.c</file>
         </group>
     </open-files>
 </project-private>

@@ -13,7 +13,7 @@
 */
 
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+© [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -57,7 +57,7 @@ void ADC0_Initialize(void)
 				|(ADC_SAMPDLY_DLY4_gc);             /* SAMPDLY (DLY4) */
     ADC0.CTRLE = (ADC_WINCM_NONE_gc);               /* WINCM (No Window Comparison) */
     ADC0.SAMPCTRL = 0x40;                              /* SAMPLEN (0x40) */
-    ADC0.MUXPOS = (ADC_MUXPOS_AIN1_gc);              /* MUXPOS (AIN1) */
+    ADC0.MUXPOS = (ADC_MUXPOS_AIN7_gc);              /* MUXPOS (AIN7) */
     ADC0.MUXNEG = (ADC_MUXNEG_GND_gc);               /* MUXNEG (GND) */
     ADC0.COMMAND = (0 << ADC_STCONV_bp)               /* STCONV (disabled) */
 				|(0 << ADC_SPCONV_bp);              /* SPCONV (disabled) */

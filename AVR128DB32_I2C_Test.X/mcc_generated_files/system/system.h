@@ -12,7 +12,7 @@
  * @version Package Version 4.3.0
 */
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+© [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -54,6 +54,7 @@ extern "C" {
 #include "../i2c_client/twi0.h"
 #include "../i2c_host/twi1.h"
 #include "../timer/tca0.h"
+#include "../timer/tcb0.h"
 /**
  * @ingroup systemdriver
  * @brief Initializes the System module. This routine is called only once during system initialization, before calling any other API.

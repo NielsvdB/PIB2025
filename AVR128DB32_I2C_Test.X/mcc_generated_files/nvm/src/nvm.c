@@ -9,7 +9,7 @@
  * @version NVM Driver Version 3.2.0
  */
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+© [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -37,8 +37,8 @@ void NVM_Initialize(void)
 {    
     NVM_StatusClear();  
 
-    //APPCODEWP enabled; APPDATAWP enabled; BOOTRP enabled; FLMAP SECTION0; FLMAPLOCK disabled; 
-	ccp_write_io(&NVMCTRL.CTRLB, 0x7);
+    //APPCODEWP disabled; APPDATAWP disabled; BOOTRP disabled; FLMAP SECTION0; FLMAPLOCK disabled; 
+	ccp_write_io(&NVMCTRL.CTRLB, 0x0);
 
     //EEREADY disabled; 
     NVMCTRL.INTCTRL = 0x0;

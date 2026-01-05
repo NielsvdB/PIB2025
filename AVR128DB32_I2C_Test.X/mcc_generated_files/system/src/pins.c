@@ -54,7 +54,7 @@ static void (*Drain_Cell_1_InterruptHandler)(void);
 static void (*Drain_Cell_2_InterruptHandler)(void);
 static void (*Drain_Cell_3_InterruptHandler)(void);
 static void (*Drain_Cell_4_InterruptHandler)(void);
-static void (*EN_Buck_InterruptHandler)(void);
+static void (*EN_Int_Net_InterruptHandler)(void);
 static void (*EN_Lader_InterruptHandler)(void);
 static void (*EN_Batt_InterruptHandler)(void);
 static void (*Lader_Output_InterruptHandler)(void);
@@ -142,7 +142,7 @@ void PIN_MANAGER_Initialize()
     Drain_Cell_2_SetInterruptHandler(Drain_Cell_2_DefaultInterruptHandler);
     Drain_Cell_3_SetInterruptHandler(Drain_Cell_3_DefaultInterruptHandler);
     Drain_Cell_4_SetInterruptHandler(Drain_Cell_4_DefaultInterruptHandler);
-    EN_Buck_SetInterruptHandler(EN_Buck_DefaultInterruptHandler);
+    EN_Int_Net_SetInterruptHandler(EN_Int_Net_DefaultInterruptHandler);
     EN_Lader_SetInterruptHandler(EN_Lader_DefaultInterruptHandler);
     EN_Batt_SetInterruptHandler(EN_Batt_DefaultInterruptHandler);
     Lader_Output_SetInterruptHandler(Lader_Output_DefaultInterruptHandler);
@@ -410,17 +410,17 @@ void Drain_Cell_4_DefaultInterruptHandler(void)
     // or set custom function using Drain_Cell_4_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for EN_Buck at application runtime
+  Allows selecting an interrupt handler for EN_Int_Net at application runtime
 */
-void EN_Buck_SetInterruptHandler(void (* interruptHandler)(void)) 
+void EN_Int_Net_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    EN_Buck_InterruptHandler = interruptHandler;
+    EN_Int_Net_InterruptHandler = interruptHandler;
 }
 
-void EN_Buck_DefaultInterruptHandler(void)
+void EN_Int_Net_DefaultInterruptHandler(void)
 {
-    // add your EN_Buck interrupt custom code
-    // or set custom function using EN_Buck_SetInterruptHandler()
+    // add your EN_Int_Net interrupt custom code
+    // or set custom function using EN_Int_Net_SetInterruptHandler()
 }
 /**
   Allows selecting an interrupt handler for EN_Lader at application runtime
@@ -499,7 +499,7 @@ ISR(PORTA_PORT_vect)
     }
     if(VPORTA.INTFLAGS & PORT_INT5_bm)
     {
-       EN_Buck_InterruptHandler(); 
+       EN_Int_Net_InterruptHandler(); 
     }
     if(VPORTA.INTFLAGS & PORT_INT6_bm)
     {

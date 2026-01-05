@@ -418,24 +418,24 @@
 #define Drain_Cell_4_EnableInterruptForLowLevelSensing() do { PORTA.PIN3CTRL = (PORTA.PIN3CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
 #define PA3_SetInterruptHandler Drain_Cell_4_SetInterruptHandler
 
-//get/set EN_Buck aliases
-#define EN_Buck_SetHigh() do { PORTA_OUTSET = 0x20; } while(0)
-#define EN_Buck_SetLow() do { PORTA_OUTCLR = 0x20; } while(0)
-#define EN_Buck_Toggle() do { PORTA_OUTTGL = 0x20; } while(0)
-#define EN_Buck_GetValue() (VPORTA.IN & (0x1 << 5))
-#define EN_Buck_SetDigitalInput() do { PORTA_DIRCLR = 0x20; } while(0)
-#define EN_Buck_SetDigitalOutput() do { PORTA_DIRSET = 0x20; } while(0)
-#define EN_Buck_SetPullUp() do { PORTA_PIN5CTRL  |= PORT_PULLUPEN_bm; } while(0)
-#define EN_Buck_ResetPullUp() do { PORTA_PIN5CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
-#define EN_Buck_SetInverted() do { PORTA_PIN5CTRL  |= PORT_INVEN_bm; } while(0)
-#define EN_Buck_ResetInverted() do { PORTA_PIN5CTRL  &= ~PORT_INVEN_bm; } while(0)
-#define EN_Buck_DisableInterruptOnChange() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
-#define EN_Buck_EnableInterruptForBothEdges() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
-#define EN_Buck_EnableInterruptForRisingEdge() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
-#define EN_Buck_EnableInterruptForFallingEdge() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
-#define EN_Buck_DisableDigitalInputBuffer() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
-#define EN_Buck_EnableInterruptForLowLevelSensing() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
-#define PA5_SetInterruptHandler EN_Buck_SetInterruptHandler
+//get/set EN_Int_Net aliases
+#define EN_Int_Net_SetHigh() do { PORTA_OUTSET = 0x20; } while(0)
+#define EN_Int_Net_SetLow() do { PORTA_OUTCLR = 0x20; } while(0)
+#define EN_Int_Net_Toggle() do { PORTA_OUTTGL = 0x20; } while(0)
+#define EN_Int_Net_GetValue() (VPORTA.IN & (0x1 << 5))
+#define EN_Int_Net_SetDigitalInput() do { PORTA_DIRCLR = 0x20; } while(0)
+#define EN_Int_Net_SetDigitalOutput() do { PORTA_DIRSET = 0x20; } while(0)
+#define EN_Int_Net_SetPullUp() do { PORTA_PIN5CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define EN_Int_Net_ResetPullUp() do { PORTA_PIN5CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define EN_Int_Net_SetInverted() do { PORTA_PIN5CTRL  |= PORT_INVEN_bm; } while(0)
+#define EN_Int_Net_ResetInverted() do { PORTA_PIN5CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define EN_Int_Net_DisableInterruptOnChange() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define EN_Int_Net_EnableInterruptForBothEdges() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define EN_Int_Net_EnableInterruptForRisingEdge() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define EN_Int_Net_EnableInterruptForFallingEdge() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define EN_Int_Net_DisableDigitalInputBuffer() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define EN_Int_Net_EnableInterruptForLowLevelSensing() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+#define PA5_SetInterruptHandler EN_Int_Net_SetInterruptHandler
 
 //get/set EN_Lader aliases
 #define EN_Lader_SetHigh() do { PORTA_OUTSET = 0x40; } while(0)
@@ -943,24 +943,24 @@ void Drain_Cell_4_SetInterruptHandler(void (* interruptHandler)(void)) ;
 
 /**
  * @ingroup  pinsdriver
- * @brief Default Interrupt Handler for EN_Buck pin. 
- *        This is a predefined interrupt handler to be used together with the EN_Buck_SetInterruptHandler() method.
- *        This handler is called every time the EN_Buck ISR is executed. 
+ * @brief Default Interrupt Handler for EN_Int_Net pin. 
+ *        This is a predefined interrupt handler to be used together with the EN_Int_Net_SetInterruptHandler() method.
+ *        This handler is called every time the EN_Int_Net ISR is executed. 
  * @pre PIN_MANAGER_Initialize() has been called at least once
  * @param none
  * @return none
  */
-void EN_Buck_DefaultInterruptHandler(void);
+void EN_Int_Net_DefaultInterruptHandler(void);
 
 /**
  * @ingroup  pinsdriver
- * @brief Interrupt Handler Setter for EN_Buck pin input-sense-config functionality.
- *        Allows selecting an interrupt handler for EN_Buck at application runtime
+ * @brief Interrupt Handler Setter for EN_Int_Net pin input-sense-config functionality.
+ *        Allows selecting an interrupt handler for EN_Int_Net at application runtime
  * @pre PIN_MANAGER_Initialize() has been called at least once
  * @param InterruptHandler function pointer.
  * @return none
  */
-void EN_Buck_SetInterruptHandler(void (* interruptHandler)(void)) ; 
+void EN_Int_Net_SetInterruptHandler(void (* interruptHandler)(void)) ; 
 
 /**
  * @ingroup  pinsdriver
