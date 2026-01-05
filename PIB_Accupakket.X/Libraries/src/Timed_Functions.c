@@ -78,7 +78,7 @@ void Update_Cell_Drain(){
 
 // --- Helper: Set Error Patterns ---
 // Call this from Main to set the pattern
-void Set_Error_Pattern(enum problemstates error_code){
+void Set_Error_Pattern(enum problemevents error_code){
     // Reset counters to start new pattern immediately
     LED_Step_Index = 0; 
     LED_Step_Counter = 0;

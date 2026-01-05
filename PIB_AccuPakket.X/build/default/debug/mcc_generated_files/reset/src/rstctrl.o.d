@@ -12,7 +12,7 @@ build/default/debug/mcc_generated_files/reset/src/rstctrl.o.d \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\inttypes.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\features.h \
- C:/Users/daanv/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/include/avr/ioavr128db32.h \
+ C:/Users/Navan/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/include/avr/ioavr128db32.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\portpins.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\common.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\xmega.h \
@@ -50,7 +50,7 @@ c:\program\ files\microchip\xc8\v3.10\avr\avr\include\inttypes.h:
 
 c:\program\ files\microchip\xc8\v3.10\avr\avr\include\features.h:
 
-C:/Users/daanv/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/include/avr/ioavr128db32.h:
+C:/Users/Navan/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/include/avr/ioavr128db32.h:
 
 c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\portpins.h:
 

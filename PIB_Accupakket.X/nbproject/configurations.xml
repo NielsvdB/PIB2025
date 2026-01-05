@@ -71,6 +71,7 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>Libraries/I2C.h</itemPath>
+      <itemPath>Libraries/Timed_Functions.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -147,6 +148,7 @@
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>Libraries/src/I2C.c</itemPath>
+      <itemPath>Libraries/src/Timed_Functions.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -160,7 +162,7 @@
         <targetDevice>AVR128DB32</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>snap</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>3.10</languageToolchainVersion>
         <platform>3</platform>
@@ -202,7 +204,7 @@
         <property key="default-bitfield-type" value="true"/>
         <property key="default-char-type" value="true"/>
         <property key="define-macros" value=""/>
-        <property key="disable-optimizations" value="false"/>
+        <property key="disable-optimizations" value="true"/>
         <property key="extra-include-directories" value=""/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
@@ -216,7 +218,7 @@
         <property key="optimization-debug" value="false"/>
         <property key="optimization-invariant-enable" value="false"/>
         <property key="optimization-invariant-value" value="16"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value="-O0"/>
         <property key="optimization-speed" value="false"/>
         <property key="optimization-stable-enable" value="false"/>
         <property key="preprocess-assembler" value="true"/>

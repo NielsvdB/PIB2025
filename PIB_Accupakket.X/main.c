@@ -1,50 +1,3 @@
-#include <avr/io.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include "mcc_generated_files/adc/adc0.h"
-#include "mcc_generated_files/system/system.h"
-#include "mcc_generated_files/power/power.h"
-
-#include "Libraries/I2C.h"
-
-//Maximum Parameters
-#define TempRatio 0.3327 //R(T)/R(25C). In datasheet NTC, Thermistors 10KOhm 5%, Mouser number: 581-NB20K00103JBA.
-#define MaxTemp 22440/(6800+3786*TempRatio) // Conversion from resistance to temperature using Tempratio
-#define Amount_Of_Overtemps_Allowed 2 //Number of allowed overtemps
-
-//BFG charge defines
-#define Charge_Scale 0.340*(50/5)*(256/4096) //Each bit represents 0.2125mAh
-#define Batt_Capacity_mAh 3200 //Battery capacity in mAh
-#define Lowest_Allowed_Charge_Normal_Operation 20 //Lowest allowed charge percentage before shutdown (Within normal operation)
-#define Absolute_Lowest_Allowed_Charge 15 //Absolute lowest allowed charge percentage before shutdown
-//ADC0_MOXPOS Defines
-#define Temp_Cell_1 	0x07	//PF0
-#define Temp_Cell_2 	0x06	//PD7
-#define Temp_Cell_3 	0x05	//PD6
-#define Temp_Cell_4 	0x04	//PD5
-#define Check_3v3 		0x08	//PF1 Must be changed to enable internal nets, because of broken pin============================================
-#define Cell_Voltage_1 	0x01	//PD2
-#define Cell_Voltage_2 	0x00	//PD1
-#define Cell_Voltage_3 	0x03	//PD4
-#define Cell_Voltage_4 	0x02	//PD3
-
-//ADC0_Result Variables
-volatile uint16_t Temp_Cell_1_Result = 0;
-volatile uint16_t Temp_Cell_2_Result = 0;
-volatile uint16_t Temp_Cell_3_Result = 0;
-volatile uint16_t Temp_Cell_4_Result = 0;
-volatile uint16_t Check_3v3_Result = 0;
-volatile uint16_t Cell_Voltage_1_Result = 0;
-volatile uint16_t Cell_Voltage_2_Result = 0;
-volatile uint16_t Cell_Voltage_3_Result = 0;
-volatile uint16_t Cell_Voltage_4_Result = 0;
-volatile bool ADC0_Filled_All_Values = false;
-
-//Amount of overtemps
-volatile uint8_t Overtemp_Count = 0;
-//Acumulated Charge Variables
-volatile uint16_t Accumulated_Charge = 0;
-
 //Designate enums===================================================================
 enum flow {
 	F_Entry, 
@@ -84,10 +37,59 @@ enum problemevents {
 	PE_BFG_Overtemp
 };
 
+//Includes
+#include <avr/io.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include "mcc_generated_files/adc/adc0.h"
+#include "mcc_generated_files/system/system.h"
+#include "mcc_generated_files/power/power.h"
+
+#include "Libraries/I2C.h"
+#include "Libraries/Timed_Functions.h"
+
+//Maximum Parameters
+#define TempRatio 0.3327 //R(T)/R(25C). In datasheet NTC, Thermistors 10KOhm 5%, Mouser number: 581-NB20K00103JBA.
+#define MaxTemp 22440/(6800+3786*TempRatio) // Conversion from resistance to temperature using Tempratio
+#define Amount_Of_Overtemps_Allowed 2 //Number of allowed overtemps
+
+//BFG charge defines
+#define Charge_Scale 0.340*(50/5)*(256/4096) //Each bit represents 0.2125mAh
+#define Batt_Capacity_mAh 3200 //Battery capacity in mAh
+#define Lowest_Allowed_Charge_Normal_Operation 20 //Lowest allowed charge percentage before shutdown (Within normal operation)
+#define Absolute_Lowest_Allowed_Charge 15 //Absolute lowest allowed charge percentage before shutdown
+//ADC0_MOXPOS Defines
+#define Temp_Cell_1 	0x07	//PF0
+#define Temp_Cell_2 	0x06	//PD7
+#define Temp_Cell_3 	0x05	//PD6
+#define Temp_Cell_4 	0x04	//PD5
+#define Check_3v3 		0x08	//PF1 Must be changed to enable internal nets, because of broken pin============================================
+#define Cell_Voltage_1 	0x01	//PD2
+#define Cell_Voltage_2 	0x00	//PD1
+#define Cell_Voltage_3 	0x03	//PD4
+#define Cell_Voltage_4 	0x02	//PD3
+
+//ADC0_Result Variables
+volatile uint16_t Temp_Cell_1_Result = 0;
+volatile uint16_t Temp_Cell_2_Result = 0;
+volatile uint16_t Temp_Cell_3_Result = 0;
+volatile uint16_t Temp_Cell_4_Result = 0;
+volatile uint16_t Check_3v3_Result = 0;
+volatile uint16_t Cell_Voltage_1_Result = 0;
+volatile uint16_t Cell_Voltage_2_Result = 0;
+volatile uint16_t Cell_Voltage_3_Result = 0;
+volatile uint16_t Cell_Voltage_4_Result = 0;
+volatile bool ADC0_Filled_All_Values = false;
+
+//Amount of overtemps
+volatile uint8_t Overtemp_Count = 0;
+//Acumulated Charge Variables
+volatile uint16_t Accumulated_Charge = 0;
+
 //Variables
 enum state CurrentState = S_Init;
 enum state NextState = S_Init;
-enum problemevents CurrentEvent = PE_NoEvent;
+enum events CurrentEvent = E_NoEvent;
 enum problemstates CurrentProblemState = PS_NoState;
 enum problemstates NextProblemState = PS_NoState;
 enum problemevents ProblemEvent = PE_NoEvent;
@@ -107,7 +109,7 @@ uint16_t BFG_Result_to_Voltage(uint16_t BFG_RES){//Convert BFG LTC2943 result to
 	return (23.6*(BFG_RES/65535));
 }
 void Enable_External_Balancer_Interrupt_Handler(){ //Interupt of external balancer pin
-	problemevents = PE_Ext_Balance;
+	ProblemEvent = PE_Ext_Balance;
 }
 void BFG_Alert_Interrupt_Handler(){ //Alert from BFG LTC2943
 	ProblemEvent = PE_Alert;
@@ -162,7 +164,7 @@ void ADC0_Conversion_Done(){//Callback function when ADC conversion is done
 
 
 uint16_t CheckAccumulatedCharge(){
-	Accumulated_Charge = ((Charge_Scale*(Get_LTC2943_REG(Charge_MSB_REG) << 8) | Get_LTC2943_REG(Charge_LSB_REG))/Batt_Capacity_mAh)*100;//Convert to percentage of total capacity;
+	Accumulated_Charge = Get_LTC2943_REG(Accumulated_Charge_REG);	
 	return Accumulated_Charge;
 }
 
@@ -181,7 +183,7 @@ void PrepareBFG(enum LTC2943_ADC_Mode ADC_Mode, enum LTC2943_Prescalar_Mode Pres
 	Write_Control_REG();
 }
 enum problemevents SelfCheck() {
-	Batt_Percentage = CheckAccumulatedCharge();
+	uint16_t Batt_Percentage = CheckAccumulatedCharge();
 	if (Batt_Percentage <= Lowest_Allowed_Charge_Normal_Operation){
 		CurrentEvent = E_Batt_Empty;
 		return PE_NoEvent;
@@ -221,6 +223,9 @@ enum problemevents Overtemp(){
 	else if(selfcheckresult == PE_scnd_Overtemp){
 		return PE_scnd_Overtemp;
 	}
+    else{
+        return PE_NoEvent;
+    }
 }
 void EnableInternalNet(bool OnOrOff) {
 	if (OnOrOff){
@@ -338,6 +343,9 @@ enum problemevents BFG_Check() {
 	if (LTC2943_Error_Status_Array[0]){ //Undervoltage Lockout Alert
 		return PE_Ext_Balance; //Output of BFG not trustworthy, use external balancer
 	}
+    else{
+        return PE_NoEvent;
+    }
 }
 
 
@@ -347,12 +355,10 @@ void PrepareTotalShutdown() {
 
 void FixCountFail(){
 	if (CurrentState == S_Charge){//Asuming counter overflowed, reset charge to full charge, because counter can only overflow when charging.
-		LTC2943_Write_REG(Charge_MSB_REG, 0xFF);
-		LTC2943_Write_REG(Charge_LSB_REG, 0xFF);
+		Set_LTC2943_REG(Accumulated_Charge, 0xFFFF);
 	}
 	else{//Asuming counter underflowed, reset charge to empty charge, because counter can only underflow when discharging.
-		LTC2943_Write_REG(Charge_MSB_REG, 0x00);
-		LTC2943_Write_REG(Charge_LSB_REG, 0x00);
+		Set_LTC2943_REG(Accumulated_Charge, 0x0000);
 	}
 }
 void ProblemEvents() {
@@ -401,6 +407,12 @@ void ProblemEvents() {
 		problemflow = F_Exit;
 		NextProblemState = PS_Cell_Voltage;
 		break;
+	case PE_BFG_Overtemp:
+		problemflow = F_Exit;
+		NextProblemState = PS_Total_Shutdown;
+		break;
+	default:
+		break;
 	}
 	Set_Error_Pattern(NextProblemState);
 
@@ -413,8 +425,8 @@ int main() {
 	SYSTEM_Initialize();
 	Setup_Timed_Functions();
 	ADC0_ConversionDoneCallbackRegister(ADC0_Conversion_Done);
-	EN_EXT_Balance_DefaultInterruptHandler(Enable_External_Balancer_Interrupt_Handler);
-	BFG_Alert_DefaultInterruptHandler(BFG_Alert_Interrupt_Handler);
+	EN_EXT_Balance_SetInterruptHandler(Enable_External_Balancer_Interrupt_Handler);
+	BFG_Alert_SetInterruptHandler(BFG_Alert_Interrupt_Handler);
 	while (1) {
 		switch (CurrentState) {
 			case S_NoState:
@@ -577,7 +589,7 @@ int main() {
 					case F_Entry:
 						ProblemEntry(1);
 					case F_Run:
-						CellFix();
+						DischargeCell();
 						break;
 					case F_Exit:
 						ProblemEntry(0);
@@ -603,5 +615,5 @@ int main() {
 			POWER_LowPowerModeEnter(POWER_IDLE_MODE);
 		}
 	}
-	return 0;
+    return 1;
 }
