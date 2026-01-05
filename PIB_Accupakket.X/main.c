@@ -81,6 +81,11 @@ volatile uint16_t Cell_Voltage_3_Result = 0;
 volatile uint16_t Cell_Voltage_4_Result = 0;
 volatile bool ADC0_Filled_All_Values = false;
 
+static uint8_t register_data[NUM_REGISTERS] = {0, 0, 0, 0};
+static uint8_t register_selected = 0;
+static uint8_t rx_byte_count = 0; // NIEUWE TELLER: Aantal ontvangen data bytes (exclusief Adres)
+
+
 //Amount of overtemps
 volatile uint8_t Overtemp_Count = 0;
 //Acumulated Charge Variables
@@ -99,6 +104,82 @@ enum flow problemflow = F_Entry;
 
 
 //Functions ===================================================================
+void set_home_status(uint8_t status_value) {
+    if (status_value <= 4) {
+        register_data[HOME_STATUS] = status_value;
+    }
+}
+void process_command(uint8_t command) {
+    switch (command) {
+        case 10:
+            CurrentEvent = E_Batt_Empty;
+            break;
+        case 6:
+            //Code voor starten met opladen
+			set_home_status(1);
+            break;
+        case 7:
+            //Code voor stoppen met opladen
+			CurrentEvent = E_Batt_Full;
+			set_home_status(1);
+            break;
+        default:
+            //Code voor onbekende commando
+            break;
+    }
+}
+bool TWI0_EventHandler(i2c_client_transfer_event_t event) {
+    switch(event) {
+        case I2C_CLIENT_TRANSFER_EVENT_ADDR_MATCH:
+            // Reset de teller voor een nieuwe Write/Read transactie.
+            rx_byte_count = 0;
+            return true; // Altijd ACK de adres-match
+
+        case I2C_CLIENT_TRANSFER_EVENT_RX_READY: {
+            uint8_t received = TWI0_ReadByte();
+            rx_byte_count++; // Tel de ontvangen data byte
+
+            // 1. REGISTER SELECTIE & COMMANDO/DATA ONTVANGEN (MASTER WRITE)
+            if (rx_byte_count == 1) { 
+                // Eerste data byte (het Register-adres)
+                register_selected = received;
+                // printf("Slave selecteert Register: 0x%X\n", register_selected);
+            } else {
+                // Tweede data byte (de Data voor het Register)
+                if (register_selected < NUM_REGISTERS) {
+                    register_data[register_selected] = received;
+                    // printf("Slave ontvangt data voor 0x%X: %u\n", register_selected, received);
+                    
+                    if (register_selected == HOME_COMMAND) {
+                        process_command(received);
+                    }
+                }
+            }
+            return true; // Altijd ACK om de volgende byte te ontvangen
+        }
+
+        case I2C_CLIENT_TRANSFER_EVENT_TX_READY: {
+            // 2. DATA ZENDEN (MASTER READ)
+            if (register_selected < NUM_REGISTERS) {
+                uint8_t data_to_send = register_data[register_selected];
+                TWI0_WriteByte(data_to_send);
+                // printf("Slave stuurt Register 0x%X: %u\n", register_selected, data_to_send);
+            } else {
+                TWI0_WriteByte(0xFF);
+            }
+            return true;
+        }
+
+        case I2C_CLIENT_TRANSFER_EVENT_STOP_BIT_RECEIVED:
+            // De transactie is volledig afgesloten, geen verdere actie nodig
+            return true;
+
+        default:
+            return true;
+    }
+}
+
+
 uint16_t ADC0RES_to_mV(uint16_t ADCRES) {//Convert ADC result to mV
 	return (ADCRES * 4096) / 3300;//3300mV reference, 12 bit ADC
 }
