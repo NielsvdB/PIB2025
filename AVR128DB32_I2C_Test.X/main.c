@@ -164,7 +164,12 @@ void Error_Entry (){
 }
 enum Events Init_Run(){
 	PrepareBFG(Automatic_Mode, M_256, Alert_Mode);
-	// Set_LTC2943_REG(uint8_t Address, uint16_t Data); Limieten voor de BFG moeten nog worden ingesteld.
+	//Instellen van de limieten
+	Set_LTC2943_REG(Current_Threshold_High_REG, 60073); //Deze moeten misschien andersom
+	Set_LTC2943_REG(Current_Threshold_Low_REG, 38228);
+	Set_LTC2943_REG(Voltage_Threshold_High_REG, 41098);
+	Set_LTC2943_REG(Voltage_Threshold_Low_REG, 33323);
+	Set_LTC2943_REG(Charge_Threshold_Low_REG, 51417);// Nog een keer checken
 
 	return E_Init_Done;
 }
