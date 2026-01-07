@@ -57,12 +57,12 @@ void ADC0_Initialize(void)
 				|(ADC_SAMPDLY_DLY4_gc);             /* SAMPDLY (DLY4) */
     ADC0.CTRLE = (ADC_WINCM_NONE_gc);               /* WINCM (No Window Comparison) */
     ADC0.SAMPCTRL = 0x40;                              /* SAMPLEN (0x40) */
-    ADC0.MUXPOS = (ADC_MUXPOS_AIN7_gc);              /* MUXPOS (AIN7) */
+    ADC0.MUXPOS = (ADC_MUXPOS_AIN1_gc);              /* MUXPOS (AIN1) */
     ADC0.MUXNEG = (ADC_MUXNEG_GND_gc);               /* MUXNEG (GND) */
     ADC0.COMMAND = (0 << ADC_STCONV_bp)               /* STCONV (disabled) */
 				|(0 << ADC_SPCONV_bp);              /* SPCONV (disabled) */
     ADC0.EVCTRL = (1 << ADC_STARTEI_bp);             /* STARTEI (enabled) */
-    ADC0.DBGCTRL = (1 << ADC_DBGRUN_bp);              /* DBGRUN (enabled) */
+    ADC0.DBGCTRL = (0 << ADC_DBGRUN_bp);              /* DBGRUN (disabled) */
     ADC0.WINHT = 0x0;                               /* WINHT (0x0) */
     ADC0.WINLT = 0x0;                               /* WINLT (0x0) */
     ADC0.INTCTRL = (1 << ADC_RESRDY_bp)               /* RESRDY (enabled) */

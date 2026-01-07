@@ -1,0 +1,5 @@
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_assemblePreprocess.dir
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/AVR128DB32_I2C_Test_default_default_XC8_compile.dir
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/AVR128DB32_I2C_Test_default_image_U_SYEx1A.dir
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/edit_cache.dir
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32_I2C_Test/default/CMakeFiles/rebuild_cache.dir

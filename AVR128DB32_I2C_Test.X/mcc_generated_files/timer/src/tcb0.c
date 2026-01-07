@@ -13,7 +13,7 @@
   * @version Package Version 6.0.0
 */
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+© [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -53,7 +53,7 @@ void TCB0_Initialize(void)
         | (0 << TCB_CCMPINIT_bp)   // CCMPINIT disabled
         | (TCB_CNTMODE_INT_gc);  // CNTMODE INT
 
-    TCB0.DBGCTRL = (1 << TCB_DBGRUN_bp);  // DBGRUN enabled
+    TCB0.DBGCTRL = (0 << TCB_DBGRUN_bp);  // DBGRUN disabled
 
     TCB0.EVCTRL = (0 << TCB_CAPTEI_bp)   // CAPTEI disabled
         | (0 << TCB_EDGE_bp)   // EDGE disabled
@@ -77,7 +77,7 @@ void TCB0_Initialize(void)
     TCB0.CTRLA = (0 << TCB_CASCADE_bp)   // CASCADE disabled
         | (TCB_CLKSEL_DIV2_gc)   // CLKSEL DIV2
         | (1 << TCB_ENABLE_bp)   // ENABLE enabled
-        | (1 << TCB_RUNSTDBY_bp)   // RUNSTDBY enabled
+        | (0 << TCB_RUNSTDBY_bp)   // RUNSTDBY disabled
         | (0 << TCB_SYNCUPD_bp);  // SYNCUPD disabled
 }
 

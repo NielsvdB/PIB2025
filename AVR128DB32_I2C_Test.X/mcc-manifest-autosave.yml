@@ -2,13 +2,13 @@
 
 manifest_file_version: 1.0.0
 project: AVR128DB32_I2C_Test
-creation_date: 2026-01-05T13:37:17.533+01:00[Europe/Berlin]
-operating_system: Windows 10
+creation_date: 2026-01-07T14:30:01.012+01:00[Europe/Berlin]
+operating_system: Windows 11
 mcc_mode: IDE
-mcc_mode_version: v6.20
+mcc_mode_version: v6.25
 device_name: AVR128DB32
 compiler: XC8 3.10
-mcc_version: 5.5.1
+mcc_version: 5.5.2
 mcc_core_version: 5.7.1
 content_manager_version: 5.0.1
 is_mcc_offline: false
@@ -20,6 +20,7 @@ modules:
 - {name: '@mchp-mcc/avr-8bit', type: MELODY, version: 4.14.2}
 - {name: '@mchp-mcc/avr8-configuration-bits-v1', type: MELODY, version: 4.3.0}
 - {name: '@mchp-mcc/avr8-pin-manager', type: MELODY, version: 4.6.2}
+- {name: '@mchp-mcc/delay-blocking-driver', type: MELODY, version: 3.2.0}
 - {name: '@mchp-mcc/generic-driver-interfaces', type: MELODY, version: 1.0.0}
 - {name: '@mchp-mcc/i2c-client-driver', type: MELODY, version: 2.1.0}
 - {name: '@mchp-mcc/i2c-host-driver', type: MELODY, version: 1.0.5}

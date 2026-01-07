@@ -51,7 +51,7 @@ void TCA0_Initialize(void)
 
     TCA0.SINGLE.CTRLB = (0 << TCA_SINGLE_ALUPD_bp)   // ALUPD disabled
         | (0 << TCA_SINGLE_CMP0EN_bp)   // CMP0EN disabled
-        | (0 << TCA_SINGLE_CMP1EN_bp)   // CMP1EN disabled
+        | (1 << TCA_SINGLE_CMP1EN_bp)   // CMP1EN enabled
         | (0 << TCA_SINGLE_CMP2EN_bp)   // CMP2EN disabled
         | (TCA_SINGLE_WGMODE_NORMAL_gc);  // WGMODE NORMAL
 
@@ -96,7 +96,7 @@ void TCA0_Initialize(void)
         | (0 << TCA_SINGLE_CMP2_bp)   // CMP2 disabled
         | (0 << TCA_SINGLE_OVF_bp);  // OVF disabled
 
-    TCA0.SINGLE.PER = 0xFFFFU;  // PER 0xFFFF
+    TCA0.SINGLE.PER = 0x1F3FU;  // PER 0x1F3F
 
     TCA0.SINGLE.TEMP = 0x0;  // TEMP 0x0
 

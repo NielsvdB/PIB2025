@@ -12,7 +12,7 @@ build/default/debug/mcc_generated_files/system/src/clock.o.d \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\stdint.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\bits\alltypes.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\bits\stdint.h \
- C:/Users/Navan/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/include/avr/ioavr128db32.h \
+ C:/Program\ Files/Microchip/MPLABX/v6.25/packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/include/avr/ioavr128db32.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\portpins.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\common.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\xmega.h \
@@ -50,7 +50,7 @@ c:\program\ files\microchip\xc8\v3.10\avr\avr\include\bits\alltypes.h:
 
 c:\program\ files\microchip\xc8\v3.10\avr\avr\include\bits\stdint.h:
 
-C:/Users/Navan/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/include/avr/ioavr128db32.h:
+C:/Program\ Files/Microchip/MPLABX/v6.25/packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/include/avr/ioavr128db32.h:
 
 c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\portpins.h:
 

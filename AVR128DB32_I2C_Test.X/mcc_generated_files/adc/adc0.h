@@ -44,55 +44,55 @@
  * @ingroup adc0
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_PD1 ADC0_CHANNEL_AIN1
+#define Cell_2_Pin ADC0_CHANNEL_AIN1
 
 /**
  * @ingroup adc0
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_PD2 ADC0_CHANNEL_AIN2
+#define Cell_1_Pin ADC0_CHANNEL_AIN2
 
 /**
  * @ingroup adc0
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_PD3 ADC0_CHANNEL_AIN3
+#define Cell_4_Pin ADC0_CHANNEL_AIN3
 
 /**
  * @ingroup adc0
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_PD4 ADC0_CHANNEL_AIN4
+#define Cell_3_Pin ADC0_CHANNEL_AIN4
 
 /**
  * @ingroup adc0
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_PD5 ADC0_CHANNEL_AIN5
+#define Temp_Cell_4_Pin ADC0_CHANNEL_AIN5
 
 /**
  * @ingroup adc0
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_PD6 ADC0_CHANNEL_AIN6
+#define Temp_Cell_3_Pin ADC0_CHANNEL_AIN6
 
 /**
  * @ingroup adc0
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_PD7 ADC0_CHANNEL_AIN7
+#define Temp_Cell_2_Pin ADC0_CHANNEL_AIN7
 
 /**
  * @ingroup adc0
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_PF0 ADC0_CHANNEL_AIN16
+#define Temp_Cell_1_Pin ADC0_CHANNEL_AIN16
 
 /**
  * @ingroup adc0
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_PF1 ADC0_CHANNEL_AIN17
+#define Check_3V3_Pin ADC0_CHANNEL_AIN17
 
 /**
  * @ingroup adc0

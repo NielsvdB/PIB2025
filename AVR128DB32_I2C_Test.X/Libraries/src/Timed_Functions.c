@@ -1,4 +1,5 @@
 #include "../../mcc_generated_files/system/system.h"
+#include <stdint.h>
 #include "../Timed_Functions.h"
 
 // --- Global Variables ---
@@ -55,10 +56,10 @@ void Update_LED_Sequencer(){
     // Odd Index  (1, 3, 5) = OFF
     if((LED_Step_Index % 2) == 0){
         // If the duration of this ON step is 0, force LOW to be safe
-        if(LED_Pattern[LED_Step_Index] == 0) LED_SetLow();
-        else LED_SetHigh();
+        if(LED_Pattern[LED_Step_Index] == 0) LED_SetHigh();
+        else LED_SetLow();
     } else {
-        LED_SetLow(); 
+        LED_SetHigh(); 
     }
 }
 
@@ -84,7 +85,7 @@ void Set_Error_Pattern(uint8_t error_code){
     LED_Step_Counter = 0;
 
     switch(error_code){
-        case 0: // NORMAL (Solid ON)
+        case 0: //NORMAL (Solid ON)
             LED_Pattern[0] = 1000; 
             LED_Pattern[1] = 0;
             LED_Pattern[2] = 0;    
@@ -93,22 +94,80 @@ void Set_Error_Pattern(uint8_t error_code){
             LED_Pattern[5] = 0;
             break;
 
-        case 1: // Current ERROR
+        case 1: //Ext balance
             LED_Pattern[0] = 200;  // ON
             LED_Pattern[1] = 200;  // OFF
-            LED_Pattern[2] = 200;  // ON
-            LED_Pattern[3] = 200;  // OFF
-            LED_Pattern[4] = 200;  // ON
-            LED_Pattern[5] = 200;  // OFF
+            LED_Pattern[2] = 0;  // ON
+            LED_Pattern[3] = 0;  // OFF
+            LED_Pattern[4] = 0;  // ON
+            LED_Pattern[5] = 0;  // OFF
             break;
             
-        case 2:
+        case 2: //Alert
             LED_Pattern[0] = 200;  // ON
             LED_Pattern[1] = 200;  // OFF
             LED_Pattern[2] = 200;  // ON
             LED_Pattern[3] = 200;  // OFF
-            LED_Pattern[4] = 200;  // ON
+            LED_Pattern[4] = 1000;  // ON
             LED_Pattern[5] = 200;  // OFF
+            break;
+        case 3: //Undervolt
+            LED_Pattern[0] = 1;  // ON
+            LED_Pattern[1] = 1000;  // OFF
+            LED_Pattern[2] = 0;  // ON
+            LED_Pattern[3] = 0;  // OFF
+            LED_Pattern[4] = 0;  // ON
+            LED_Pattern[5] = 0;  // OFF
+            break;
+        case 4: //Extreme Overvolt
+            LED_Pattern[0] = 800;  // ON
+            LED_Pattern[1] = 200;  // OFF
+            LED_Pattern[2] = 0;  // ON
+            LED_Pattern[3] = 0;  // OFF
+            LED_Pattern[4] = 0;  // ON
+            LED_Pattern[5] = 0;  // OFF
+            break;
+        case 5: //Unbalance
+            LED_Pattern[0] = 200;  // ON
+            LED_Pattern[1] = 200;  // OFF
+            LED_Pattern[2] = 800;  // ON
+            LED_Pattern[3] = 800;  // OFF
+            LED_Pattern[4] = 0;  // ON
+            LED_Pattern[5] = 0;  // OFF
+            break;
+        case 6: //Overtemp
+        case 7: //Second Overtemp
+        case 11://BFG Overtemp
+            LED_Pattern[0] = 50;  // ON
+            LED_Pattern[1] = 200;   // OFF
+            LED_Pattern[2] = 0;  // ON
+            LED_Pattern[3] = 0;   // OFF
+            LED_Pattern[4] = 0;  // ON
+            LED_Pattern[5] = 0;   // OFF
+            break;
+        case 8: //Count Fail
+            LED_Pattern[0] = 500;  // ON
+            LED_Pattern[1] = 400;   // OFF
+            LED_Pattern[2] = 300;  // ON
+            LED_Pattern[3] = 200;   // OFF
+            LED_Pattern[4] = 100;  // ON
+            LED_Pattern[5] = 50;   // OFF
+            break;
+        case 9: //Over Current
+            LED_Pattern[0] = 50;  // ON
+            LED_Pattern[1] = 50;   // OFF
+            LED_Pattern[2] = 0;  // ON
+            LED_Pattern[3] = 0;   // OFF
+            LED_Pattern[4] = 0;  // ON
+            LED_Pattern[5] = 0;   // OFF
+            break;
+        case 10: // Overvoltage
+            LED_Pattern[0] = 50;  // ON
+            LED_Pattern[1] = 50;  // OFF
+            LED_Pattern[2] = 50;  // ON
+            LED_Pattern[3] = 50;  // OFF
+            LED_Pattern[4] = 50;  // ON
+            LED_Pattern[5] = 500;  // OFF
             break;
     }
 }

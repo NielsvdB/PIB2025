@@ -1,5 +1,4 @@
-// Typedefs for statemachine====================================================================================================
-#include "mcc_generated_files/system/pins.h"
+// Typedefs voor statemachine====================================================================================================
 enum States {
 	S_Error, //State waarin de problemstatemachine handelt en de normale state machine niks mag doen
 	S_Init, //Opstart state
@@ -9,7 +8,7 @@ enum States {
 	S_Batt_Full //Batterij vol, maar aan de lader
 };
 enum Events {
-	E_Error,
+	E_Error, // Er is een probleem die niet kan worden opgelost door deze statemachine, de problemstatemachine neemt over
 	E_Error_Handled, //Probleem is afgehandelt door de problemstatemachine, normale statemachine mag opnieuw opstarten
 	E_Init_Done, //Opstarten is afgelopen, klaar voor normale operatie
 	E_No_Event, //Er gebeurt niks, doorgaan zoals net
@@ -23,6 +22,28 @@ enum Flow { //Flow wordt gebruikt om de verschillende states aan elkaar te verbi
 	F_Run,
 	F_Exit
 };
+
+// Typedefs voor problem statemachine========================================================================================
+enum ProblemStates {
+	PS_No_Problem, //Er is geen probleem, deze statemachine doet niks
+	PS_Overvolt,
+	PS_Handle_BFG_Alert,
+	PS_Total_Shutdown,
+	PS_Count_Fix
+};
+enum ProblemEvents {
+	PE_No_Event,
+	PE_Alert,
+	PE_Overtemp,
+	PE_Undervolt,
+	PE_Overvolt,
+	PE_Count_Fail,
+	PE_Single_Cell_Empty,
+	PE_Over_Current,
+	PE_BFG_Overtemp,
+	PE_Systeem_Integratie_Nood
+};
+
 
 //Typedef voor I2C===============================================================================================================
 enum HomeReg {
@@ -39,6 +60,7 @@ enum HomeReg {
 #include "mcc_generated_files/adc/adc0.h"
 #include "mcc_generated_files/system/system.h"
 #include "mcc_generated_files/power/power.h"
+#include "mcc_generated_files/system/pins.h"
 
 #include "Libraries/I2C.h"
 #include "Libraries/Timed_Functions.h"
@@ -53,17 +75,31 @@ enum HomeReg {
 #define Cell_Voltage_3 	0x03	//PD4
 #define Cell_Voltage_4 	0x02	//PD3
 
+//Cell defines=======================================================================================================================
+#define Amount_Of_Cells 4
+
+//Cell voltage defines
+#define Min_Cell_Voltage 3200
+#define Max_Cell_Voltage 3700
+#define Cell_Voltage_Start_Drain 3650
+#define Cell_Voltage_Stop_Drain 3600
+
 //Temp defines
 #define Max_Temp 250
 
 //I2C================================================================================================================================
 #define NUM_REGISTERS 4
 
-//Variables for statemachine============================================================================================================
+//Variables voor statemachine============================================================================================================
 enum States CurrentState = S_Init;
 enum States NextState = S_Init; 
 enum Events CurrentEvent = E_No_Event;
 enum Flow CurrentFlow = F_Entry;
+
+//Variables voor de problemstatemachine==============================================================================================
+enum ProblemStates CurrentProblemState = PS_No_Problem;
+enum ProblemStates NextProblemState = PS_No_Problem;
+enum ProblemEvents CurrentProblemEvent = PE_No_Event;
 
 //ADC0_Result Variables===============================================================================================================
 volatile uint16_t Temp_Cell_1_Result = 0;
@@ -238,7 +274,7 @@ void Enable_External_Balancer_ISR () { //Microcontroller mag niet bemoeien met e
 	while(1){sleep_mode();};
 }
 void BFG_Alert_ISR () {
-	;
+	CurrentProblemEvent = PE_Alert;
 }
 void Charger_Connect_ISR (){ //De interupt handler voor het aansluiten en loshalen van de lader
 	if(Lader_Output_GetValue()){ // Dit kan misgaan door contactdender!!!
@@ -250,20 +286,63 @@ void Charger_Connect_ISR (){ //De interupt handler voor het aansluiten en loshal
 }
 
 //Regular Functions==================================================================================================================
-enum Events TempCheck() {//Check if any temperature is above maximum
-	if(Temp_Cell_1_Result > Max_Temp || Temp_Cell_2_Result > Max_Temp || Temp_Cell_3_Result > Max_Temp || Temp_Cell_4_Result > Max_Temp) {//=======================================================================================================================================================================================
-		return 1;
+enum ProblemEvents TempCheck() {//Check if any temperature is above maximum
+	if(Temp_Cell_1_Result > Max_Temp || Temp_Cell_2_Result > Max_Temp || Temp_Cell_3_Result > Max_Temp || Temp_Cell_4_Result > Max_Temp) {
+		return PE_Overtemp;
 	}else {
-		return 0;
+		return PE_No_Event;
 	}
 }
 
-enum Events Monitor_Batt (){
-	return E_No_Event;
+enum ProblemEvents Monitor_Batt (){
+	if(Cell_Voltage_1_Result <= Min_Cell_Voltage || Cell_Voltage_2_Result <= Min_Cell_Voltage || Cell_Voltage_3_Result <= Min_Cell_Voltage || Cell_Voltage_4_Result <= Min_Cell_Voltage){
+		CurrentEvent = E_Batt_Empty;
+		return PE_No_Event;
+	}
+	else if (Cell_Voltage_1_Result >= Max_Cell_Voltage || Cell_Voltage_2_Result >= Max_Cell_Voltage || Cell_Voltage_3_Result >= Max_Cell_Voltage || Cell_Voltage_4_Result >= Max_Cell_Voltage){
+		return PE_Overvolt;
+	}
+	else{
+		return TempCheck();
+	}
 }
 
+void Balance_Cells(){
+	//Bypass cell 1 if voltage to high
+	if(Cell_Voltage_1_Result > Cell_Voltage_Start_Drain){
+		Drain_Cell_1_SetHigh();
+	}
+	else if (Cell_Voltage_1_Result < Cell_Voltage_Stop_Drain){
+		Drain_Cell_1_SetLow();
+	}
+
+	//Bypass cell 2 if voltage to high
+	if(Cell_Voltage_2_Result > Cell_Voltage_Start_Drain){
+		Drain_Cell_2_SetHigh();
+	}
+	else if (Cell_Voltage_2_Result < Cell_Voltage_Stop_Drain){
+		Drain_Cell_2_SetLow();
+	}
+
+	//Bypass cell 3 if voltage to high
+	if(Cell_Voltage_3_Result > Cell_Voltage_Start_Drain){
+		Drain_Cell_3_SetHigh();
+	}
+	else if (Cell_Voltage_3_Result < Cell_Voltage_Stop_Drain){
+		Drain_Cell_3_SetLow();
+	}
+	
+	//Bypass cell 4 if voltage to high
+	if(Cell_Voltage_4_Result > Cell_Voltage_Start_Drain){
+		Drain_Cell_4_SetHigh();
+	}
+	else if (Cell_Voltage_4_Result < Cell_Voltage_Stop_Drain){
+		Drain_Cell_4_SetLow();
+	}
+}
 // Statemachine Functions============================================================================================================
 void Switch_State (){ //Schakel naar nieuwe state
+	CurrentEvent = E_No_Event;
 	CurrentState = NextState;
 	CurrentFlow = F_Entry;
 }
@@ -273,8 +352,9 @@ void Error_Entry (){
 enum Events Init_Run(){
 	PrepareBFG(Automatic_Mode, M_256, Alert_Mode);
 	//Instellen van de limieten
-	Set_LTC2943_REG(Current_Threshold_High_REG, 60073); //Deze moeten misschien andersom
-	Set_LTC2943_REG(Current_Threshold_Low_REG, 38228);
+	Set_LTC2943_REG(Accumulated_Charge_REG, 0xFFFF); //Zet de lading op max om errors te voorkomen
+	Set_LTC2943_REG(Current_Threshold_High_REG, 38228);//	((MaxLaadStroom*ShuntWeerstand)/60mV*32767)+32767
+	Set_LTC2943_REG(Current_Threshold_Low_REG, 5461);//	((-MaxOntlaadStroom*ShuntWeerstand)/60mV*32767)+32767
 	Set_LTC2943_REG(Voltage_Threshold_High_REG, 41098);
 	Set_LTC2943_REG(Voltage_Threshold_Low_REG, 33323);
 	Set_LTC2943_REG(Charge_Threshold_Low_REG, 51417);// Nog een keer checken
@@ -285,6 +365,7 @@ enum Events Discharge_Entry(){
 	return E_No_Event;
 }
 enum Events Discharge_Run(){
+	CurrentProblemEvent = Monitor_Batt();
 	return E_No_Event;
 }
 void Discharge_Exit(){
@@ -294,6 +375,8 @@ enum Events Charge_Entry(){
 	return E_No_Event;
 }
 enum Events Charge_Run(){
+	Balance_Cells();
+	CurrentProblemEvent = Monitor_Batt();
 	return E_No_Event;
 }
 void Charge_Exit(){
@@ -318,6 +401,19 @@ void Shutdown_Exit(){
 	;
 }
 
+//ProblemState functions==================================================================================================================
+enum Events Overvolt(){
+	return E_No_Event;
+}
+enum Events Handle_BFG_Alert(){
+	return E_No_Event;
+}
+void Total_Shutdown(){
+	;
+}
+enum Events CountFix(){
+	return E_No_Event;
+}
 
 
 //Main Function=========================================================================================================================
@@ -329,6 +425,7 @@ int main () {
 	BFG_Alert_SetInterruptHandler(BFG_Alert_ISR);
 	Lader_Output_SetInterruptHandler(Charger_Connect_ISR);
 	while(1) {
+		//Statemachine=================================
 		switch (CurrentState){
 			case S_Error:
 				switch (CurrentEvent){
@@ -483,6 +580,76 @@ int main () {
 						break;
 				}
 		}
+		//Problem statemachine ==================================
+		switch (CurrentProblemState){
+			case PS_No_Problem:
+				switch (CurrentProblemEvent){
+					case PE_Alert:
+						NextProblemState = PS_Handle_BFG_Alert;
+						break;
+					case PE_Overtemp:
+					case PE_Undervolt:
+					case PE_Over_Current:
+					case PE_BFG_Overtemp:
+					case PE_Systeem_Integratie_Nood:
+						NextProblemState = PS_Total_Shutdown;
+						break;
+					case PE_Overvolt:
+						NextProblemState = PS_Overvolt;
+						break;
+					case PE_Count_Fail:
+						NextProblemState = PS_Count_Fix;
+						break;
+					case PE_Single_Cell_Empty:
+						NextProblemState = PS_No_Problem;
+						CurrentEvent = E_Batt_Empty;
+						break;
+					case PE_No_Event:
+						NextProblemState = PS_No_Problem;
+					default:
+						break;
+				}
+				break;
+			case PS_Overvolt:
+				switch (CurrentProblemEvent){
+					case PE_Overtemp:
+					case PE_Undervolt:
+					case PE_Over_Current:
+					case PE_BFG_Overtemp:
+					case PE_Systeem_Integratie_Nood:
+						NextProblemState = PS_Total_Shutdown;
+						break;
+					case PE_No_Event:
+						NextProblemState = PS_No_Problem;
+					default:
+						break;
+				}
+				CurrentEvent = Overvolt();
+				break;
+			case PS_Handle_BFG_Alert:
+				switch (CurrentProblemEvent){
+					case PE_Overtemp:
+					case PE_Undervolt:
+					case PE_Over_Current:
+					case PE_BFG_Overtemp:
+					case PE_Systeem_Integratie_Nood:
+						NextProblemState = PS_Total_Shutdown;
+						break;
+					case PE_No_Event:
+						NextProblemState = PS_No_Problem;
+					default:
+						break;
+				}
+				CurrentEvent = Handle_BFG_Alert();
+				break;
+			case PS_Total_Shutdown:
+				Total_Shutdown();
+				break;
+			case PS_Count_Fix:
+				CurrentEvent = CountFix();
+				break;
+		}
+		CurrentProblemState = NextProblemState;
 	}
 	return 0;
 }

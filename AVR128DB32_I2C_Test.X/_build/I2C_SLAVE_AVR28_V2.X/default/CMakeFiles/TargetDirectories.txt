@@ -1,5 +1,0 @@
-C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/I2C_SLAVE_AVR28_V2.X/default/CMakeFiles/I2C_SLAVE_AVR28_V2_X_default_default_XC8_assemblePreprocess.dir
-C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/I2C_SLAVE_AVR28_V2.X/default/CMakeFiles/I2C_SLAVE_AVR28_V2_X_default_default_XC8_compile.dir
-C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/I2C_SLAVE_AVR28_V2.X/default/CMakeFiles/I2C_SLAVE_AVR28_V2_X_default_image_jSHh7ocn.dir
-C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/I2C_SLAVE_AVR28_V2.X/default/CMakeFiles/edit_cache.dir
-C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/I2C_SLAVE_AVR28_V2.X/default/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,5 @@
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32/default/CMakeFiles/AVR128DB32_default_default_XC8_assemblePreprocess.dir
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32/default/CMakeFiles/AVR128DB32_default_default_XC8_compile.dir
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32/default/CMakeFiles/AVR128DB32_default_image_ekgeMOIz.dir
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32/default/CMakeFiles/edit_cache.dir
+C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/_build/AVR128DB32/default/CMakeFiles/rebuild_cache.dir

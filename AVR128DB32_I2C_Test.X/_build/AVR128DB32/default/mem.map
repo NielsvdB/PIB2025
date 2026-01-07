@@ -1,0 +1,2389 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o (__udivmodhi4)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o (__tablejump2__)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o (__do_copy_data)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o (__muluhisi3)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o (__adddi3_s8)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o (__cmpdi2)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o) (__umulhisi3)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o (__subsf3)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o) (__addsf3x)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o (__divsf3)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o) (__divsf3x)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o (__fixunssfsi)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o (__floatunsisf)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_inf)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_nan)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_pscA)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_pscB)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o) (__fp_round)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_split3)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_zero)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+                              CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o (__mulsf3)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o) (__mulsf3x)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+                              C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o (exit)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o) (_Exit)
+c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+                              c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o) (_exit)
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+ .bss           0x0000000000000000        0x0 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_assemblePreprocess.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\protected_io.S.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_assemblePreprocess.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\protected_io.S.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_assemblePreprocess.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\protected_io.S.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .text.Get_LTC2943_REG_8
+                0x0000000000000000       0x4a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .text.Get_LTC2943_REG_16
+                0x0000000000000000       0x5a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .text.Get_LTC2943_REG
+                0x0000000000000000       0x2e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .progmem.gcc_sw_table.Get_LTC2943_REG
+                0x0000000000000000       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .text.Get_Active_Alerts
+                0x0000000000000000       0x40 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .text.Get_Battery_Charge_In_mAh
+                0x0000000000000000       0xa8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .progmem.gcc_sw_table.Get_Battery_Charge_In_mAh
+                0x0000000000000000        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .text.Get_Battery_Voltage
+                0x0000000000000000       0x2a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .text.Get_Battery_Current
+                0x0000000000000000       0x28 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .text.Get_LTC2943_Tempature
+                0x0000000000000000       0x26 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .rodata.LTC2943_Current_Conversion_Constant
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .rodata.LTC2943_Voltage_Conversion_Constant
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .rodata.LTC2943_Capacity_Conversion_Constant
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .bss.LTC2943_Error_Status_Array
+                0x0000000000000000        0x7 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .text.Set_Error_Pattern
+                0x0000000000000000      0x1b8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .progmem.gcc_sw_table.Set_Error_Pattern
+                0x0000000000000000       0x18 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .data.Cell_Drain_Time
+                0x0000000000000000        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.set_home_status
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.process_command
+                0x0000000000000000       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.TWI0_EventHandler
+                0x0000000000000000       0x66 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.ADC0RES_to_mV
+                0x0000000000000000       0x16 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.BFG_Result_to_Voltage
+                0x0000000000000000       0x2a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.TempCheck
+                0x0000000000000000       0x4a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Monitor_Batt
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Error_Entry
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Discharge_Entry
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Discharge_Run
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Discharge_Exit
+                0x0000000000000000        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Charge_Entry
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Charge_Run
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Charge_Exit
+                0x0000000000000000        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Batt_Full_Entry
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Batt_Full_Run
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Batt_Full_Exit
+                0x0000000000000000        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Shutdown_Entry
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Shutdown_Run
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text.Shutdown_Exit
+                0x0000000000000000        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .bss.rx_byte_count
+                0x0000000000000000        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .bss.register_selected
+                0x0000000000000000        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .bss.register_data
+                0x0000000000000000        0x4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_Deinitialize
+                0x0000000000000000       0x28 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_Enable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_Disable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ConversionStart
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ConversionDoneInterruptEnable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ConversionDoneInterruptDisable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_IsConversionDone
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ConversionResultGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ChannelSelectAndConvert
+                0x0000000000000000       0x1c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ResolutionGet
+                0x0000000000000000       0x10 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ConversionStop
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_SampleRepeatCountSet
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ComputationModeSet
+                0x0000000000000000       0x1a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_UpperThresholdSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_LowerThresholdSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ThresholdModeSet
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ThresholdInterruptEnable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ThresholdInterruptDisable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_AccumulatedResultGet
+                0x0000000000000000        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ThresholdCallbackRegister
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ContinuousConversionEnable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ContinuousConversionDisable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_AutoTriggerEnable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_AutoTriggerDisable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_IsConversionDoneInterruptFlagSet
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ConversionDoneInterruptFlagClear
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_IsThresholdInterruptFlagSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text.ADC0_ThresholdInterruptFlagClear
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .text.EVSYS_SoftwareEventASet
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .text.TWI0_Deinitialize
+                0x0000000000000000       0x16 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .text.TWI0_WriteByte
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .text.TWI0_ReadByte
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .text.TWI0_ErrorGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .text.TWI0_TransferDirGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .text.TWI0_LastByteAckStatusGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .text.TWI0_CallbackRegister
+                0x0000000000000000        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .text.TWI0_ReadAddr
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .rodata.I2C0_Client
+                0x0000000000000000       0x12 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .text.TWI1_Deinitialize
+                0x0000000000000000       0x22 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .text.TWI1_ErrorGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .text.TWI1_CallbackRegister
+                0x0000000000000000        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .text.TWI1_Read
+                0x0000000000000000       0x5c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .text.TWI1_WriteRead
+                0x0000000000000000       0x6e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .rodata.LTC2943
+                0x0000000000000000       0x14 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.FLASH_SpmWriteWord
+                0x0000000000000000       0x1e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.NVM_StatusGet
+                0x0000000000000000        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.FLASH_Read
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.FLASH_Write
+                0x0000000000000000       0x4e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.FLASH_RowWrite
+                0x0000000000000000       0x92 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.FLASH_PageErase
+                0x0000000000000000       0x46 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.FLASH_IsBusy
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.FLASH_PageAddressGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.FLASH_PageOffsetGet
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.EEPROM_Read
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.EEPROM_Write
+                0x0000000000000000       0x2c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text.EEPROM_IsBusy
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .text.POWER_LowPowerModeEnter
+                0x0000000000000000       0x48 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .debug_info    0x0000000000000000      0x371 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .debug_abbrev  0x0000000000000000       0xb0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .debug_loc     0x0000000000000000       0xd3 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .debug_aranges
+                0x0000000000000000       0x20 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .debug_ranges  0x0000000000000000       0x10 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .debug_line    0x0000000000000000      0x1e8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .debug_str     0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .comment       0x0000000000000000       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .debug_frame   0x0000000000000000       0x24 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .text.RSTCTRL_SoftwareReset
+                0x0000000000000000        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .text.RSTCTRL_ResetCauseGet
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .text.RSTCTRL_ResetFlagsAllClear
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .text.RSTCTRL_ResetFlagClear
+                0x0000000000000000       0x4c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .debug_info    0x0000000000000000      0x4d4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .debug_abbrev  0x0000000000000000      0x15a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .debug_loc     0x0000000000000000       0xc7 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .debug_aranges
+                0x0000000000000000       0x38 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .debug_ranges  0x0000000000000000       0x28 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .debug_line    0x0000000000000000      0x27a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .debug_str     0x0000000000000000       0x13 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .comment       0x0000000000000000       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .debug_frame   0x0000000000000000       0x54 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .text.CFD_Enable
+                0x0000000000000000       0x10 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .text.CFD_Disable
+                0x0000000000000000       0x12 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Lader_Input_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.SCL_LTC2943_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.SDA_LTC2943_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.SCL_Slave_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.SDA_Slave_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Cell_2_Pin_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Cell_1_Pin_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Cell_4_Pin_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Cell_3_Pin_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Temp_Cell_4_Pin_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Temp_Cell_3_Pin_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Temp_Cell_2_Pin_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Temp_Cell_1_Pin_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Check_3V3_Pin_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Drain_Cell_1_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Drain_Cell_2_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Drain_Cell_3_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.Drain_Cell_4_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.EN_Buck_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.EN_Lader_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.EN_Batt_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text.LED_SetInterruptHandler
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .text.DELAY_milliseconds
+                0x0000000000000000       0x16 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .text.DELAY_microseconds
+                0x0000000000000000       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .debug_info    0x0000000000000000      0x41f CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .debug_abbrev  0x0000000000000000      0x129 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .debug_loc     0x0000000000000000      0x15e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .debug_aranges
+                0x0000000000000000       0x28 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .debug_ranges  0x0000000000000000       0x18 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .debug_line    0x0000000000000000      0x164 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .debug_str     0x0000000000000000       0x26 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .comment       0x0000000000000000       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .debug_frame   0x0000000000000000       0x34 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_Start
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_Stop
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_SetOVFIsrCallback
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_SetCMPIsrCallback
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_SetPITIsrCallback
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_WriteCounter
+                0x0000000000000000       0x16 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_ReadCounter
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_WritePeriod
+                0x0000000000000000       0x16 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_ReadPeriod
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_EnableCMPInterrupt
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_DisableCMPInterrupt
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_EnableOVFInterrupt
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_DisableOVFInterrupt
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_EnablePITInterrupt
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_DisablePITInterrupt
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_ClearOVFInterruptFlag
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_IsOVFInterruptEnabled
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_WriteCMPRegister
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text.RTC_ReadCMPRegister
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Deinitialize
+                0x0000000000000000       0x3a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Start
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Stop
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_CounterSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_CounterGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_PeriodSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_PeriodBufferSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_PeriodGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Compare0Set
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Compare0BufferSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Compare1Set
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Compare1BufferSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Compare2Set
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Compare2BufferSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_MaxCountGet
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_ModeSet
+                0x0000000000000000       0x20 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_OverflowStatusClear
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_OverflowStatusGet
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_CMP0MatchStatusClear
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_CMP0MatchStatusGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_CMP1MatchStatusClear
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_CMP1MatchStatusGet
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_CMP2MatchStatusClear
+                0x0000000000000000        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_CMP2MatchStatusGet
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Tasks
+                0x0000000000000000       0x72 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_OverflowCallbackRegister
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Compare0CallbackRegister
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Compare1CallbackRegister
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text.TCA0_Compare2CallbackRegister
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .bss.TCA0_OVFCallback
+                0x0000000000000000        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .bss.TCA0_CMP2Callback
+                0x0000000000000000        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .bss.TCA0_CMP1Callback
+                0x0000000000000000        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .bss.TCA0_CMP0Callback
+                0x0000000000000000        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_Deinitialize
+                0x0000000000000000       0x24 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_Start
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_Stop
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_CounterSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_CounterGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_PeriodSet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_PeriodGet
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_MaxCountGet
+                0x0000000000000000        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_CAPTInterruptEnable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_CAPTInterruptDisable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_OVFInterruptEnable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_OVFInterruptDisable
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_IsCaptInterruptEnabled
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_IsOvfInterruptEnabled
+                0x0000000000000000        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text.TCB0_OverflowCallbackRegister
+                0x0000000000000000        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .stack.descriptors
+                0x0000000000000000       0x1a c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .stack.descriptors
+                0x0000000000000000       0x1c c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.mul
+                0x0000000000000000       0x16 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .stack.descriptors.hdr
+                0x0000000000000000        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .stack.descriptors
+                0x0000000000000000       0x19 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .stack.descriptors
+                0x0000000000000000       0x19 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .stack.descriptors
+                0x0000000000000000       0x16 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.mul
+                0x0000000000000000       0x1e c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .stack.descriptors.hdr
+                0x0000000000000000        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .stack.descriptors
+                0x0000000000000000       0x19 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .stack.descriptors
+                0x0000000000000000       0x2c c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .stack.descriptors
+                0x0000000000000000       0x17 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .stack.descriptors
+                0x0000000000000000       0x16 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .stack.descriptors
+                0x0000000000000000       0x31 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+ .stack.descriptors
+                0x0000000000000000       0x1a c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .stack.descriptors
+                0x0000000000000000       0x34 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .stack.descriptors
+                0x0000000000000000       0x16 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .stack.descriptors
+                0x0000000000000000       0x16 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .stack.descriptors
+                0x0000000000000000       0x17 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .stack.descriptors
+                0x0000000000000000       0x17 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .stack.descriptors
+                0x0000000000000000       0x18 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .stack.descriptors
+                0x0000000000000000       0x32 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .stack.descriptors
+                0x0000000000000000       0x2f c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .text          0x0000000000000000        0x8 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .stack.descriptors.hdr
+                0x0000000000000000        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .stack.descriptors
+                0x0000000000000000       0x16 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .text          0x0000000000000000       0xd4 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .stack.descriptors.hdr
+                0x0000000000000000        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .stack.descriptors
+                0x0000000000000000       0x31 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+ .stack.descriptors
+                0x0000000000000000       0x73 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o)
+ .stack.descriptors
+                0x0000000000000000       0x13 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o)
+ .text          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .stack.descriptors
+                0x0000000000000000       0x13 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000804000 0x0000000000004000 rw !x
+eeprom           0x0000000000810000 0x0000000000000200 rw !x
+fuse             0x0000000000820000 0x0000000000000010 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+bootrow          0x0000000000860000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x804000
+                0x0000000000008000                __RODATA_PM_OFFSET__ = 0x8000
+LOAD C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+                0x0000000000000001                __MPLAB_BUILD = 0x1
+                0x0000000000000001                __MPLAB_DEBUG = 0x1
+                0x0000000000000001                __DEBUG = 0x1
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_assemblePreprocess.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\protected_io.S.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\power\src\power.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\reset\src\rstctrl.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\delay.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+LOAD CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+START GROUP
+LOAD c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a
+LOAD c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a
+LOAD c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a
+LOAD C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4\libavr128db32.a
+END GROUP
+                [0x0000000000000000]                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x0000000000804000]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x802000
+                [0x0000000000020000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x100000
+                [0x0000000000004000]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x0000000000000200]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000010]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __BOOTROW_REGION_LENGTH__ = DEFINED (__BOOTROW_REGION_LENGTH__)?__BOOTROW_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000      0x18e
+ *(.vectors)
+ .vectors       0x0000000000000000       0xb0 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+                0x0000000000000000                __vector_default
+                0x0000000000000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table.Set_LTC2943_REG
+                0x00000000000000b0       0x2e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .progmem.gcc_sw_table.ADC0_Conversion_Done_ISR
+                0x00000000000000de       0x10 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ *(.dinit)
+ .dinit         0x00000000000000ee       0x48 data_init
+                0x0000000000000136                . = ALIGN (0x2)
+ *fill*         0x0000000000000136        0x0 
+                0x0000000000000136                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000136        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000136                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+                0x0000000000000136                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000136                __ctors_start = .
+ *(.ctors)
+                0x0000000000000136                __ctors_end = .
+                0x0000000000000136                __dtors_start = .
+ *(.dtors)
+                0x0000000000000136                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000136        0x0 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+                0x0000000000000136                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000136        0xc C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000000000000142       0x40 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+                0x0000000000000142                __do_copy_data
+                0x0000000000000174                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000000000000182        0x8 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+ *(.init9)
+                0x000000000000018a                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000000000000018a        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+                0x000000000000018a                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000000000000018a        0x4 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ *(.fini0)
+                0x000000000000018e                _etext = .
+
+.data           0x0000000000804000        0x0 load address 0x000000000000018e
+                [!provide]                        PROVIDE (__data_start, .)
+ *(.gnu.linkonce.d*)
+ *(.gnu.linkonce.r*)
+                0x0000000000804000                . = ALIGN (0x2)
+                0x0000000000804000                _edata = .
+                [!provide]                        PROVIDE (__data_end, .)
+
+.bss            0x0000000000804000        0x0
+                [!provide]                        PROVIDE (__bss_start, .)
+ *(COMMON)
+                [!provide]                        PROVIDE (__bss_end, .)
+                0x000000000000018e                __data_load_start = LOADADDR (.data)
+                0x000000000000018e                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000804000        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000804000                _end = .
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse           0x0000000000820000        0x9
+ *(.fuse)
+ .fuse          0x0000000000820000        0x9 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+                0x0000000000820000                __fuse
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.bootrow
+ *(.bootrow*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x5b
+ *(.comment)
+ .comment       0x0000000000000000       0x2f CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                                         0x30 (size before relaxing)
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .comment       0x000000000000002f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+ .comment       0x000000000000002f       0x2c c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+                                         0x2d (size before relaxing)
+ .comment       0x000000000000005b       0x2d c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o)
+
+.stack.descriptors.hdr
+                0x0000000000000000      0x118
+ .stack.descriptors.hdr
+                0x0000000000000000        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .stack.descriptors.hdr
+                0x000000000000000e        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .stack.descriptors.hdr
+                0x000000000000001c        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+ .stack.descriptors.hdr
+                0x000000000000002a        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+ .stack.descriptors.hdr
+                0x0000000000000038        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .stack.descriptors.hdr
+                0x0000000000000046        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .stack.descriptors.hdr
+                0x0000000000000054        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .stack.descriptors.hdr
+                0x0000000000000062        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .stack.descriptors.hdr
+                0x0000000000000070        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+ .stack.descriptors.hdr
+                0x000000000000007e        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .stack.descriptors.hdr
+                0x000000000000008c        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .stack.descriptors.hdr
+                0x000000000000009a        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .stack.descriptors.hdr
+                0x00000000000000a8        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .stack.descriptors.hdr
+                0x00000000000000b6        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .stack.descriptors.hdr
+                0x00000000000000c4        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .stack.descriptors.hdr
+                0x00000000000000d2        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .stack.descriptors.hdr
+                0x00000000000000e0        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .stack.descriptors.hdr
+                0x00000000000000ee        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+ .stack.descriptors.hdr
+                0x00000000000000fc        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o)
+ .stack.descriptors.hdr
+                0x000000000000010a        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x9d0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 CMakeFiles\AVR128DB32_default_default_XC8_assemblePreprocess.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\protected_io.S.o
+ .debug_aranges
+                0x0000000000000020       0x78 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .debug_aranges
+                0x0000000000000098       0x48 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .debug_aranges
+                0x00000000000000e0      0x108 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .debug_aranges
+                0x00000000000001e8      0x120 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .debug_aranges
+                0x0000000000000308       0x28 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .debug_aranges
+                0x0000000000000330       0x68 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .debug_aranges
+                0x0000000000000398       0xa8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .debug_aranges
+                0x0000000000000440       0x88 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .debug_aranges
+                0x00000000000004c8       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .debug_aranges
+                0x00000000000004f8       0x18 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+ .debug_aranges
+                0x0000000000000510       0x20 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .debug_aranges
+                0x0000000000000530      0x1d0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .debug_aranges
+                0x0000000000000700       0x28 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .debug_aranges
+                0x0000000000000728       0xc8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .debug_aranges
+                0x00000000000007f0      0x108 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .debug_aranges
+                0x00000000000008f8       0xb8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .debug_aranges
+                0x00000000000009b0       0x20 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0xfdee
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000     0x2848 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+ .debug_info    0x0000000000002848       0xd2 CMakeFiles\AVR128DB32_default_default_XC8_assemblePreprocess.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\protected_io.S.o
+ .debug_info    0x000000000000291a      0xb8d CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .debug_info    0x00000000000034a7      0x723 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .debug_info    0x0000000000003bca     0x148d CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .debug_info    0x0000000000005057     0x197d CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .debug_info    0x00000000000069d4      0x805 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .debug_info    0x00000000000071d9      0xb36 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .debug_info    0x0000000000007d0f      0xecd CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .debug_info    0x0000000000008bdc      0xda9 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .debug_info    0x0000000000009985      0xed0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .debug_info    0x000000000000a855      0x874 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+ .debug_info    0x000000000000b0c9      0x3c8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .debug_info    0x000000000000b491     0x1abd CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .debug_info    0x000000000000cf4e      0x52f CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .debug_info    0x000000000000d47d      0x90f CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .debug_info    0x000000000000dd8c     0x13cc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .debug_info    0x000000000000f158      0x962 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .debug_info    0x000000000000faba      0x334 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+
+.debug_abbrev   0x0000000000000000     0x4181
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x2626 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+ .debug_abbrev  0x0000000000002626       0x14 CMakeFiles\AVR128DB32_default_default_XC8_assemblePreprocess.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\protected_io.S.o
+ .debug_abbrev  0x000000000000263a      0x1c4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .debug_abbrev  0x00000000000027fe      0x16e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .debug_abbrev  0x000000000000296c      0x38a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .debug_abbrev  0x0000000000002cf6      0x1b8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .debug_abbrev  0x0000000000002eae       0xb1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .debug_abbrev  0x0000000000002f5f      0x220 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .debug_abbrev  0x000000000000317f      0x2ae CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .debug_abbrev  0x000000000000342d      0x249 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .debug_abbrev  0x0000000000003676      0x133 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .debug_abbrev  0x00000000000037a9       0x95 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+ .debug_abbrev  0x000000000000383e       0xf8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .debug_abbrev  0x0000000000003936      0x180 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .debug_abbrev  0x0000000000003ab6      0x140 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .debug_abbrev  0x0000000000003bf6      0x14a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .debug_abbrev  0x0000000000003d40      0x1d0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .debug_abbrev  0x0000000000003f10      0x1e7 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .debug_abbrev  0x00000000000040f7       0x8a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+
+.debug_line     0x0000000000000000     0x499f
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000      0x19f C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+ .debug_line    0x000000000000019f       0xa5 CMakeFiles\AVR128DB32_default_default_XC8_assemblePreprocess.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\protected_io.S.o
+ .debug_line    0x0000000000000244      0x42e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .debug_line    0x0000000000000672      0x452 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .debug_line    0x0000000000000ac4      0x904 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .debug_line    0x00000000000013c8      0x597 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .debug_line    0x000000000000195f      0x23e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .debug_line    0x0000000000001b9d      0x3d9 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .debug_line    0x0000000000001f76      0x61b CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .debug_line    0x0000000000002591      0x3c5 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .debug_line    0x0000000000002956      0x1e8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .debug_line    0x0000000000002b3e      0x11c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+ .debug_line    0x0000000000002c5a      0x1b4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .debug_line    0x0000000000002e0e      0x87c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .debug_line    0x000000000000368a      0x491 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .debug_line    0x0000000000003b1b      0x443 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .debug_line    0x0000000000003f5e      0x577 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .debug_line    0x00000000000044d5      0x38f CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .debug_line    0x0000000000004864      0x13b CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+
+.debug_frame    0x0000000000000000     0x165c
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000      0x148 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .debug_frame   0x0000000000000148       0xa8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .debug_frame   0x00000000000001f0      0x1f4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .debug_frame   0x00000000000003e4      0x2b4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .debug_frame   0x0000000000000698       0x34 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .debug_frame   0x00000000000006cc       0xfc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .debug_frame   0x00000000000007c8      0x21c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .debug_frame   0x00000000000009e4      0x174 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .debug_frame   0x0000000000000b58       0x44 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .debug_frame   0x0000000000000b9c       0x24 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .debug_frame   0x0000000000000bc0      0x4b0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .debug_frame   0x0000000000001070       0x34 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .debug_frame   0x00000000000010a4      0x204 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .debug_frame   0x00000000000012a8      0x1f4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .debug_frame   0x000000000000149c      0x19c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .debug_frame   0x0000000000001638       0x24 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+
+.debug_str      0x0000000000000000     0x1516
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0x1189 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+ .debug_str     0x0000000000001189       0x2e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .debug_str     0x00000000000011b7       0x1d CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .debug_str     0x00000000000011d4      0x11f CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .debug_str     0x00000000000012f3        0x9 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .debug_str     0x00000000000012fc        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .debug_str     0x00000000000012fc        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .debug_str     0x00000000000012fc       0x42 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .debug_str     0x000000000000133e       0x1b CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .debug_str     0x0000000000001359       0x13 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .debug_str     0x000000000000136c        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\config_bits.c.o
+ .debug_str     0x000000000000136c       0x13 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .debug_str     0x000000000000137f       0x30 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .debug_str     0x00000000000013af       0xdc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .debug_str     0x000000000000148b        0x9 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .debug_str     0x0000000000001494       0x72 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .debug_str     0x0000000000001506       0x10 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .debug_str     0x0000000000001516        0x0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+
+.debug_loc      0x0000000000000000     0x10bc
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x346 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .debug_loc     0x0000000000000346      0x102 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .debug_loc     0x0000000000000448      0x1e4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .debug_loc     0x000000000000062c       0x6f CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .debug_loc     0x000000000000069b      0x35b CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .debug_loc     0x00000000000009f6      0x3db CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .debug_loc     0x0000000000000dd1      0x23b CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .debug_loc     0x000000000000100c       0x2a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .debug_loc     0x0000000000001036       0x52 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .debug_loc     0x0000000000001088       0x34 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x898
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x68 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+ .debug_ranges  0x0000000000000068       0x38 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+ .debug_ranges  0x00000000000000a0       0xf8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+ .debug_ranges  0x0000000000000198      0x110 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+ .debug_ranges  0x00000000000002a8       0x18 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+ .debug_ranges  0x00000000000002c0       0x58 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+ .debug_ranges  0x0000000000000318       0x98 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+ .debug_ranges  0x00000000000003b0       0x78 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+ .debug_ranges  0x0000000000000428       0x20 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+ .debug_ranges  0x0000000000000448       0x10 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+ .debug_ranges  0x0000000000000458      0x1c0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+ .debug_ranges  0x0000000000000618       0x18 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+ .debug_ranges  0x0000000000000630       0xb8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+ .debug_ranges  0x00000000000006e8       0xf8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+ .debug_ranges  0x00000000000007e0       0xa8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+ .debug_ranges  0x0000000000000888       0x10 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(C:\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\out\AVR128DB32\default.elf elf32-avr)
+LOAD linker stubs
+LOAD data_init
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+
+.bss.LTC2943_Shutdown
+                0x0000000000804097        0x1
+ .bss.LTC2943_Shutdown
+                0x0000000000804097        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                0x0000000000804097                LTC2943_Shutdown
+
+.bss.Current_LTC2943_ALCC_Pin_Mode
+                0x0000000000804098        0x1
+ .bss.Current_LTC2943_ALCC_Pin_Mode
+                0x0000000000804098        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                0x0000000000804098                Current_LTC2943_ALCC_Pin_Mode
+
+.bss.Drain_Counter.4820
+                0x000000000080403c        0x2
+ .bss.Drain_Counter.4820
+                0x000000000080403c        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+
+.bss.LED_Step_Counter
+                0x000000000080402c        0x8
+ .bss.LED_Step_Counter
+                0x000000000080402c        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x000000000080402c                LED_Step_Counter
+
+.bss.LED_Step_Index
+                0x000000000080409b        0x1
+ .bss.LED_Step_Index
+                0x000000000080409b        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x000000000080409b                LED_Step_Index
+
+.bss.Global_Timer
+                0x0000000000804034        0x8
+ .bss.Global_Timer
+                0x0000000000804034        0x8 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x0000000000804034                Global_Timer
+
+.bss.ADC0_Filled_All_Values
+                0x000000000080409c        0x1
+ .bss.ADC0_Filled_All_Values
+                0x000000000080409c        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x000000000080409c                ADC0_Filled_All_Values
+
+.bss.Cell_Voltage_4_Result
+                0x0000000000804040        0x2
+ .bss.Cell_Voltage_4_Result
+                0x0000000000804040        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000804040                Cell_Voltage_4_Result
+
+.bss.Cell_Voltage_3_Result
+                0x0000000000804042        0x2
+ .bss.Cell_Voltage_3_Result
+                0x0000000000804042        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000804042                Cell_Voltage_3_Result
+
+.bss.Cell_Voltage_2_Result
+                0x0000000000804044        0x2
+ .bss.Cell_Voltage_2_Result
+                0x0000000000804044        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000804044                Cell_Voltage_2_Result
+
+.bss.Cell_Voltage_1_Result
+                0x0000000000804046        0x2
+ .bss.Cell_Voltage_1_Result
+                0x0000000000804046        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000804046                Cell_Voltage_1_Result
+
+.bss.Temp_Cell_4_Result
+                0x0000000000804048        0x2
+ .bss.Temp_Cell_4_Result
+                0x0000000000804048        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000804048                Temp_Cell_4_Result
+
+.bss.Temp_Cell_3_Result
+                0x000000000080404a        0x2
+ .bss.Temp_Cell_3_Result
+                0x000000000080404a        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x000000000080404a                Temp_Cell_3_Result
+
+.bss.Temp_Cell_2_Result
+                0x000000000080404c        0x2
+ .bss.Temp_Cell_2_Result
+                0x000000000080404c        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x000000000080404c                Temp_Cell_2_Result
+
+.bss.Temp_Cell_1_Result
+                0x000000000080404e        0x2
+ .bss.Temp_Cell_1_Result
+                0x000000000080404e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x000000000080404e                Temp_Cell_1_Result
+
+.bss.CurrentFlow
+                0x000000000080409d        0x1
+ .bss.CurrentFlow
+                0x000000000080409d        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x000000000080409d                CurrentFlow
+
+.bss.ADC0_ThresholdCallback
+                0x0000000000804050        0x2
+ .bss.ADC0_ThresholdCallback
+                0x0000000000804050        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+
+.bss.ADC0_ConversionDoneCallback
+                0x0000000000804052        0x2
+ .bss.ADC0_ConversionDoneCallback
+                0x0000000000804052        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+
+.bss.isAddressByte.4034
+                0x00000000008040a1        0x1
+ .bss.isAddressByte.4034
+                0x00000000008040a1        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+
+.bss.TWI0_InterruptHandler
+                0x0000000000804054        0x2
+ .bss.TWI0_InterruptHandler
+                0x0000000000804054        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+
+.bss.twi0ErrorState
+                0x00000000008040a2        0x1
+ .bss.twi0ErrorState
+                0x00000000008040a2        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+
+.bss.twi0matchedAddress
+                0x0000000000804056        0x2
+ .bss.twi0matchedAddress
+                0x0000000000804056        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+
+.bss.twi1_Status
+                0x0000000000804012        0xe
+ .bss.twi1_Status
+                0x0000000000804012        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+                0x0000000000804012                twi1_Status
+
+.bss.TWI1_Callback
+                0x0000000000804058        0x2
+ .bss.TWI1_Callback
+                0x0000000000804058        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.bss.LED_InterruptHandler
+                0x000000000080405a        0x2
+ .bss.LED_InterruptHandler
+                0x000000000080405a        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Lader_Output_InterruptHandler
+                0x000000000080405c        0x2
+ .bss.Lader_Output_InterruptHandler
+                0x000000000080405c        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.EN_Batt_InterruptHandler
+                0x000000000080405e        0x2
+ .bss.EN_Batt_InterruptHandler
+                0x000000000080405e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.EN_Lader_InterruptHandler
+                0x0000000000804060        0x2
+ .bss.EN_Lader_InterruptHandler
+                0x0000000000804060        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.EN_Buck_InterruptHandler
+                0x0000000000804062        0x2
+ .bss.EN_Buck_InterruptHandler
+                0x0000000000804062        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Drain_Cell_4_InterruptHandler
+                0x0000000000804064        0x2
+ .bss.Drain_Cell_4_InterruptHandler
+                0x0000000000804064        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Drain_Cell_3_InterruptHandler
+                0x0000000000804066        0x2
+ .bss.Drain_Cell_3_InterruptHandler
+                0x0000000000804066        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Drain_Cell_2_InterruptHandler
+                0x0000000000804068        0x2
+ .bss.Drain_Cell_2_InterruptHandler
+                0x0000000000804068        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Drain_Cell_1_InterruptHandler
+                0x000000000080406a        0x2
+ .bss.Drain_Cell_1_InterruptHandler
+                0x000000000080406a        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.EN_EXT_Balance_InterruptHandler
+                0x000000000080406c        0x2
+ .bss.EN_EXT_Balance_InterruptHandler
+                0x000000000080406c        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.BFG_Alert_InterruptHandler
+                0x000000000080406e        0x2
+ .bss.BFG_Alert_InterruptHandler
+                0x000000000080406e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Check_3V3_Pin_InterruptHandler
+                0x0000000000804070        0x2
+ .bss.Check_3V3_Pin_InterruptHandler
+                0x0000000000804070        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Temp_Cell_1_Pin_InterruptHandler
+                0x0000000000804072        0x2
+ .bss.Temp_Cell_1_Pin_InterruptHandler
+                0x0000000000804072        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Temp_Cell_2_Pin_InterruptHandler
+                0x0000000000804074        0x2
+ .bss.Temp_Cell_2_Pin_InterruptHandler
+                0x0000000000804074        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Temp_Cell_3_Pin_InterruptHandler
+                0x0000000000804076        0x2
+ .bss.Temp_Cell_3_Pin_InterruptHandler
+                0x0000000000804076        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Temp_Cell_4_Pin_InterruptHandler
+                0x0000000000804078        0x2
+ .bss.Temp_Cell_4_Pin_InterruptHandler
+                0x0000000000804078        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Cell_3_Pin_InterruptHandler
+                0x000000000080407a        0x2
+ .bss.Cell_3_Pin_InterruptHandler
+                0x000000000080407a        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Cell_4_Pin_InterruptHandler
+                0x000000000080407c        0x2
+ .bss.Cell_4_Pin_InterruptHandler
+                0x000000000080407c        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Cell_1_Pin_InterruptHandler
+                0x000000000080407e        0x2
+ .bss.Cell_1_Pin_InterruptHandler
+                0x000000000080407e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Cell_2_Pin_InterruptHandler
+                0x0000000000804080        0x2
+ .bss.Cell_2_Pin_InterruptHandler
+                0x0000000000804080        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.SDA_Slave_InterruptHandler
+                0x0000000000804082        0x2
+ .bss.SDA_Slave_InterruptHandler
+                0x0000000000804082        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.SCL_Slave_InterruptHandler
+                0x0000000000804084        0x2
+ .bss.SCL_Slave_InterruptHandler
+                0x0000000000804084        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.SDA_LTC2943_InterruptHandler
+                0x0000000000804086        0x2
+ .bss.SDA_LTC2943_InterruptHandler
+                0x0000000000804086        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.SCL_LTC2943_InterruptHandler
+                0x0000000000804088        0x2
+ .bss.SCL_LTC2943_InterruptHandler
+                0x0000000000804088        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.Lader_Input_InterruptHandler
+                0x000000000080408a        0x2
+ .bss.Lader_Input_InterruptHandler
+                0x000000000080408a        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+
+.bss.RTC_PIT_isr_cb
+                0x000000000080408c        0x2
+ .bss.RTC_PIT_isr_cb
+                0x000000000080408c        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+                0x000000000080408c                RTC_PIT_isr_cb
+
+.bss.RTC_CMP_isr_cb
+                0x000000000080408e        0x2
+ .bss.RTC_CMP_isr_cb
+                0x000000000080408e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+                0x000000000080408e                RTC_CMP_isr_cb
+
+.bss.RTC_OVF_isr_cb
+                0x0000000000804090        0x2
+ .bss.RTC_OVF_isr_cb
+                0x0000000000804090        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+                0x0000000000804090                RTC_OVF_isr_cb
+
+.bss.TCB0_CAPT_isr_cb
+                0x0000000000804092        0x2
+ .bss.TCB0_CAPT_isr_cb
+                0x0000000000804092        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+
+.bss.TCB0_OVF_isr_cb
+                0x0000000000804094        0x2
+ .bss.TCB0_OVF_isr_cb
+                0x0000000000804094        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+
+.text.PIN_MANAGER_Initialize
+                0x000000000000018e      0x1e4
+ .text.PIN_MANAGER_Initialize
+                0x000000000000018e      0x1e4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x000000000000018e                PIN_MANAGER_Initialize
+
+.text.main      0x0000000000000372      0x1c4
+ .text.main     0x0000000000000372      0x1c4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000000372                main
+
+.text.ADC0_Conversion_Done_ISR
+                0x0000000000000536      0x192
+ .text.ADC0_Conversion_Done_ISR
+                0x0000000000000536      0x192 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000000536                ADC0_Conversion_Done_ISR
+
+.text.__vector_18
+                0x00000000000006c8      0x186
+ .text.__vector_18
+                0x00000000000006c8      0x186 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+                0x00000000000006c8                __vector_18
+
+.text.Update_LED_Sequencer
+                0x000000000000084e      0x12c
+ .text.Update_LED_Sequencer
+                0x000000000000084e      0x12c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x000000000000084e                Update_LED_Sequencer
+
+.text.__vector_43
+                0x000000000000097a      0x10e
+ .text.__vector_43
+                0x000000000000097a      0x10e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+                0x000000000000097a                __vector_43
+
+.text           0x0000000000000a88       0xde
+ .text          0x0000000000000a88       0xde c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+                0x0000000000000a88                __divsf3x
+                0x0000000000000ab0                __divsf3_pse
+
+.text.Write_Control_REG
+                0x0000000000000b66       0xd0
+ .text.Write_Control_REG
+                0x0000000000000b66       0xd0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                0x0000000000000b66                Write_Control_REG
+
+.text           0x0000000000000c36       0xce
+ .text          0x0000000000000c36       0xce c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+                0x0000000000000c36                __addsf3x
+
+.text.__vector_8
+                0x0000000000000d04       0xc0
+ .text.__vector_8
+                0x0000000000000d04       0xc0 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000000d04                __vector_8
+
+.text.__vector_24
+                0x0000000000000dc4       0xb2
+ .text.__vector_24
+                0x0000000000000dc4       0xb2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000000dc4                __vector_24
+
+.text.__vector_35
+                0x0000000000000e76       0xa4
+ .text.__vector_35
+                0x0000000000000e76       0xa4 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000000e76                __vector_35
+
+.text.I2C_EVENT_RX
+                0x0000000000000f1a       0x9a
+ .text.I2C_EVENT_RX
+                0x0000000000000f1a       0x9a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.text.CLOCK_Initialize
+                0x0000000000000fb4       0x90
+ .text.CLOCK_Initialize
+                0x0000000000000fb4       0x90 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\clock.c.o
+                0x0000000000000fb4                CLOCK_Initialize
+
+.text.__vector_5
+                0x0000000000001044       0x8e
+ .text.__vector_5
+                0x0000000000001044       0x8e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+                0x0000000000001044                __vector_5
+
+.text.__vector_30
+                0x00000000000010d2       0x88
+ .text.__vector_30
+                0x00000000000010d2       0x88 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x00000000000010d2                __vector_30
+
+.text.__vector_14
+                0x000000000000115a       0x84
+ .text.__vector_14
+                0x000000000000115a       0x84 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+                0x000000000000115a                __vector_14
+
+.text.EVSYS_Initialize
+                0x00000000000011de       0x7c
+ .text.EVSYS_Initialize
+                0x00000000000011de       0x7c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\evsys\src\evsys.c.o
+                0x00000000000011de                EVSYS_Initialize
+
+.text           0x000000000000125a       0x7a
+ .text          0x000000000000125a       0x7a c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+                0x000000000000125a                __floatunsisf
+                0x000000000000125e                __floatsisf
+
+.text.__vector_26
+                0x00000000000012d4       0x60
+ .text.__vector_26
+                0x00000000000012d4       0x60 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+                0x00000000000012d4                __vector_26
+
+.text.__vector_27
+                0x0000000000001334       0x60
+ .text.__vector_27
+                0x0000000000001334       0x60 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+                0x0000000000001334                __vector_27
+
+.text.__vector_6
+                0x0000000000001394       0x60
+ .text.__vector_6
+                0x0000000000001394       0x60 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+                0x0000000000001394                __vector_6
+
+.text           0x00000000000013f4       0x5e
+ .text          0x00000000000013f4       0x5e c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+                0x00000000000013f4                __fixunssfsi
+
+.text.TWI1_Write
+                0x0000000000001452       0x5c
+ .text.TWI1_Write
+                0x0000000000001452       0x5c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+                0x0000000000001452                TWI1_Write
+
+.text.ADC0_Initialize
+                0x00000000000014ae       0x52
+ .text.ADC0_Initialize
+                0x00000000000014ae       0x52 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+                0x00000000000014ae                ADC0_Initialize
+
+.text.TCB0_Interrupt
+                0x0000000000001500       0x4c
+ .text.TCB0_Interrupt
+                0x0000000000001500       0x4c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x0000000000001500                TCB0_Interrupt
+
+.text.I2C_EVENT_TX
+                0x000000000000154c       0x48
+ .text.I2C_EVENT_TX
+                0x000000000000154c       0x48 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.text           0x0000000000001594       0x44
+ .text          0x0000000000001594       0x44 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+                0x0000000000001594                __fp_split3
+                0x00000000000015a4                __fp_splitA
+
+.text.Init_Run  0x00000000000015d8       0x40
+ .text.Init_Run
+                0x00000000000015d8       0x40 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x00000000000015d8                Init_Run
+
+.text.TCB0_Initialize
+                0x0000000000001618       0x40
+ .text.TCB0_Initialize
+                0x0000000000001618       0x40 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+                0x0000000000001618                TCB0_Initialize
+
+.text.Set_LTC2943_REG_16
+                0x0000000000001658       0x3c
+ .text.Set_LTC2943_REG_16
+                0x0000000000001658       0x3c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                0x0000000000001658                Set_LTC2943_REG_16
+
+.text.I2C_EVENT_STOP
+                0x0000000000001694       0x3c
+ .text.I2C_EVENT_STOP
+                0x0000000000001694       0x3c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.text.RTC_Initialize
+                0x00000000000016d0       0x3c
+ .text.RTC_Initialize
+                0x00000000000016d0       0x3c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\rtc.c.o
+                0x00000000000016d0                RTC_Initialize
+
+.text.TCA0_Initialize
+                0x000000000000170c       0x3c
+ .text.TCA0_Initialize
+                0x000000000000170c       0x3c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tca0.c.o
+                0x000000000000170c                TCA0_Initialize
+
+.text.Set_LTC2943_REG_8
+                0x0000000000001748       0x36
+ .text.Set_LTC2943_REG_8
+                0x0000000000001748       0x36 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                0x0000000000001748                Set_LTC2943_REG_8
+
+.text.SYSTEM_Initialize
+                0x000000000000177e       0x36
+ .text.SYSTEM_Initialize
+                0x000000000000177e       0x36 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+                0x000000000000177e                SYSTEM_Initialize
+
+.text.TWI1_Initialize
+                0x00000000000017b4       0x2c
+ .text.TWI1_Initialize
+                0x00000000000017b4       0x2c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+                0x00000000000017b4                TWI1_Initialize
+
+.text.Set_LTC2943_REG
+                0x00000000000017e0       0x2a
+ .text.Set_LTC2943_REG
+                0x00000000000017e0       0x2a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                0x00000000000017e0                Set_LTC2943_REG
+
+.text.Update_Cell_Drain
+                0x000000000000180a       0x2a
+ .text.Update_Cell_Drain
+                0x000000000000180a       0x2a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x000000000000180a                Update_Cell_Drain
+
+.text.mV_to_CellVoltage
+                0x0000000000001834       0x2a
+ .text.mV_to_CellVoltage
+                0x0000000000001834       0x2a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000001834                mV_to_CellVoltage
+
+.text.libgcc.div
+                0x000000000000185e       0x28
+ .text.libgcc.div
+                0x000000000000185e       0x28 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+                0x000000000000185e                __udivmodhi4
+
+.text.TWI0_Initialize
+                0x0000000000001886       0x22
+ .text.TWI0_Initialize
+                0x0000000000001886       0x22 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_client\src\twi0.c.o
+                0x0000000000001886                TWI0_Initialize
+
+.text           0x00000000000018a8       0x22
+ .text          0x00000000000018a8       0x22 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+                0x00000000000018a8                __fp_round
+
+.text.ShutdownAllPins
+                0x00000000000018ca       0x1e
+ .text.ShutdownAllPins
+                0x00000000000018ca       0x1e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x00000000000018ca                ShutdownAllPins
+
+.text.TWI1_IsBusy
+                0x00000000000018e8       0x1e
+ .text.TWI1_IsBusy
+                0x00000000000018e8       0x1e CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+                0x00000000000018e8                TWI1_IsBusy
+
+.text.SLPCTRL_Initialize
+                0x0000000000001906       0x1c
+ .text.SLPCTRL_Initialize
+                0x0000000000001906       0x1c CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\system.c.o
+                0x0000000000001906                SLPCTRL_Initialize
+
+.text.Enable_External_Balancer_ISR
+                0x0000000000001922       0x1a
+ .text.Enable_External_Balancer_ISR
+                0x0000000000001922       0x1a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000001922                Enable_External_Balancer_ISR
+
+.text.CPUINT_Initialize
+                0x000000000000193c       0x1a
+ .text.CPUINT_Initialize
+                0x000000000000193c       0x1a CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\interrupt.c.o
+                0x000000000000193c                CPUINT_Initialize
+
+.text.I2C_EVENT_RESET
+                0x0000000000001956       0x18
+ .text.I2C_EVENT_RESET
+                0x0000000000001956       0x18 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.text.libgcc    0x000000000000196e       0x18
+ .text.libgcc   0x000000000000196e       0x18 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_adddi3_s8.o)
+                0x000000000000196e                __adddi3_s8
+
+.text.PrepareBFG
+                0x0000000000001986       0x16
+ .text.PrepareBFG
+                0x0000000000001986       0x16 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000001986                PrepareBFG
+
+.text.NVM_Initialize
+                0x000000000000199c       0x16
+ .text.NVM_Initialize
+                0x000000000000199c       0x16 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+                0x000000000000199c                NVM_Initialize
+
+.text.exit      0x00000000000019b2       0x16
+ .text.exit     0x00000000000019b2       0x16 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+                0x00000000000019b2                exit
+
+.text.Charger_Connect_ISR
+                0x00000000000019c8       0x14
+ .text.Charger_Connect_ISR
+                0x00000000000019c8       0x14 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x00000000000019c8                Charger_Connect_ISR
+
+.text.I2C_EVENT_SEND_RD_ADDR
+                0x00000000000019dc       0x14
+ .text.I2C_EVENT_SEND_RD_ADDR
+                0x00000000000019dc       0x14 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.text.I2C_EVENT_SEND_WR_ADDR
+                0x00000000000019f0       0x12
+ .text.I2C_EVENT_SEND_WR_ADDR
+                0x00000000000019f0       0x12 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.text.libgcc    0x0000000000001a02       0x12
+ .text.libgcc   0x0000000000001a02       0x12 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+                0x0000000000001a02                __tablejump2__
+
+.text.libgcc    0x0000000000001a14       0x12
+ .text.libgcc   0x0000000000001a14       0x12 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_cmpdi2.o)
+                0x0000000000001a14                __cmpdi2
+
+.text.Switch_State
+                0x0000000000001a26        0xe
+ .text.Switch_State
+                0x0000000000001a26        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000001a26                Switch_State
+
+.text.I2C_EVENT_IDLE
+                0x0000000000001a34        0xe
+ .text.I2C_EVENT_IDLE
+                0x0000000000001a34        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.text.VREF_Initialize
+                0x0000000000001a42        0xe
+ .text.VREF_Initialize
+                0x0000000000001a42        0xe CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\vref\src\vref.c.o
+                0x0000000000001a42                VREF_Initialize
+
+.text           0x0000000000001a50        0xe
+ .text          0x0000000000001a50        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+                0x0000000000001a50                __subsf3
+                0x0000000000001a52                __addsf3
+
+.text           0x0000000000001a5e        0xe
+ .text          0x0000000000001a5e        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+                0x0000000000001a5e                __fp_pscA
+
+.text           0x0000000000001a6c        0xe
+ .text          0x0000000000001a6c        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+                0x0000000000001a6c                __fp_pscB
+
+.text           0x0000000000001a7a        0xe
+ .text          0x0000000000001a7a        0xe c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+                0x0000000000001a7a                __fp_zero
+                0x0000000000001a7c                __fp_szero
+
+.text.I2C_EVENT_ERROR
+                0x0000000000001a88        0xc
+ .text.I2C_EVENT_ERROR
+                0x0000000000001a88        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.text.NVM_StatusClear
+                0x0000000000001a94        0xc
+ .text.NVM_StatusClear
+                0x0000000000001a94        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\nvm\src\nvm.c.o
+                0x0000000000001a94                NVM_StatusClear
+
+.text           0x0000000000001aa0        0xc
+ .text          0x0000000000001aa0        0xc c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+                0x0000000000001aa0                __fp_inf
+
+.text.protected_write_io
+                0x0000000000001aac        0xa
+ .text.protected_write_io
+                0x0000000000001aac        0xa CMakeFiles\AVR128DB32_default_default_XC8_assemblePreprocess.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\protected_io.S.o
+                0x0000000000001aac                protected_write_io
+
+.text.Update_Timed_Functions
+                0x0000000000001ab6        0xa
+ .text.Update_Timed_Functions
+                0x0000000000001ab6        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x0000000000001ab6                Update_Timed_Functions
+
+.text.Setup_Timed_Functions
+                0x0000000000001ac0        0xa
+ .text.Setup_Timed_Functions
+                0x0000000000001ac0        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x0000000000001ac0                Setup_Timed_Functions
+
+.text.ADC0_ConversionDoneCallbackRegister
+                0x0000000000001aca        0xa
+ .text.ADC0_ConversionDoneCallbackRegister
+                0x0000000000001aca        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+                0x0000000000001aca                ADC0_ConversionDoneCallbackRegister
+
+.text.BFG_Alert_SetInterruptHandler
+                0x0000000000001ad4        0xa
+ .text.BFG_Alert_SetInterruptHandler
+                0x0000000000001ad4        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001ad4                BFG_Alert_SetInterruptHandler
+
+.text.EN_EXT_Balance_SetInterruptHandler
+                0x0000000000001ade        0xa
+ .text.EN_EXT_Balance_SetInterruptHandler
+                0x0000000000001ade        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001ade                EN_EXT_Balance_SetInterruptHandler
+
+.text.Lader_Output_SetInterruptHandler
+                0x0000000000001ae8        0xa
+ .text.Lader_Output_SetInterruptHandler
+                0x0000000000001ae8        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001ae8                Lader_Output_SetInterruptHandler
+
+.text.TCB0_CaptureCallbackRegister
+                0x0000000000001af2        0xa
+ .text.TCB0_CaptureCallbackRegister
+                0x0000000000001af2        0xa CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+                0x0000000000001af2                TCB0_CaptureCallbackRegister
+
+.text           0x0000000000001afc        0x8
+ .text          0x0000000000001afc        0x8 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+                0x0000000000001afc                __divsf3
+
+.text.ADC0_ChannelSelect
+                0x0000000000001b04        0x6
+ .text.ADC0_ChannelSelect
+                0x0000000000001b04        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\adc\src\adc0.c.o
+                0x0000000000001b04                ADC0_ChannelSelect
+
+.text.I2C_EVENT_NACK
+                0x0000000000001b0a        0x6
+ .text.I2C_EVENT_NACK
+                0x0000000000001b0a        0x6 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+
+.text           0x0000000000001b10        0x6
+ .text          0x0000000000001b10        0x6 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+                0x0000000000001b10                __fp_nan
+
+.text           0x0000000000001b16        0x4
+ .text          0x0000000000001b16        0x4 C:/Users/Niels/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321/xc8/avr/lib/avrxmega4/crtavr128db32.o
+                0x0000000000001b16                __vector_38
+                0x0000000000001b16                __vector_22
+                0x0000000000001b16                __vector_28
+                0x0000000000001b16                __vector_1
+                0x0000000000001b16                __vector_32
+                0x0000000000001b16                __vector_34
+                0x0000000000001b16                __vector_12
+                0x0000000000001b16                __bad_interrupt
+                0x0000000000001b16                __vector_31
+                0x0000000000001b16                __vector_39
+                0x0000000000001b16                __vector_3
+                0x0000000000001b16                __vector_23
+                0x0000000000001b16                __vector_25
+                0x0000000000001b16                __vector_11
+                0x0000000000001b16                __vector_13
+                0x0000000000001b16                __vector_17
+                0x0000000000001b16                __vector_19
+                0x0000000000001b16                __vector_7
+                0x0000000000001b16                __vector_41
+                0x0000000000001b16                __vector_33
+                0x0000000000001b16                __vector_37
+                0x0000000000001b16                __vector_4
+                0x0000000000001b16                __vector_9
+                0x0000000000001b16                __vector_2
+                0x0000000000001b16                __vector_21
+                0x0000000000001b16                __vector_15
+                0x0000000000001b16                __vector_36
+                0x0000000000001b16                __vector_29
+                0x0000000000001b16                __vector_40
+                0x0000000000001b16                __vector_10
+                0x0000000000001b16                __vector_16
+                0x0000000000001b16                __vector_20
+                0x0000000000001b16                __vector_42
+
+.text._Exit     0x0000000000001b1a        0x4
+ .text._Exit    0x0000000000001b1a        0x4 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(_Exit.o)
+                0x0000000000001b1a                _Exit
+
+.text.BFG_Alert_ISR
+                0x0000000000001b1e        0x2
+ .text.BFG_Alert_ISR
+                0x0000000000001b1e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x0000000000001b1e                BFG_Alert_ISR
+
+.text.Lader_Input_DefaultInterruptHandler
+                0x0000000000001b20        0x2
+ .text.Lader_Input_DefaultInterruptHandler
+                0x0000000000001b20        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b20                Lader_Input_DefaultInterruptHandler
+
+.text.SCL_LTC2943_DefaultInterruptHandler
+                0x0000000000001b22        0x2
+ .text.SCL_LTC2943_DefaultInterruptHandler
+                0x0000000000001b22        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b22                SCL_LTC2943_DefaultInterruptHandler
+
+.text.SDA_LTC2943_DefaultInterruptHandler
+                0x0000000000001b24        0x2
+ .text.SDA_LTC2943_DefaultInterruptHandler
+                0x0000000000001b24        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b24                SDA_LTC2943_DefaultInterruptHandler
+
+.text.SCL_Slave_DefaultInterruptHandler
+                0x0000000000001b26        0x2
+ .text.SCL_Slave_DefaultInterruptHandler
+                0x0000000000001b26        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b26                SCL_Slave_DefaultInterruptHandler
+
+.text.SDA_Slave_DefaultInterruptHandler
+                0x0000000000001b28        0x2
+ .text.SDA_Slave_DefaultInterruptHandler
+                0x0000000000001b28        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b28                SDA_Slave_DefaultInterruptHandler
+
+.text.Cell_2_Pin_DefaultInterruptHandler
+                0x0000000000001b2a        0x2
+ .text.Cell_2_Pin_DefaultInterruptHandler
+                0x0000000000001b2a        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b2a                Cell_2_Pin_DefaultInterruptHandler
+
+.text.Cell_1_Pin_DefaultInterruptHandler
+                0x0000000000001b2c        0x2
+ .text.Cell_1_Pin_DefaultInterruptHandler
+                0x0000000000001b2c        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b2c                Cell_1_Pin_DefaultInterruptHandler
+
+.text.Cell_4_Pin_DefaultInterruptHandler
+                0x0000000000001b2e        0x2
+ .text.Cell_4_Pin_DefaultInterruptHandler
+                0x0000000000001b2e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b2e                Cell_4_Pin_DefaultInterruptHandler
+
+.text.Cell_3_Pin_DefaultInterruptHandler
+                0x0000000000001b30        0x2
+ .text.Cell_3_Pin_DefaultInterruptHandler
+                0x0000000000001b30        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b30                Cell_3_Pin_DefaultInterruptHandler
+
+.text.Temp_Cell_4_Pin_DefaultInterruptHandler
+                0x0000000000001b32        0x2
+ .text.Temp_Cell_4_Pin_DefaultInterruptHandler
+                0x0000000000001b32        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b32                Temp_Cell_4_Pin_DefaultInterruptHandler
+
+.text.Temp_Cell_3_Pin_DefaultInterruptHandler
+                0x0000000000001b34        0x2
+ .text.Temp_Cell_3_Pin_DefaultInterruptHandler
+                0x0000000000001b34        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b34                Temp_Cell_3_Pin_DefaultInterruptHandler
+
+.text.Temp_Cell_2_Pin_DefaultInterruptHandler
+                0x0000000000001b36        0x2
+ .text.Temp_Cell_2_Pin_DefaultInterruptHandler
+                0x0000000000001b36        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b36                Temp_Cell_2_Pin_DefaultInterruptHandler
+
+.text.Temp_Cell_1_Pin_DefaultInterruptHandler
+                0x0000000000001b38        0x2
+ .text.Temp_Cell_1_Pin_DefaultInterruptHandler
+                0x0000000000001b38        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b38                Temp_Cell_1_Pin_DefaultInterruptHandler
+
+.text.Check_3V3_Pin_DefaultInterruptHandler
+                0x0000000000001b3a        0x2
+ .text.Check_3V3_Pin_DefaultInterruptHandler
+                0x0000000000001b3a        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b3a                Check_3V3_Pin_DefaultInterruptHandler
+
+.text.BFG_Alert_DefaultInterruptHandler
+                0x0000000000001b3c        0x2
+ .text.BFG_Alert_DefaultInterruptHandler
+                0x0000000000001b3c        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b3c                BFG_Alert_DefaultInterruptHandler
+
+.text.EN_EXT_Balance_DefaultInterruptHandler
+                0x0000000000001b3e        0x2
+ .text.EN_EXT_Balance_DefaultInterruptHandler
+                0x0000000000001b3e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b3e                EN_EXT_Balance_DefaultInterruptHandler
+
+.text.Drain_Cell_1_DefaultInterruptHandler
+                0x0000000000001b40        0x2
+ .text.Drain_Cell_1_DefaultInterruptHandler
+                0x0000000000001b40        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b40                Drain_Cell_1_DefaultInterruptHandler
+
+.text.Drain_Cell_2_DefaultInterruptHandler
+                0x0000000000001b42        0x2
+ .text.Drain_Cell_2_DefaultInterruptHandler
+                0x0000000000001b42        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b42                Drain_Cell_2_DefaultInterruptHandler
+
+.text.Drain_Cell_3_DefaultInterruptHandler
+                0x0000000000001b44        0x2
+ .text.Drain_Cell_3_DefaultInterruptHandler
+                0x0000000000001b44        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b44                Drain_Cell_3_DefaultInterruptHandler
+
+.text.Drain_Cell_4_DefaultInterruptHandler
+                0x0000000000001b46        0x2
+ .text.Drain_Cell_4_DefaultInterruptHandler
+                0x0000000000001b46        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b46                Drain_Cell_4_DefaultInterruptHandler
+
+.text.EN_Buck_DefaultInterruptHandler
+                0x0000000000001b48        0x2
+ .text.EN_Buck_DefaultInterruptHandler
+                0x0000000000001b48        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b48                EN_Buck_DefaultInterruptHandler
+
+.text.EN_Lader_DefaultInterruptHandler
+                0x0000000000001b4a        0x2
+ .text.EN_Lader_DefaultInterruptHandler
+                0x0000000000001b4a        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b4a                EN_Lader_DefaultInterruptHandler
+
+.text.EN_Batt_DefaultInterruptHandler
+                0x0000000000001b4c        0x2
+ .text.EN_Batt_DefaultInterruptHandler
+                0x0000000000001b4c        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b4c                EN_Batt_DefaultInterruptHandler
+
+.text.Lader_Output_DefaultInterruptHandler
+                0x0000000000001b4e        0x2
+ .text.Lader_Output_DefaultInterruptHandler
+                0x0000000000001b4e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b4e                Lader_Output_DefaultInterruptHandler
+
+.text.LED_DefaultInterruptHandler
+                0x0000000000001b50        0x2
+ .text.LED_DefaultInterruptHandler
+                0x0000000000001b50        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\system\src\pins.c.o
+                0x0000000000001b50                LED_DefaultInterruptHandler
+
+.text.TCB0_DefaultOverflowCallback
+                0x0000000000001b52        0x2
+ .text.TCB0_DefaultOverflowCallback
+                0x0000000000001b52        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+
+.text.TCB0_DefaultCaptureCallback
+                0x0000000000001b54        0x2
+ .text.TCB0_DefaultCaptureCallback
+                0x0000000000001b54        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\timer\src\tcb0.c.o
+
+.text.__dummy_fini
+                0x0000000000001b56        0x2
+ .text.__dummy_fini
+                0x0000000000001b56        0x2 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+                0x0000000000001b56                _fini
+
+.text.__dummy_funcs_on_exit
+                0x0000000000001b58        0x2
+ .text.__dummy_funcs_on_exit
+                0x0000000000001b58        0x2 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+                0x0000000000001b58                __funcs_on_exit
+
+.text.__dummy_simulator_exit
+                0x0000000000001b5a        0x2
+ .text.__dummy_simulator_exit
+                0x0000000000001b5a        0x2 c:/progra~1/microc~1/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(exit.o)
+                0x0000000000001b5a                __simulator_exit
+
+.rodata.twi1_eventTable
+                0x0000000000804000       0x12 load address 0x0000000000001b5c
+ .rodata.twi1_eventTable
+                0x0000000000804000       0x12 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\mcc_generated_files\i2c_host\src\twi1.c.o
+                0x0000000000804000                twi1_eventTable
+
+.data.LED_Pattern
+                0x0000000000804020        0xc load address 0x0000000000001b6e
+ .data.LED_Pattern
+                0x0000000000804020        0xc CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x0000000000804020                LED_Pattern
+
+.data.Cell_Drain_Period_ms
+                0x000000000080403e        0x2 load address 0x0000000000001b7a
+ .data.Cell_Drain_Period_ms
+                0x000000000080403e        0x2 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\Timed_Functions.c.o
+                0x000000000080403e                Cell_Drain_Period_ms
+
+.data.LTC2943_Control_REG_Content
+                0x0000000000804096        0x1 load address 0x0000000000001b7c
+ .data.LTC2943_Control_REG_Content
+                0x0000000000804096        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                0x0000000000804096                LTC2943_Control_REG_Content
+
+.data.Current_LTC2943_Prescalar_Mode
+                0x0000000000804099        0x1 load address 0x0000000000001b7d
+ .data.Current_LTC2943_Prescalar_Mode
+                0x0000000000804099        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                0x0000000000804099                Current_LTC2943_Prescalar_Mode
+
+.data.Current_LTC2943_ADC_Mode
+                0x000000000080409a        0x1 load address 0x0000000000001b7e
+ .data.Current_LTC2943_ADC_Mode
+                0x000000000080409a        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\Libraries\src\I2C.c.o
+                0x000000000080409a                Current_LTC2943_ADC_Mode
+
+.data.CurrentEvent
+                0x000000000080409e        0x1 load address 0x0000000000001b7f
+ .data.CurrentEvent
+                0x000000000080409e        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x000000000080409e                CurrentEvent
+
+.data.NextState
+                0x000000000080409f        0x1 load address 0x0000000000001b80
+ .data.NextState
+                0x000000000080409f        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x000000000080409f                NextState
+
+.data.CurrentState
+                0x00000000008040a0        0x1 load address 0x0000000000001b81
+ .data.CurrentState
+                0x00000000008040a0        0x1 CMakeFiles\AVR128DB32_default_default_XC8_compile.dir\C_\Git_repositories\PIB2025\AVR128DB32_I2C_Test.X\main.c.o
+                0x00000000008040a0                CurrentState

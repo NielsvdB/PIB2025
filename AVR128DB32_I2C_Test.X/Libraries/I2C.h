@@ -1,3 +1,9 @@
+//Defines die moeten gebeuren om te laten werken
+#define Max_Voltage_LTC2943 20 //20 V voor LTC2943, 60 V voor LTC2943
+#define Shunt_Resistor_Value 5 //In miliOhm
+#define Total_Battery_Capacity 3600 //In mAh
+
+
 #ifndef I2C_H
 #define I2C_H
 
@@ -50,12 +56,12 @@ extern uint8_t Current_LTC2943_Prescalar_Mode;
 extern uint8_t Current_LTC2943_ALCC_Pin_Mode;
 extern bool LTC2943_Shutdown;
 
-void Write_Control_REG();
-
 extern uint8_t LTC2943_Control_REG_Content;
 
 //Write to Registers================================================
 void Set_LTC2943_REG(uint8_t Address, uint16_t Data);
+
+void Write_Control_REG();
 
 //Read From Registers===============================================
 uint16_t Get_LTC2943_REG(uint8_t Address);
@@ -63,5 +69,14 @@ uint16_t Get_LTC2943_REG(uint8_t Address);
 void Get_Active_Alerts();
 
 extern bool LTC2943_Error_Status_Array[7];
+
+//Read converted Values=============================================
+float Get_Battery_Charge();
+
+float Get_Batteru_Voltage();
+
+float Get_Battery_Current();
+
+float Get_LTC2943_Tempature();
 
 #endif

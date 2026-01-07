@@ -1,0 +1,23 @@
+# ninja log v7
+62	782	7894961861977419	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/power/src/power.c.o	f4646772c521d9e8
+6	802	7894961861417009	CMakeFiles/AVR128DB32_default_default_XC8_assemblePreprocess.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/system/src/protected_io.S.o	a907f43c7989681e
+84	830	7894961862192996	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/system/src/config_bits.c.o	e308321a6f2d3e87
+77	929	7894961862117654	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/system/src/clock.c.o	b950bcdd8d69b0d6
+18	960	7894961861535237	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/Libraries/src/Timed_Functions.c.o	9d5b4c8b8386f3b9
+42	997	7894961861779893	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/i2c_client/src/twi0.c.o	5b78cc426098e08
+36	1029	7894961861715316	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/evsys/src/evsys.c.o	988b601aaea259eb
+91	1040	7894961862263601	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/system/src/interrupt.c.o	47db73f5c75743bc
+30	1041	7894961861650389	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/adc/src/adc0.c.o	2d6fa84aa3f5f9be
+24	1053	7894961861596651	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/main.c.o	f532f1fbb08f38e5
+70	1056	7894961862052592	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/reset/src/rstctrl.c.o	3d51f6c78ea455e4
+49	1069	7894961861844913	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/i2c_host/src/twi1.c.o	bc8af60569723ea6
+115	1074	7894961862503960	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/timer/src/delay.c.o	391eb90dfa0e2849
+108	1092	7894961862433890	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/system/src/system.c.o	5c8e4c0efb11c4f3
+13	1098	7894961861489678	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/Libraries/src/I2C.c.o	84a92e9c4d4670e7
+99	1129	7894961862343768	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/system/src/pins.c.o	6e29006fc4304844
+126	1151	7894961862614460	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/timer/src/rtc.c.o	d2aea926f667af33
+56	1170	7894961861900554	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/nvm/src/nvm.c.o	9603ee1d80e399dd
+831	1355	7894961869656251	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/vref/src/vref.c.o	cb25d22733189784
+803	1401	7894961869384915	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/timer/src/tcb0.c.o	f9d57a8de00af862
+785	1414	7894961869203663	CMakeFiles/AVR128DB32_default_default_XC8_compile.dir/C_/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/mcc_generated_files/timer/src/tca0.c.o	17647afba2b913ec
+1414	1551	7894961875493296	C:/Git_repositories/PIB2025/AVR128DB32_I2C_Test.X/out/AVR128DB32/default.elf	5b54fffb3c1e325c

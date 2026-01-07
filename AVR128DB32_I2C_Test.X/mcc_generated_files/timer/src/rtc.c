@@ -57,8 +57,8 @@ int8_t RTC_Initialize(void)
     // CMP disabled; OVF enabled; 
     RTC.INTCTRL = 0x1;
 
-    // DBGRUN enabled; 
-    RTC.DBGCTRL = 0x1;
+    // DBGRUN disabled; 
+    RTC.DBGCTRL = 0x0;
 
     // CORREN disabled; PRESCALER RTC Clock / 1; RTCEN enabled; RUNSTDBY disabled; 
     RTC.CTRLA = 0x1;

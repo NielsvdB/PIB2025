@@ -12,7 +12,7 @@
 */
 
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+© [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -35,26 +35,26 @@
 #include "../pins.h"
 
 static void (*Lader_Input_InterruptHandler)(void);
-static void (*IO_PF3_InterruptHandler)(void);
-static void (*IO_PF2_InterruptHandler)(void);
-static void (*IO_PC3_InterruptHandler)(void);
-static void (*IO_PC2_InterruptHandler)(void);
-static void (*IO_PD1_InterruptHandler)(void);
-static void (*IO_PD2_InterruptHandler)(void);
-static void (*IO_PD3_InterruptHandler)(void);
-static void (*IO_PD4_InterruptHandler)(void);
-static void (*IO_PD5_InterruptHandler)(void);
-static void (*IO_PD6_InterruptHandler)(void);
-static void (*IO_PD7_InterruptHandler)(void);
-static void (*IO_PF0_InterruptHandler)(void);
-static void (*IO_PF1_InterruptHandler)(void);
+static void (*SCL_LTC2943_InterruptHandler)(void);
+static void (*SDA_LTC2943_InterruptHandler)(void);
+static void (*SCL_Slave_InterruptHandler)(void);
+static void (*SDA_Slave_InterruptHandler)(void);
+static void (*Cell_2_Pin_InterruptHandler)(void);
+static void (*Cell_1_Pin_InterruptHandler)(void);
+static void (*Cell_4_Pin_InterruptHandler)(void);
+static void (*Cell_3_Pin_InterruptHandler)(void);
+static void (*Temp_Cell_4_Pin_InterruptHandler)(void);
+static void (*Temp_Cell_3_Pin_InterruptHandler)(void);
+static void (*Temp_Cell_2_Pin_InterruptHandler)(void);
+static void (*Temp_Cell_1_Pin_InterruptHandler)(void);
+static void (*Check_3V3_Pin_InterruptHandler)(void);
 static void (*BFG_Alert_InterruptHandler)(void);
 static void (*EN_EXT_Balance_InterruptHandler)(void);
 static void (*Drain_Cell_1_InterruptHandler)(void);
 static void (*Drain_Cell_2_InterruptHandler)(void);
 static void (*Drain_Cell_3_InterruptHandler)(void);
 static void (*Drain_Cell_4_InterruptHandler)(void);
-static void (*EN_Int_Net_InterruptHandler)(void);
+static void (*EN_Buck_InterruptHandler)(void);
 static void (*EN_Lader_InterruptHandler)(void);
 static void (*EN_Batt_InterruptHandler)(void);
 static void (*Lader_Output_InterruptHandler)(void);
@@ -123,26 +123,26 @@ void PIN_MANAGER_Initialize()
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
     Lader_Input_SetInterruptHandler(Lader_Input_DefaultInterruptHandler);
-    IO_PF3_SetInterruptHandler(IO_PF3_DefaultInterruptHandler);
-    IO_PF2_SetInterruptHandler(IO_PF2_DefaultInterruptHandler);
-    IO_PC3_SetInterruptHandler(IO_PC3_DefaultInterruptHandler);
-    IO_PC2_SetInterruptHandler(IO_PC2_DefaultInterruptHandler);
-    IO_PD1_SetInterruptHandler(IO_PD1_DefaultInterruptHandler);
-    IO_PD2_SetInterruptHandler(IO_PD2_DefaultInterruptHandler);
-    IO_PD3_SetInterruptHandler(IO_PD3_DefaultInterruptHandler);
-    IO_PD4_SetInterruptHandler(IO_PD4_DefaultInterruptHandler);
-    IO_PD5_SetInterruptHandler(IO_PD5_DefaultInterruptHandler);
-    IO_PD6_SetInterruptHandler(IO_PD6_DefaultInterruptHandler);
-    IO_PD7_SetInterruptHandler(IO_PD7_DefaultInterruptHandler);
-    IO_PF0_SetInterruptHandler(IO_PF0_DefaultInterruptHandler);
-    IO_PF1_SetInterruptHandler(IO_PF1_DefaultInterruptHandler);
+    SCL_LTC2943_SetInterruptHandler(SCL_LTC2943_DefaultInterruptHandler);
+    SDA_LTC2943_SetInterruptHandler(SDA_LTC2943_DefaultInterruptHandler);
+    SCL_Slave_SetInterruptHandler(SCL_Slave_DefaultInterruptHandler);
+    SDA_Slave_SetInterruptHandler(SDA_Slave_DefaultInterruptHandler);
+    Cell_2_Pin_SetInterruptHandler(Cell_2_Pin_DefaultInterruptHandler);
+    Cell_1_Pin_SetInterruptHandler(Cell_1_Pin_DefaultInterruptHandler);
+    Cell_4_Pin_SetInterruptHandler(Cell_4_Pin_DefaultInterruptHandler);
+    Cell_3_Pin_SetInterruptHandler(Cell_3_Pin_DefaultInterruptHandler);
+    Temp_Cell_4_Pin_SetInterruptHandler(Temp_Cell_4_Pin_DefaultInterruptHandler);
+    Temp_Cell_3_Pin_SetInterruptHandler(Temp_Cell_3_Pin_DefaultInterruptHandler);
+    Temp_Cell_2_Pin_SetInterruptHandler(Temp_Cell_2_Pin_DefaultInterruptHandler);
+    Temp_Cell_1_Pin_SetInterruptHandler(Temp_Cell_1_Pin_DefaultInterruptHandler);
+    Check_3V3_Pin_SetInterruptHandler(Check_3V3_Pin_DefaultInterruptHandler);
     BFG_Alert_SetInterruptHandler(BFG_Alert_DefaultInterruptHandler);
     EN_EXT_Balance_SetInterruptHandler(EN_EXT_Balance_DefaultInterruptHandler);
     Drain_Cell_1_SetInterruptHandler(Drain_Cell_1_DefaultInterruptHandler);
     Drain_Cell_2_SetInterruptHandler(Drain_Cell_2_DefaultInterruptHandler);
     Drain_Cell_3_SetInterruptHandler(Drain_Cell_3_DefaultInterruptHandler);
     Drain_Cell_4_SetInterruptHandler(Drain_Cell_4_DefaultInterruptHandler);
-    EN_Int_Net_SetInterruptHandler(EN_Int_Net_DefaultInterruptHandler);
+    EN_Buck_SetInterruptHandler(EN_Buck_DefaultInterruptHandler);
     EN_Lader_SetInterruptHandler(EN_Lader_DefaultInterruptHandler);
     EN_Batt_SetInterruptHandler(EN_Batt_DefaultInterruptHandler);
     Lader_Output_SetInterruptHandler(Lader_Output_DefaultInterruptHandler);
@@ -163,173 +163,173 @@ void Lader_Input_DefaultInterruptHandler(void)
     // or set custom function using Lader_Input_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PF3 at application runtime
+  Allows selecting an interrupt handler for SCL_LTC2943 at application runtime
 */
-void IO_PF3_SetInterruptHandler(void (* interruptHandler)(void)) 
+void SCL_LTC2943_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PF3_InterruptHandler = interruptHandler;
+    SCL_LTC2943_InterruptHandler = interruptHandler;
 }
 
-void IO_PF3_DefaultInterruptHandler(void)
+void SCL_LTC2943_DefaultInterruptHandler(void)
 {
-    // add your IO_PF3 interrupt custom code
-    // or set custom function using IO_PF3_SetInterruptHandler()
+    // add your SCL_LTC2943 interrupt custom code
+    // or set custom function using SCL_LTC2943_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PF2 at application runtime
+  Allows selecting an interrupt handler for SDA_LTC2943 at application runtime
 */
-void IO_PF2_SetInterruptHandler(void (* interruptHandler)(void)) 
+void SDA_LTC2943_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PF2_InterruptHandler = interruptHandler;
+    SDA_LTC2943_InterruptHandler = interruptHandler;
 }
 
-void IO_PF2_DefaultInterruptHandler(void)
+void SDA_LTC2943_DefaultInterruptHandler(void)
 {
-    // add your IO_PF2 interrupt custom code
-    // or set custom function using IO_PF2_SetInterruptHandler()
+    // add your SDA_LTC2943 interrupt custom code
+    // or set custom function using SDA_LTC2943_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PC3 at application runtime
+  Allows selecting an interrupt handler for SCL_Slave at application runtime
 */
-void IO_PC3_SetInterruptHandler(void (* interruptHandler)(void)) 
+void SCL_Slave_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PC3_InterruptHandler = interruptHandler;
+    SCL_Slave_InterruptHandler = interruptHandler;
 }
 
-void IO_PC3_DefaultInterruptHandler(void)
+void SCL_Slave_DefaultInterruptHandler(void)
 {
-    // add your IO_PC3 interrupt custom code
-    // or set custom function using IO_PC3_SetInterruptHandler()
+    // add your SCL_Slave interrupt custom code
+    // or set custom function using SCL_Slave_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PC2 at application runtime
+  Allows selecting an interrupt handler for SDA_Slave at application runtime
 */
-void IO_PC2_SetInterruptHandler(void (* interruptHandler)(void)) 
+void SDA_Slave_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PC2_InterruptHandler = interruptHandler;
+    SDA_Slave_InterruptHandler = interruptHandler;
 }
 
-void IO_PC2_DefaultInterruptHandler(void)
+void SDA_Slave_DefaultInterruptHandler(void)
 {
-    // add your IO_PC2 interrupt custom code
-    // or set custom function using IO_PC2_SetInterruptHandler()
+    // add your SDA_Slave interrupt custom code
+    // or set custom function using SDA_Slave_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PD1 at application runtime
+  Allows selecting an interrupt handler for Cell_2_Pin at application runtime
 */
-void IO_PD1_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Cell_2_Pin_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PD1_InterruptHandler = interruptHandler;
+    Cell_2_Pin_InterruptHandler = interruptHandler;
 }
 
-void IO_PD1_DefaultInterruptHandler(void)
+void Cell_2_Pin_DefaultInterruptHandler(void)
 {
-    // add your IO_PD1 interrupt custom code
-    // or set custom function using IO_PD1_SetInterruptHandler()
+    // add your Cell_2_Pin interrupt custom code
+    // or set custom function using Cell_2_Pin_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PD2 at application runtime
+  Allows selecting an interrupt handler for Cell_1_Pin at application runtime
 */
-void IO_PD2_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Cell_1_Pin_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PD2_InterruptHandler = interruptHandler;
+    Cell_1_Pin_InterruptHandler = interruptHandler;
 }
 
-void IO_PD2_DefaultInterruptHandler(void)
+void Cell_1_Pin_DefaultInterruptHandler(void)
 {
-    // add your IO_PD2 interrupt custom code
-    // or set custom function using IO_PD2_SetInterruptHandler()
+    // add your Cell_1_Pin interrupt custom code
+    // or set custom function using Cell_1_Pin_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PD3 at application runtime
+  Allows selecting an interrupt handler for Cell_4_Pin at application runtime
 */
-void IO_PD3_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Cell_4_Pin_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PD3_InterruptHandler = interruptHandler;
+    Cell_4_Pin_InterruptHandler = interruptHandler;
 }
 
-void IO_PD3_DefaultInterruptHandler(void)
+void Cell_4_Pin_DefaultInterruptHandler(void)
 {
-    // add your IO_PD3 interrupt custom code
-    // or set custom function using IO_PD3_SetInterruptHandler()
+    // add your Cell_4_Pin interrupt custom code
+    // or set custom function using Cell_4_Pin_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PD4 at application runtime
+  Allows selecting an interrupt handler for Cell_3_Pin at application runtime
 */
-void IO_PD4_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Cell_3_Pin_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PD4_InterruptHandler = interruptHandler;
+    Cell_3_Pin_InterruptHandler = interruptHandler;
 }
 
-void IO_PD4_DefaultInterruptHandler(void)
+void Cell_3_Pin_DefaultInterruptHandler(void)
 {
-    // add your IO_PD4 interrupt custom code
-    // or set custom function using IO_PD4_SetInterruptHandler()
+    // add your Cell_3_Pin interrupt custom code
+    // or set custom function using Cell_3_Pin_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PD5 at application runtime
+  Allows selecting an interrupt handler for Temp_Cell_4_Pin at application runtime
 */
-void IO_PD5_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Temp_Cell_4_Pin_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PD5_InterruptHandler = interruptHandler;
+    Temp_Cell_4_Pin_InterruptHandler = interruptHandler;
 }
 
-void IO_PD5_DefaultInterruptHandler(void)
+void Temp_Cell_4_Pin_DefaultInterruptHandler(void)
 {
-    // add your IO_PD5 interrupt custom code
-    // or set custom function using IO_PD5_SetInterruptHandler()
+    // add your Temp_Cell_4_Pin interrupt custom code
+    // or set custom function using Temp_Cell_4_Pin_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PD6 at application runtime
+  Allows selecting an interrupt handler for Temp_Cell_3_Pin at application runtime
 */
-void IO_PD6_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Temp_Cell_3_Pin_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PD6_InterruptHandler = interruptHandler;
+    Temp_Cell_3_Pin_InterruptHandler = interruptHandler;
 }
 
-void IO_PD6_DefaultInterruptHandler(void)
+void Temp_Cell_3_Pin_DefaultInterruptHandler(void)
 {
-    // add your IO_PD6 interrupt custom code
-    // or set custom function using IO_PD6_SetInterruptHandler()
+    // add your Temp_Cell_3_Pin interrupt custom code
+    // or set custom function using Temp_Cell_3_Pin_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PD7 at application runtime
+  Allows selecting an interrupt handler for Temp_Cell_2_Pin at application runtime
 */
-void IO_PD7_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Temp_Cell_2_Pin_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PD7_InterruptHandler = interruptHandler;
+    Temp_Cell_2_Pin_InterruptHandler = interruptHandler;
 }
 
-void IO_PD7_DefaultInterruptHandler(void)
+void Temp_Cell_2_Pin_DefaultInterruptHandler(void)
 {
-    // add your IO_PD7 interrupt custom code
-    // or set custom function using IO_PD7_SetInterruptHandler()
+    // add your Temp_Cell_2_Pin interrupt custom code
+    // or set custom function using Temp_Cell_2_Pin_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PF0 at application runtime
+  Allows selecting an interrupt handler for Temp_Cell_1_Pin at application runtime
 */
-void IO_PF0_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Temp_Cell_1_Pin_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PF0_InterruptHandler = interruptHandler;
+    Temp_Cell_1_Pin_InterruptHandler = interruptHandler;
 }
 
-void IO_PF0_DefaultInterruptHandler(void)
+void Temp_Cell_1_Pin_DefaultInterruptHandler(void)
 {
-    // add your IO_PF0 interrupt custom code
-    // or set custom function using IO_PF0_SetInterruptHandler()
+    // add your Temp_Cell_1_Pin interrupt custom code
+    // or set custom function using Temp_Cell_1_Pin_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for IO_PF1 at application runtime
+  Allows selecting an interrupt handler for Check_3V3_Pin at application runtime
 */
-void IO_PF1_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Check_3V3_Pin_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    IO_PF1_InterruptHandler = interruptHandler;
+    Check_3V3_Pin_InterruptHandler = interruptHandler;
 }
 
-void IO_PF1_DefaultInterruptHandler(void)
+void Check_3V3_Pin_DefaultInterruptHandler(void)
 {
-    // add your IO_PF1 interrupt custom code
-    // or set custom function using IO_PF1_SetInterruptHandler()
+    // add your Check_3V3_Pin interrupt custom code
+    // or set custom function using Check_3V3_Pin_SetInterruptHandler()
 }
 /**
   Allows selecting an interrupt handler for BFG_Alert at application runtime
@@ -410,17 +410,17 @@ void Drain_Cell_4_DefaultInterruptHandler(void)
     // or set custom function using Drain_Cell_4_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for EN_Int_Net at application runtime
+  Allows selecting an interrupt handler for EN_Buck at application runtime
 */
-void EN_Int_Net_SetInterruptHandler(void (* interruptHandler)(void)) 
+void EN_Buck_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    EN_Int_Net_InterruptHandler = interruptHandler;
+    EN_Buck_InterruptHandler = interruptHandler;
 }
 
-void EN_Int_Net_DefaultInterruptHandler(void)
+void EN_Buck_DefaultInterruptHandler(void)
 {
-    // add your EN_Int_Net interrupt custom code
-    // or set custom function using EN_Int_Net_SetInterruptHandler()
+    // add your EN_Buck interrupt custom code
+    // or set custom function using EN_Buck_SetInterruptHandler()
 }
 /**
   Allows selecting an interrupt handler for EN_Lader at application runtime
@@ -499,7 +499,7 @@ ISR(PORTA_PORT_vect)
     }
     if(VPORTA.INTFLAGS & PORT_INT5_bm)
     {
-       EN_Int_Net_InterruptHandler(); 
+       EN_Buck_InterruptHandler(); 
     }
     if(VPORTA.INTFLAGS & PORT_INT6_bm)
     {
@@ -522,11 +522,11 @@ ISR(PORTC_PORT_vect)
     }
     if(VPORTC.INTFLAGS & PORT_INT3_bm)
     {
-       IO_PC3_InterruptHandler(); 
+       SCL_Slave_InterruptHandler(); 
     }
     if(VPORTC.INTFLAGS & PORT_INT2_bm)
     {
-       IO_PC2_InterruptHandler(); 
+       SDA_Slave_InterruptHandler(); 
     }
     if(VPORTC.INTFLAGS & PORT_INT0_bm)
     {
@@ -541,31 +541,31 @@ ISR(PORTD_PORT_vect)
     // Call the interrupt handler for the callback registered at runtime
     if(VPORTD.INTFLAGS & PORT_INT1_bm)
     {
-       IO_PD1_InterruptHandler(); 
+       Cell_2_Pin_InterruptHandler(); 
     }
     if(VPORTD.INTFLAGS & PORT_INT2_bm)
     {
-       IO_PD2_InterruptHandler(); 
+       Cell_1_Pin_InterruptHandler(); 
     }
     if(VPORTD.INTFLAGS & PORT_INT3_bm)
     {
-       IO_PD3_InterruptHandler(); 
+       Cell_4_Pin_InterruptHandler(); 
     }
     if(VPORTD.INTFLAGS & PORT_INT4_bm)
     {
-       IO_PD4_InterruptHandler(); 
+       Cell_3_Pin_InterruptHandler(); 
     }
     if(VPORTD.INTFLAGS & PORT_INT5_bm)
     {
-       IO_PD5_InterruptHandler(); 
+       Temp_Cell_4_Pin_InterruptHandler(); 
     }
     if(VPORTD.INTFLAGS & PORT_INT6_bm)
     {
-       IO_PD6_InterruptHandler(); 
+       Temp_Cell_3_Pin_InterruptHandler(); 
     }
     if(VPORTD.INTFLAGS & PORT_INT7_bm)
     {
-       IO_PD7_InterruptHandler(); 
+       Temp_Cell_2_Pin_InterruptHandler(); 
     }
     /* Clear interrupt flags */
     VPORTD.INTFLAGS = 0xff;
@@ -576,19 +576,19 @@ ISR(PORTF_PORT_vect)
     // Call the interrupt handler for the callback registered at runtime
     if(VPORTF.INTFLAGS & PORT_INT3_bm)
     {
-       IO_PF3_InterruptHandler(); 
+       SCL_LTC2943_InterruptHandler(); 
     }
     if(VPORTF.INTFLAGS & PORT_INT2_bm)
     {
-       IO_PF2_InterruptHandler(); 
+       SDA_LTC2943_InterruptHandler(); 
     }
     if(VPORTF.INTFLAGS & PORT_INT0_bm)
     {
-       IO_PF0_InterruptHandler(); 
+       Temp_Cell_1_Pin_InterruptHandler(); 
     }
     if(VPORTF.INTFLAGS & PORT_INT1_bm)
     {
-       IO_PF1_InterruptHandler(); 
+       Check_3V3_Pin_InterruptHandler(); 
     }
     if(VPORTF.INTFLAGS & PORT_INT5_bm)
     {
