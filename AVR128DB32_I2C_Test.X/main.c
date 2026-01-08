@@ -440,7 +440,9 @@ enum Events Charge_Entry(){
 }
 enum Events Charge_Run(){
 	Balance_Cells();
+	Accumulated_Charge = Get_Battery_Charge_In_mAh();
 	CurrentProblemEvent = Monitor_Batt();
+	TCA0.SINGLE.CMP1 = ((Get_Battery_Charge_In_mAh()-600)/3000*2E16-1);
 	if (IsBatteryCharged()){
 		return E_Batt_Full;
 	}
@@ -449,6 +451,7 @@ enum Events Charge_Run(){
 	}
 }
 void Charge_Exit(){
+	TCA0.SINGLE.CMP1 = 0;
 	EN_Lader_SetLow();
 	set_home_status(1);
 }
@@ -511,7 +514,7 @@ enum Events Handle_BFG_Alert(){
 void Total_Shutdown(){
 	EN_Lader_SetLow();
 	EN_Batt_SetLow();
-	set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+	set_sleep_mode(SLEEP_MODE_STANDBY);
 	sleep_mode();
 }
 enum Events CountFix(){
@@ -690,6 +693,7 @@ int main () {
 				}
 		}
 		//Problem statemachine ==================================
+		Set_Error_Pattern(CurrentProblemEvent);
 		switch (CurrentProblemState){
 			case PS_No_Problem:
 				switch (CurrentProblemEvent){
@@ -764,6 +768,8 @@ int main () {
 				break;
 		}
 		CurrentProblemState = NextProblemState;
+		set_sleep_mode(SLEEP_MODE_IDLE);
+		sleep_mode();
 	}
 	return 0;
 }
