@@ -340,6 +340,15 @@ void Balance_Cells(){
 		Drain_Cell_4_SetLow();
 	}
 }
+
+bool IsBatteryCharged(){
+	if (Cell_Voltage_1_Result >= Cell_Voltage_Stop_Drain && Cell_Voltage_2_Result >= Cell_Voltage_Stop_Drain && Cell_Voltage_3_Result >= Cell_Voltage_Stop_Drain && Cell_Voltage_4_Result >= Cell_Voltage_Stop_Drain){
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 // Statemachine Functions============================================================================================================
 void Switch_State (){ //Schakel naar nieuwe state
 	CurrentEvent = E_No_Event;
@@ -358,10 +367,12 @@ enum Events Init_Run(){
 	Set_LTC2943_REG(Voltage_Threshold_High_REG, 41098);
 	Set_LTC2943_REG(Voltage_Threshold_Low_REG, 33323);
 	Set_LTC2943_REG(Charge_Threshold_Low_REG, 51417);// Nog een keer checken
+	set_home_status(1);
 
 	return E_Init_Done;
 }
 enum Events Discharge_Entry(){
+	EN_Batt_SetHigh();
 	return E_No_Event;
 }
 enum Events Discharge_Run(){
@@ -369,20 +380,29 @@ enum Events Discharge_Run(){
 	return E_No_Event;
 }
 void Discharge_Exit(){
-	;
+	EN_Batt_SetLow();
 }
 enum Events Charge_Entry(){
+	EN_Lader_SetHigh();
+	set_home_status(3);
 	return E_No_Event;
 }
 enum Events Charge_Run(){
 	Balance_Cells();
 	CurrentProblemEvent = Monitor_Batt();
-	return E_No_Event;
+	if (IsBatteryCharged()){
+		return E_Batt_Full;
+	}
+	else{
+		return E_No_Event;
+	}
 }
 void Charge_Exit(){
-	;
+	EN_Lader_SetLow();
+	set_home_status(1);
 }
 enum Events Batt_Full_Entry(){
+	EN_Lader_SetLow();
 	return E_No_Event;
 }
 enum Events Batt_Full_Run(){
@@ -392,9 +412,13 @@ void Batt_Full_Exit(){
 	;
 }
 enum Events Shutdown_Entry(){
+	EN_Lader_SetLow();
+	EN_Batt_SetLow();
+	set_home_status(2);
 	return E_No_Event;
 }
 enum Events Shutdown_Run(){
+	CurrentProblemEvent = Monitor_Batt();
 	return E_No_Event;
 }
 void Shutdown_Exit(){
