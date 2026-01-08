@@ -300,6 +300,7 @@ enum ProblemEvents TempCheck() {//Check if any temperature is above maximum
 
 enum ProblemEvents Monitor_Batt (){
 	Accumulated_Charge = Get_Battery_Charge_In_mAh();
+	register_data[HOME_DATA_IN] = (Accumulated_Charge-600)/3000*100;
 	if(Cell_Voltage_1_Result <= Min_Cell_Voltage || Cell_Voltage_2_Result <= Min_Cell_Voltage || Cell_Voltage_3_Result <= Min_Cell_Voltage || Cell_Voltage_4_Result <= Min_Cell_Voltage){
 		CurrentEvent = E_Batt_Empty;
 		return PE_No_Event;
@@ -442,7 +443,7 @@ enum Events Charge_Run(){
 	Balance_Cells();
 	Accumulated_Charge = Get_Battery_Charge_In_mAh();
 	CurrentProblemEvent = Monitor_Batt();
-	TCA0.SINGLE.CMP1 = ((Get_Battery_Charge_In_mAh()-600)/3000*2E16-1);
+	TCA0.SINGLE.CMP1 = ((Accumulated_Charge-600)/3000*2E16-1);
 	if (IsBatteryCharged()){
 		return E_Batt_Full;
 	}
