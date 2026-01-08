@@ -557,6 +557,7 @@ int main () {
 						Switch_State ();
 						break;
 				}
+				break;
 			case S_Init:
 				switch (CurrentEvent){
 					case E_Init_Done:
@@ -580,6 +581,7 @@ int main () {
 						Switch_State ();
 						break;
 				}
+				break;
 			case S_Discharge:
 				switch (CurrentEvent){
 					case E_Charger_Connected:
@@ -609,6 +611,7 @@ int main () {
 						Switch_State ();
 						break;
 				}
+				break;
 			case S_Charge:
 				switch (CurrentEvent){
 					case E_Batt_Full:
@@ -638,6 +641,7 @@ int main () {
 						Switch_State ();
 						break;
 				}
+				break;
 			case S_Batt_Full:
 				switch (CurrentEvent){
 					case E_Charger_Disconnected:
@@ -667,6 +671,7 @@ int main () {
 						Switch_State ();
 						break;
 				}
+				break;
 			case S_Shutdown:
 				switch (CurrentEvent){
 					case E_Charger_Connected:
