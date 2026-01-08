@@ -94,7 +94,7 @@ void Set_Error_Pattern(uint8_t error_code){
             LED_Pattern[5] = 0;
             break;
 
-        case 1: //Ext balance
+        case 1: //Alert
             LED_Pattern[0] = 200;  // ON
             LED_Pattern[1] = 200;  // OFF
             LED_Pattern[2] = 0;  // ON
@@ -103,7 +103,7 @@ void Set_Error_Pattern(uint8_t error_code){
             LED_Pattern[5] = 0;  // OFF
             break;
             
-        case 2: //Alert
+        case 2: //Overtemp
             LED_Pattern[0] = 200;  // ON
             LED_Pattern[1] = 200;  // OFF
             LED_Pattern[2] = 200;  // ON
@@ -119,7 +119,7 @@ void Set_Error_Pattern(uint8_t error_code){
             LED_Pattern[4] = 0;  // ON
             LED_Pattern[5] = 0;  // OFF
             break;
-        case 4: //Extreme Overvolt
+        case 4: //Overvolt
             LED_Pattern[0] = 800;  // ON
             LED_Pattern[1] = 200;  // OFF
             LED_Pattern[2] = 0;  // ON
@@ -127,7 +127,7 @@ void Set_Error_Pattern(uint8_t error_code){
             LED_Pattern[4] = 0;  // ON
             LED_Pattern[5] = 0;  // OFF
             break;
-        case 5: //Unbalance
+        case 5: //Countfail
             LED_Pattern[0] = 200;  // ON
             LED_Pattern[1] = 200;  // OFF
             LED_Pattern[2] = 800;  // ON
@@ -135,9 +135,7 @@ void Set_Error_Pattern(uint8_t error_code){
             LED_Pattern[4] = 0;  // ON
             LED_Pattern[5] = 0;  // OFF
             break;
-        case 6: //Overtemp
-        case 7: //Second Overtemp
-        case 11://BFG Overtemp
+        case 6: //Single Cell Empty
             LED_Pattern[0] = 50;  // ON
             LED_Pattern[1] = 200;   // OFF
             LED_Pattern[2] = 0;  // ON
@@ -145,15 +143,7 @@ void Set_Error_Pattern(uint8_t error_code){
             LED_Pattern[4] = 0;  // ON
             LED_Pattern[5] = 0;   // OFF
             break;
-        case 8: //Count Fail
-            LED_Pattern[0] = 500;  // ON
-            LED_Pattern[1] = 400;   // OFF
-            LED_Pattern[2] = 300;  // ON
-            LED_Pattern[3] = 200;   // OFF
-            LED_Pattern[4] = 100;  // ON
-            LED_Pattern[5] = 50;   // OFF
-            break;
-        case 9: //Over Current
+        case 8: //Over Current
             LED_Pattern[0] = 50;  // ON
             LED_Pattern[1] = 50;   // OFF
             LED_Pattern[2] = 0;  // ON
@@ -161,7 +151,15 @@ void Set_Error_Pattern(uint8_t error_code){
             LED_Pattern[4] = 0;  // ON
             LED_Pattern[5] = 0;   // OFF
             break;
-        case 10: // Overvoltage
+        case 9: //BFG Overtemp
+            LED_Pattern[0] = 500;  // ON
+            LED_Pattern[1] = 400;   // OFF
+            LED_Pattern[2] = 300;  // ON
+            LED_Pattern[3] = 200;   // OFF
+            LED_Pattern[4] = 100;  // ON
+            LED_Pattern[5] = 50;   // OFF
+            break;
+        case 10: //Systeem Integratie Nood
             LED_Pattern[0] = 50;  // ON
             LED_Pattern[1] = 50;  // OFF
             LED_Pattern[2] = 50;  // ON
