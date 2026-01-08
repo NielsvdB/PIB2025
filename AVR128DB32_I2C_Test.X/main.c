@@ -77,6 +77,7 @@ enum HomeReg {
 
 //Cell defines=======================================================================================================================
 #define Amount_Of_Cells 4
+#define Min_Charge 600
 
 //Cell voltage defines
 #define Min_Cell_Voltage 3200
@@ -100,6 +101,7 @@ enum Flow CurrentFlow = F_Entry;
 enum ProblemStates CurrentProblemState = PS_No_Problem;
 enum ProblemStates NextProblemState = PS_No_Problem;
 enum ProblemEvents CurrentProblemEvent = PE_No_Event;
+bool OvervoltCells[Amount_Of_Cells] = {0};
 
 //ADC0_Result Variables===============================================================================================================
 volatile uint16_t Temp_Cell_1_Result = 0;
@@ -117,6 +119,8 @@ static uint8_t register_data[NUM_REGISTERS] = {0, 0, 0, 0};
 static uint8_t register_selected = 0;
 static uint8_t rx_byte_count = 0; // NIEUWE TELLER: Aantal ontvangen data bytes (exclusief Adres)
 
+//Cell Variables=====================================================================================================================
+float Accumulated_Charge;
 //I2C naar systeemintegratie functios=================================================================================================
 void set_home_status(uint8_t status_value) {
     if (status_value <= 4) {
@@ -295,12 +299,17 @@ enum ProblemEvents TempCheck() {//Check if any temperature is above maximum
 }
 
 enum ProblemEvents Monitor_Batt (){
+	Accumulated_Charge = Get_Battery_Charge();
 	if(Cell_Voltage_1_Result <= Min_Cell_Voltage || Cell_Voltage_2_Result <= Min_Cell_Voltage || Cell_Voltage_3_Result <= Min_Cell_Voltage || Cell_Voltage_4_Result <= Min_Cell_Voltage){
 		CurrentEvent = E_Batt_Empty;
 		return PE_No_Event;
 	}
 	else if (Cell_Voltage_1_Result >= Max_Cell_Voltage || Cell_Voltage_2_Result >= Max_Cell_Voltage || Cell_Voltage_3_Result >= Max_Cell_Voltage || Cell_Voltage_4_Result >= Max_Cell_Voltage){
 		return PE_Overvolt;
+	}
+	else if(Accumulated_Charge < Min_Charge){
+		CurrentEvent = E_Batt_Empty;
+		return PE_No_Event;
 	}
 	else{
 		return TempCheck();
@@ -349,6 +358,43 @@ bool IsBatteryCharged(){
 		return false;
 	}
 }
+
+enum Events Overcharged_Cells(){
+	bool CheckOvervolt = 0;
+	if(Cell_Voltage_1_Result > Max_Cell_Voltage){
+		CheckOvervolt = 1;
+		Drain_Cell_1_SetHigh();
+	}
+	else if(Cell_Voltage_1_Result <= Max_Cell_Voltage)
+		Drain_Cell_1_SetLow();
+	if(Cell_Voltage_2_Result > Max_Cell_Voltage){
+		CheckOvervolt = 1;
+		Drain_Cell_2_SetHigh();
+	}
+	else if(Cell_Voltage_2_Result <= Max_Cell_Voltage)
+		Drain_Cell_2_SetLow();
+	if(Cell_Voltage_3_Result > Max_Cell_Voltage){
+		Drain_Cell_3_SetHigh();
+		CheckOvervolt = 1;
+	}
+	else if(Cell_Voltage_3_Result <= Max_Cell_Voltage)
+		Drain_Cell_3_SetLow();
+	if(Cell_Voltage_4_Result > Max_Cell_Voltage){
+		Drain_Cell_4_SetHigh();
+		CheckOvervolt = 1;
+	}
+	else if(Cell_Voltage_4_Result <= Max_Cell_Voltage)
+		Drain_Cell_4_SetLow();
+	if (CheckOvervolt){
+		CurrentProblemEvent = PE_Overvolt;
+		return E_No_Event;
+	}
+	else {
+		CurrentProblemEvent = PE_No_Event;
+		return E_Error_Handled;
+	}
+}
+
 // Statemachine Functions============================================================================================================
 void Switch_State (){ //Schakel naar nieuwe state
 	CurrentEvent = E_No_Event;
@@ -377,7 +423,12 @@ enum Events Discharge_Entry(){
 }
 enum Events Discharge_Run(){
 	CurrentProblemEvent = Monitor_Batt();
-	return E_No_Event;
+	if (CurrentEvent == E_Batt_Empty){
+		return E_Batt_Empty;
+	}
+	else{
+		return E_No_Event;
+	} 
 }
 void Discharge_Exit(){
 	EN_Batt_SetLow();
@@ -402,11 +453,16 @@ void Charge_Exit(){
 	set_home_status(1);
 }
 enum Events Batt_Full_Entry(){
-	EN_Lader_SetLow();
 	return E_No_Event;
 }
 enum Events Batt_Full_Run(){
-	return E_No_Event;
+	CurrentProblemEvent = Monitor_Batt();
+	if (CurrentEvent == E_Batt_Empty){
+		return E_Batt_Empty;
+	}
+	else{
+		return E_No_Event;
+	} 
 }
 void Batt_Full_Exit(){
 	;
@@ -419,7 +475,12 @@ enum Events Shutdown_Entry(){
 }
 enum Events Shutdown_Run(){
 	CurrentProblemEvent = Monitor_Batt();
-	return E_No_Event;
+	if (CurrentEvent == E_Batt_Empty){
+		return E_Batt_Empty;
+	}
+	else{
+		return E_No_Event;
+	} 
 }
 void Shutdown_Exit(){
 	;
@@ -427,15 +488,39 @@ void Shutdown_Exit(){
 
 //ProblemState functions==================================================================================================================
 enum Events Overvolt(){
-	return E_No_Event;
+	return Overcharged_Cells();
 }
 enum Events Handle_BFG_Alert(){
+	Get_Active_Alerts();
+	if (LTC2943_Error_Status_Array[0])
+		CurrentProblemEvent = PE_No_Event;
+	if (LTC2943_Error_Status_Array[1])
+		CurrentProblemEvent = Monitor_Batt();
+	if (LTC2943_Error_Status_Array[2])
+		CurrentEvent = E_Batt_Empty;
+	if (LTC2943_Error_Status_Array[3])
+		CurrentEvent = E_Batt_Full;
+	if (LTC2943_Error_Status_Array[4])
+		CurrentProblemEvent = PE_BFG_Overtemp;
+	if (LTC2943_Error_Status_Array[5])
+		CurrentProblemEvent = PE_Count_Fail;
+	if (LTC2943_Error_Status_Array[6])
+		CurrentProblemEvent = PE_Over_Current;
 	return E_No_Event;
 }
 void Total_Shutdown(){
-	;
+	EN_Lader_SetLow();
+	EN_Batt_SetLow();
+	set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+	sleep_mode();
 }
 enum Events CountFix(){
+	if (IsBatteryCharged()){//If battery full reset counter to max
+		Set_LTC2943_REG(Accumulated_Charge_REG, 0xFFFF);
+	}
+	else{//If battery not full reset counter to min
+		Set_LTC2943_REG(Accumulated_Charge_REG, 0x0000);
+	}
 	return E_No_Event;
 }
 
@@ -610,6 +695,7 @@ int main () {
 				switch (CurrentProblemEvent){
 					case PE_Alert:
 						NextProblemState = PS_Handle_BFG_Alert;
+						CurrentEvent = E_Error;
 						break;
 					case PE_Overtemp:
 					case PE_Undervolt:
@@ -617,16 +703,20 @@ int main () {
 					case PE_BFG_Overtemp:
 					case PE_Systeem_Integratie_Nood:
 						NextProblemState = PS_Total_Shutdown;
+						CurrentEvent = E_Error;
 						break;
 					case PE_Overvolt:
 						NextProblemState = PS_Overvolt;
+						CurrentEvent = E_Error;
 						break;
 					case PE_Count_Fail:
 						NextProblemState = PS_Count_Fix;
+						CurrentEvent = E_Error;
 						break;
 					case PE_Single_Cell_Empty:
 						NextProblemState = PS_No_Problem;
 						CurrentEvent = E_Batt_Empty;
+						CurrentEvent = E_Error;
 						break;
 					case PE_No_Event:
 						NextProblemState = PS_No_Problem;
