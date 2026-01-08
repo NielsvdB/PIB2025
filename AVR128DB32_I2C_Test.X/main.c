@@ -120,7 +120,7 @@ static uint8_t register_selected = 0;
 static uint8_t rx_byte_count = 0; // NIEUWE TELLER: Aantal ontvangen data bytes (exclusief Adres)
 
 //Cell Variables=====================================================================================================================
-float Accumulated_Charge;
+float Accumulated_Charge = 0;
 //I2C naar systeemintegratie functios=================================================================================================
 void set_home_status(uint8_t status_value) {
     if (status_value <= 4) {
@@ -299,7 +299,7 @@ enum ProblemEvents TempCheck() {//Check if any temperature is above maximum
 }
 
 enum ProblemEvents Monitor_Batt (){
-	Accumulated_Charge = Get_Battery_Charge();
+	Accumulated_Charge = Get_Battery_Charge_In_mAh();
 	if(Cell_Voltage_1_Result <= Min_Cell_Voltage || Cell_Voltage_2_Result <= Min_Cell_Voltage || Cell_Voltage_3_Result <= Min_Cell_Voltage || Cell_Voltage_4_Result <= Min_Cell_Voltage){
 		CurrentEvent = E_Batt_Empty;
 		return PE_No_Event;

@@ -71,7 +71,7 @@ void Get_Active_Alerts();
 extern bool LTC2943_Error_Status_Array[7];
 
 //Read converted Values=============================================
-float Get_Battery_Charge();
+float Get_Battery_Charge_In_mAh();
 
 float Get_Batteru_Voltage();
 
