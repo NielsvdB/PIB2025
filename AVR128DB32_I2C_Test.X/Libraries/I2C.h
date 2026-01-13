@@ -8,6 +8,7 @@
 #define I2C_H
 
 #define LTC2943_ADDR 0x64
+#define LTC2943_ARA_ADDR 0x0C
 
 //Read Addresses
 #define Status_REG                      0x00 //8 bit
@@ -67,6 +68,8 @@ void Write_Control_REG();
 uint16_t Get_LTC2943_REG(uint8_t Address);
 
 void Get_Active_Alerts();
+
+void Clear_LTC2943_Alert();
 
 extern bool LTC2943_Error_Status_Array[7];
 

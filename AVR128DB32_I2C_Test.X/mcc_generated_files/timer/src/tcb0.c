@@ -77,7 +77,7 @@ void TCB0_Initialize(void)
     TCB0.CTRLA = (0 << TCB_CASCADE_bp)   // CASCADE disabled
         | (TCB_CLKSEL_DIV2_gc)   // CLKSEL DIV2
         | (1 << TCB_ENABLE_bp)   // ENABLE enabled
-        | (0 << TCB_RUNSTDBY_bp)   // RUNSTDBY disabled
+        | (1 << TCB_RUNSTDBY_bp)   // RUNSTDBY enabled
         | (0 << TCB_SYNCUPD_bp);  // SYNCUPD disabled
 }
 

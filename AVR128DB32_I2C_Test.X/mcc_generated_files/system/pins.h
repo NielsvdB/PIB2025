@@ -38,24 +38,24 @@
 #include <avr/io.h>
 #include "./port.h"
 
-//get/set Lader_Input aliases
-#define Lader_Input_SetHigh() do { PORTC_OUTSET = 0x2; } while(0)
-#define Lader_Input_SetLow() do { PORTC_OUTCLR = 0x2; } while(0)
-#define Lader_Input_Toggle() do { PORTC_OUTTGL = 0x2; } while(0)
-#define Lader_Input_GetValue() (VPORTC.IN & (0x1 << 1))
-#define Lader_Input_SetDigitalInput() do { PORTC_DIRCLR = 0x2; } while(0)
-#define Lader_Input_SetDigitalOutput() do { PORTC_DIRSET = 0x2; } while(0)
-#define Lader_Input_SetPullUp() do { PORTC_PIN1CTRL  |= PORT_PULLUPEN_bm; } while(0)
-#define Lader_Input_ResetPullUp() do { PORTC_PIN1CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
-#define Lader_Input_SetInverted() do { PORTC_PIN1CTRL  |= PORT_INVEN_bm; } while(0)
-#define Lader_Input_ResetInverted() do { PORTC_PIN1CTRL  &= ~PORT_INVEN_bm; } while(0)
-#define Lader_Input_DisableInterruptOnChange() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
-#define Lader_Input_EnableInterruptForBothEdges() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
-#define Lader_Input_EnableInterruptForRisingEdge() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
-#define Lader_Input_EnableInterruptForFallingEdge() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
-#define Lader_Input_DisableDigitalInputBuffer() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
-#define Lader_Input_EnableInterruptForLowLevelSensing() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
-#define PC1_SetInterruptHandler Lader_Input_SetInterruptHandler
+//get/set Lader_Output aliases
+#define Lader_Output_SetHigh() do { PORTC_OUTSET = 0x1; } while(0)
+#define Lader_Output_SetLow() do { PORTC_OUTCLR = 0x1; } while(0)
+#define Lader_Output_Toggle() do { PORTC_OUTTGL = 0x1; } while(0)
+#define Lader_Output_GetValue() (VPORTC.IN & (0x1 << 0))
+#define Lader_Output_SetDigitalInput() do { PORTC_DIRCLR = 0x1; } while(0)
+#define Lader_Output_SetDigitalOutput() do { PORTC_DIRSET = 0x1; } while(0)
+#define Lader_Output_SetPullUp() do { PORTC_PIN0CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define Lader_Output_ResetPullUp() do { PORTC_PIN0CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define Lader_Output_SetInverted() do { PORTC_PIN0CTRL  |= PORT_INVEN_bm; } while(0)
+#define Lader_Output_ResetInverted() do { PORTC_PIN0CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define Lader_Output_DisableInterruptOnChange() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define Lader_Output_EnableInterruptForBothEdges() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define Lader_Output_EnableInterruptForRisingEdge() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define Lader_Output_EnableInterruptForFallingEdge() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define Lader_Output_DisableDigitalInputBuffer() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define Lader_Output_EnableInterruptForLowLevelSensing() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+#define PC0_SetInterruptHandler Lader_Output_SetInterruptHandler
 
 //get/set SCL_LTC2943 aliases
 #define SCL_LTC2943_SetHigh() do { PORTF_OUTSET = 0x8; } while(0)
@@ -323,6 +323,25 @@
 #define BFG_Alert_EnableInterruptForLowLevelSensing() do { PORTA.PIN4CTRL = (PORTA.PIN4CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
 #define PA4_SetInterruptHandler BFG_Alert_SetInterruptHandler
 
+//get/set Lader_Input aliases
+#define Lader_Input_SetHigh() do { PORTC_OUTSET = 0x2; } while(0)
+#define Lader_Input_SetLow() do { PORTC_OUTCLR = 0x2; } while(0)
+#define Lader_Input_Toggle() do { PORTC_OUTTGL = 0x2; } while(0)
+#define Lader_Input_GetValue() (VPORTC.IN & (0x1 << 1))
+#define Lader_Input_SetDigitalInput() do { PORTC_DIRCLR = 0x2; } while(0)
+#define Lader_Input_SetDigitalOutput() do { PORTC_DIRSET = 0x2; } while(0)
+#define Lader_Input_SetPullUp() do { PORTC_PIN1CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define Lader_Input_ResetPullUp() do { PORTC_PIN1CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define Lader_Input_SetInverted() do { PORTC_PIN1CTRL  |= PORT_INVEN_bm; } while(0)
+#define Lader_Input_ResetInverted() do { PORTC_PIN1CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define Lader_Input_DisableInterruptOnChange() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define Lader_Input_EnableInterruptForBothEdges() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define Lader_Input_EnableInterruptForRisingEdge() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define Lader_Input_EnableInterruptForFallingEdge() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define Lader_Input_DisableDigitalInputBuffer() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define Lader_Input_EnableInterruptForLowLevelSensing() do { PORTC.PIN1CTRL = (PORTC.PIN1CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+#define PC1_SetInterruptHandler Lader_Input_SetInterruptHandler
+
 //get/set EN_EXT_Balance aliases
 #define EN_EXT_Balance_SetHigh() do { PORTF_OUTSET = 0x20; } while(0)
 #define EN_EXT_Balance_SetLow() do { PORTF_OUTCLR = 0x20; } while(0)
@@ -437,62 +456,43 @@
 #define EN_Buck_EnableInterruptForLowLevelSensing() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
 #define PA5_SetInterruptHandler EN_Buck_SetInterruptHandler
 
-//get/set EN_Lader aliases
-#define EN_Lader_SetHigh() do { PORTA_OUTSET = 0x40; } while(0)
-#define EN_Lader_SetLow() do { PORTA_OUTCLR = 0x40; } while(0)
-#define EN_Lader_Toggle() do { PORTA_OUTTGL = 0x40; } while(0)
-#define EN_Lader_GetValue() (VPORTA.IN & (0x1 << 6))
-#define EN_Lader_SetDigitalInput() do { PORTA_DIRCLR = 0x40; } while(0)
-#define EN_Lader_SetDigitalOutput() do { PORTA_DIRSET = 0x40; } while(0)
-#define EN_Lader_SetPullUp() do { PORTA_PIN6CTRL  |= PORT_PULLUPEN_bm; } while(0)
-#define EN_Lader_ResetPullUp() do { PORTA_PIN6CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
-#define EN_Lader_SetInverted() do { PORTA_PIN6CTRL  |= PORT_INVEN_bm; } while(0)
-#define EN_Lader_ResetInverted() do { PORTA_PIN6CTRL  &= ~PORT_INVEN_bm; } while(0)
-#define EN_Lader_DisableInterruptOnChange() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
-#define EN_Lader_EnableInterruptForBothEdges() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
-#define EN_Lader_EnableInterruptForRisingEdge() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
-#define EN_Lader_EnableInterruptForFallingEdge() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
-#define EN_Lader_DisableDigitalInputBuffer() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
-#define EN_Lader_EnableInterruptForLowLevelSensing() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
-#define PA6_SetInterruptHandler EN_Lader_SetInterruptHandler
-
 //get/set EN_Batt aliases
-#define EN_Batt_SetHigh() do { PORTA_OUTSET = 0x80; } while(0)
-#define EN_Batt_SetLow() do { PORTA_OUTCLR = 0x80; } while(0)
-#define EN_Batt_Toggle() do { PORTA_OUTTGL = 0x80; } while(0)
-#define EN_Batt_GetValue() (VPORTA.IN & (0x1 << 7))
-#define EN_Batt_SetDigitalInput() do { PORTA_DIRCLR = 0x80; } while(0)
-#define EN_Batt_SetDigitalOutput() do { PORTA_DIRSET = 0x80; } while(0)
-#define EN_Batt_SetPullUp() do { PORTA_PIN7CTRL  |= PORT_PULLUPEN_bm; } while(0)
-#define EN_Batt_ResetPullUp() do { PORTA_PIN7CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
-#define EN_Batt_SetInverted() do { PORTA_PIN7CTRL  |= PORT_INVEN_bm; } while(0)
-#define EN_Batt_ResetInverted() do { PORTA_PIN7CTRL  &= ~PORT_INVEN_bm; } while(0)
-#define EN_Batt_DisableInterruptOnChange() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
-#define EN_Batt_EnableInterruptForBothEdges() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
-#define EN_Batt_EnableInterruptForRisingEdge() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
-#define EN_Batt_EnableInterruptForFallingEdge() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
-#define EN_Batt_DisableDigitalInputBuffer() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
-#define EN_Batt_EnableInterruptForLowLevelSensing() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
-#define PA7_SetInterruptHandler EN_Batt_SetInterruptHandler
+#define EN_Batt_SetHigh() do { PORTA_OUTSET = 0x40; } while(0)
+#define EN_Batt_SetLow() do { PORTA_OUTCLR = 0x40; } while(0)
+#define EN_Batt_Toggle() do { PORTA_OUTTGL = 0x40; } while(0)
+#define EN_Batt_GetValue() (VPORTA.IN & (0x1 << 6))
+#define EN_Batt_SetDigitalInput() do { PORTA_DIRCLR = 0x40; } while(0)
+#define EN_Batt_SetDigitalOutput() do { PORTA_DIRSET = 0x40; } while(0)
+#define EN_Batt_SetPullUp() do { PORTA_PIN6CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define EN_Batt_ResetPullUp() do { PORTA_PIN6CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define EN_Batt_SetInverted() do { PORTA_PIN6CTRL  |= PORT_INVEN_bm; } while(0)
+#define EN_Batt_ResetInverted() do { PORTA_PIN6CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define EN_Batt_DisableInterruptOnChange() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define EN_Batt_EnableInterruptForBothEdges() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define EN_Batt_EnableInterruptForRisingEdge() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define EN_Batt_EnableInterruptForFallingEdge() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define EN_Batt_DisableDigitalInputBuffer() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define EN_Batt_EnableInterruptForLowLevelSensing() do { PORTA.PIN6CTRL = (PORTA.PIN6CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+#define PA6_SetInterruptHandler EN_Batt_SetInterruptHandler
 
-//get/set Lader_Output aliases
-#define Lader_Output_SetHigh() do { PORTC_OUTSET = 0x1; } while(0)
-#define Lader_Output_SetLow() do { PORTC_OUTCLR = 0x1; } while(0)
-#define Lader_Output_Toggle() do { PORTC_OUTTGL = 0x1; } while(0)
-#define Lader_Output_GetValue() (VPORTC.IN & (0x1 << 0))
-#define Lader_Output_SetDigitalInput() do { PORTC_DIRCLR = 0x1; } while(0)
-#define Lader_Output_SetDigitalOutput() do { PORTC_DIRSET = 0x1; } while(0)
-#define Lader_Output_SetPullUp() do { PORTC_PIN0CTRL  |= PORT_PULLUPEN_bm; } while(0)
-#define Lader_Output_ResetPullUp() do { PORTC_PIN0CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
-#define Lader_Output_SetInverted() do { PORTC_PIN0CTRL  |= PORT_INVEN_bm; } while(0)
-#define Lader_Output_ResetInverted() do { PORTC_PIN0CTRL  &= ~PORT_INVEN_bm; } while(0)
-#define Lader_Output_DisableInterruptOnChange() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
-#define Lader_Output_EnableInterruptForBothEdges() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
-#define Lader_Output_EnableInterruptForRisingEdge() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
-#define Lader_Output_EnableInterruptForFallingEdge() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
-#define Lader_Output_DisableDigitalInputBuffer() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
-#define Lader_Output_EnableInterruptForLowLevelSensing() do { PORTC.PIN0CTRL = (PORTC.PIN0CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
-#define PC0_SetInterruptHandler Lader_Output_SetInterruptHandler
+//get/set EN_Lader aliases
+#define EN_Lader_SetHigh() do { PORTA_OUTSET = 0x80; } while(0)
+#define EN_Lader_SetLow() do { PORTA_OUTCLR = 0x80; } while(0)
+#define EN_Lader_Toggle() do { PORTA_OUTTGL = 0x80; } while(0)
+#define EN_Lader_GetValue() (VPORTA.IN & (0x1 << 7))
+#define EN_Lader_SetDigitalInput() do { PORTA_DIRCLR = 0x80; } while(0)
+#define EN_Lader_SetDigitalOutput() do { PORTA_DIRSET = 0x80; } while(0)
+#define EN_Lader_SetPullUp() do { PORTA_PIN7CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define EN_Lader_ResetPullUp() do { PORTA_PIN7CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define EN_Lader_SetInverted() do { PORTA_PIN7CTRL  |= PORT_INVEN_bm; } while(0)
+#define EN_Lader_ResetInverted() do { PORTA_PIN7CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define EN_Lader_DisableInterruptOnChange() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define EN_Lader_EnableInterruptForBothEdges() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define EN_Lader_EnableInterruptForRisingEdge() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define EN_Lader_EnableInterruptForFallingEdge() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define EN_Lader_DisableDigitalInputBuffer() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define EN_Lader_EnableInterruptForLowLevelSensing() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+#define PA7_SetInterruptHandler EN_Lader_SetInterruptHandler
 
 //get/set LED aliases
 #define LED_SetHigh() do { PORTF_OUTSET = 0x10; } while(0)
@@ -523,24 +523,24 @@ void PIN_MANAGER_Initialize();
 
 /**
  * @ingroup  pinsdriver
- * @brief Default Interrupt Handler for Lader_Input pin. 
- *        This is a predefined interrupt handler to be used together with the Lader_Input_SetInterruptHandler() method.
- *        This handler is called every time the Lader_Input ISR is executed. 
+ * @brief Default Interrupt Handler for Lader_Output pin. 
+ *        This is a predefined interrupt handler to be used together with the Lader_Output_SetInterruptHandler() method.
+ *        This handler is called every time the Lader_Output ISR is executed. 
  * @pre PIN_MANAGER_Initialize() has been called at least once
  * @param none
  * @return none
  */
-void Lader_Input_DefaultInterruptHandler(void);
+void Lader_Output_DefaultInterruptHandler(void);
 
 /**
  * @ingroup  pinsdriver
- * @brief Interrupt Handler Setter for Lader_Input pin input-sense-config functionality.
- *        Allows selecting an interrupt handler for Lader_Input at application runtime
+ * @brief Interrupt Handler Setter for Lader_Output pin input-sense-config functionality.
+ *        Allows selecting an interrupt handler for Lader_Output at application runtime
  * @pre PIN_MANAGER_Initialize() has been called at least once
  * @param InterruptHandler function pointer.
  * @return none
  */
-void Lader_Input_SetInterruptHandler(void (* interruptHandler)(void)) ; 
+void Lader_Output_SetInterruptHandler(void (* interruptHandler)(void)) ; 
 
 /**
  * @ingroup  pinsdriver
@@ -838,6 +838,27 @@ void BFG_Alert_SetInterruptHandler(void (* interruptHandler)(void)) ;
 
 /**
  * @ingroup  pinsdriver
+ * @brief Default Interrupt Handler for Lader_Input pin. 
+ *        This is a predefined interrupt handler to be used together with the Lader_Input_SetInterruptHandler() method.
+ *        This handler is called every time the Lader_Input ISR is executed. 
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param none
+ * @return none
+ */
+void Lader_Input_DefaultInterruptHandler(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt Handler Setter for Lader_Input pin input-sense-config functionality.
+ *        Allows selecting an interrupt handler for Lader_Input at application runtime
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param InterruptHandler function pointer.
+ * @return none
+ */
+void Lader_Input_SetInterruptHandler(void (* interruptHandler)(void)) ; 
+
+/**
+ * @ingroup  pinsdriver
  * @brief Default Interrupt Handler for EN_EXT_Balance pin. 
  *        This is a predefined interrupt handler to be used together with the EN_EXT_Balance_SetInterruptHandler() method.
  *        This handler is called every time the EN_EXT_Balance ISR is executed. 
@@ -964,27 +985,6 @@ void EN_Buck_SetInterruptHandler(void (* interruptHandler)(void)) ;
 
 /**
  * @ingroup  pinsdriver
- * @brief Default Interrupt Handler for EN_Lader pin. 
- *        This is a predefined interrupt handler to be used together with the EN_Lader_SetInterruptHandler() method.
- *        This handler is called every time the EN_Lader ISR is executed. 
- * @pre PIN_MANAGER_Initialize() has been called at least once
- * @param none
- * @return none
- */
-void EN_Lader_DefaultInterruptHandler(void);
-
-/**
- * @ingroup  pinsdriver
- * @brief Interrupt Handler Setter for EN_Lader pin input-sense-config functionality.
- *        Allows selecting an interrupt handler for EN_Lader at application runtime
- * @pre PIN_MANAGER_Initialize() has been called at least once
- * @param InterruptHandler function pointer.
- * @return none
- */
-void EN_Lader_SetInterruptHandler(void (* interruptHandler)(void)) ; 
-
-/**
- * @ingroup  pinsdriver
  * @brief Default Interrupt Handler for EN_Batt pin. 
  *        This is a predefined interrupt handler to be used together with the EN_Batt_SetInterruptHandler() method.
  *        This handler is called every time the EN_Batt ISR is executed. 
@@ -1006,24 +1006,24 @@ void EN_Batt_SetInterruptHandler(void (* interruptHandler)(void)) ;
 
 /**
  * @ingroup  pinsdriver
- * @brief Default Interrupt Handler for Lader_Output pin. 
- *        This is a predefined interrupt handler to be used together with the Lader_Output_SetInterruptHandler() method.
- *        This handler is called every time the Lader_Output ISR is executed. 
+ * @brief Default Interrupt Handler for EN_Lader pin. 
+ *        This is a predefined interrupt handler to be used together with the EN_Lader_SetInterruptHandler() method.
+ *        This handler is called every time the EN_Lader ISR is executed. 
  * @pre PIN_MANAGER_Initialize() has been called at least once
  * @param none
  * @return none
  */
-void Lader_Output_DefaultInterruptHandler(void);
+void EN_Lader_DefaultInterruptHandler(void);
 
 /**
  * @ingroup  pinsdriver
- * @brief Interrupt Handler Setter for Lader_Output pin input-sense-config functionality.
- *        Allows selecting an interrupt handler for Lader_Output at application runtime
+ * @brief Interrupt Handler Setter for EN_Lader pin input-sense-config functionality.
+ *        Allows selecting an interrupt handler for EN_Lader at application runtime
  * @pre PIN_MANAGER_Initialize() has been called at least once
  * @param InterruptHandler function pointer.
  * @return none
  */
-void Lader_Output_SetInterruptHandler(void (* interruptHandler)(void)) ; 
+void EN_Lader_SetInterruptHandler(void (* interruptHandler)(void)) ; 
 
 /**
  * @ingroup  pinsdriver

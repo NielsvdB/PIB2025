@@ -50,8 +50,8 @@ void TCA0_Initialize(void)
     TCA0.SINGLE.CNT = 0x0;  // CNT 0x0
 
     TCA0.SINGLE.CTRLB = (0 << TCA_SINGLE_ALUPD_bp)   // ALUPD disabled
-        | (0 << TCA_SINGLE_CMP0EN_bp)   // CMP0EN disabled
-        | (1 << TCA_SINGLE_CMP1EN_bp)   // CMP1EN enabled
+        | (1 << TCA_SINGLE_CMP0EN_bp)   // CMP0EN enabled
+        | (0 << TCA_SINGLE_CMP1EN_bp)   // CMP1EN disabled
         | (0 << TCA_SINGLE_CMP2EN_bp)   // CMP2EN disabled
         | (TCA_SINGLE_WGMODE_NORMAL_gc);  // WGMODE NORMAL
 
@@ -102,7 +102,7 @@ void TCA0_Initialize(void)
 
     TCA0.SINGLE.CTRLA = (TCA_SINGLE_CLKSEL_DIV1_gc)   // CLKSEL DIV1
         | (1 << TCA_SINGLE_ENABLE_bp)   // ENABLE enabled
-        | (0 << TCA_SINGLE_RUNSTDBY_bp);  // RUNSTDBY disabled
+        | (1 << TCA_SINGLE_RUNSTDBY_bp);  // RUNSTDBY enabled
 }
 
 void TCA0_Deinitialize(void)

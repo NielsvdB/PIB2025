@@ -57,6 +57,7 @@ enum HomeReg {
 #include <stdbool.h>
 #include <stdint.h>
 #include <avr/sleep.h>
+#include <util/delay.h>
 #include "mcc_generated_files/adc/adc0.h"
 #include "mcc_generated_files/system/system.h"
 #include "mcc_generated_files/power/power.h"
@@ -87,6 +88,13 @@ enum HomeReg {
 
 //Temp defines
 #define Max_Temp 250
+
+//BFG Maximums and Minimums
+#define Max_Charge_Current_RAW 5462
+#define Max_Discharge_Current_RAW 19100
+#define Max_Battery_Voltage_RAW 41098
+#define Min_Battery_Voltage_RAW 33323
+#define Min_Battery_Charge_RAW 51417
 
 //I2C================================================================================================================================
 #define NUM_REGISTERS 4
@@ -201,7 +209,7 @@ bool TWI0_EventHandler(i2c_client_transfer_event_t event) {
 
 //Conversion Functions=================================================================================================================
 uint16_t ADC0RES_to_mV(uint16_t ADCRES) {//Convert ADC result to mV
-	return (ADCRES * 4096) / 3300;//3300mV reference, 12 bit ADC
+	return (ADCRES/4096) * 1024;//3300mV reference, 12 bit ADC
 }
 uint16_t mV_to_CellVoltage(uint16_t mV){//Convert input to real cell voltage
 	return (mV/1.2)+3000; //Voltage multiplier of 1.2, subtraction of 3000mV
@@ -409,13 +417,16 @@ enum Events Init_Run(){
 	PrepareBFG(Automatic_Mode, M_256, Alert_Mode);
 	//Instellen van de limieten
 	Set_LTC2943_REG(Accumulated_Charge_REG, 0xFFFF); //Zet de lading op max om errors te voorkomen
-	Set_LTC2943_REG(Current_Threshold_High_REG, 38228);//	((MaxLaadStroom*ShuntWeerstand)/60mV*32767)+32767
-	Set_LTC2943_REG(Current_Threshold_Low_REG, 5461);//	((-MaxOntlaadStroom*ShuntWeerstand)/60mV*32767)+32767
-	Set_LTC2943_REG(Voltage_Threshold_High_REG, 41098);
-	Set_LTC2943_REG(Voltage_Threshold_Low_REG, 33323);
-	Set_LTC2943_REG(Charge_Threshold_Low_REG, 51417);// Nog een keer checken
+	Set_LTC2943_REG(Current_Threshold_High_REG, Max_Charge_Current_RAW);//	((MaxLaadStroom*ShuntWeerstand)/60mV*32767)+32767
+	Set_LTC2943_REG(Current_Threshold_Low_REG, Max_Discharge_Current_RAW);//	((-MaxOntlaadStroom*ShuntWeerstand)/60mV*32767)+32767
+	Set_LTC2943_REG(Voltage_Threshold_High_REG, Max_Battery_Voltage_RAW);
+	Set_LTC2943_REG(Voltage_Threshold_Low_REG, Min_Battery_Voltage_RAW);
+	Set_LTC2943_REG(Charge_Threshold_Low_REG, Min_Battery_Charge_RAW);// Nog een keer checken
+    
 	set_home_status(1);
 
+    Clear_LTC2943_Alert();//Clears any error that was left from previous run
+    
 	return E_Init_Done;
 }
 enum Events Discharge_Entry(){
@@ -510,6 +521,9 @@ enum Events Handle_BFG_Alert(){
 		CurrentProblemEvent = PE_Count_Fail;
 	if (LTC2943_Error_Status_Array[6])
 		CurrentProblemEvent = PE_Over_Current;
+    
+    //Clear_LTC2943_Alert();// Moet nog op goede plekken gezet worden
+    
 	return E_No_Event;
 }
 void Total_Shutdown(){
@@ -536,7 +550,8 @@ int main () {
 	ADC0_ConversionDoneCallbackRegister(ADC0_Conversion_Done_ISR);
 	EN_EXT_Balance_SetInterruptHandler(Enable_External_Balancer_ISR);
 	BFG_Alert_SetInterruptHandler(BFG_Alert_ISR);
-	Lader_Output_SetInterruptHandler(Charger_Connect_ISR);
+	Lader_Input_SetInterruptHandler(Charger_Connect_ISR);
+    //EN_Batt_SetHigh();
 	while(1) {
 		//Statemachine=================================
 		switch (CurrentState){
@@ -602,6 +617,7 @@ int main () {
 				switch (CurrentFlow){
 					case F_Entry:
 						CurrentEvent = Discharge_Entry();
+						CurrentFlow = F_Run;
 						break;
 					case F_Run:
 						CurrentEvent = Discharge_Run();
@@ -632,6 +648,7 @@ int main () {
 				switch (CurrentFlow){
 					case F_Entry:
 						CurrentEvent = Charge_Entry();
+						CurrentFlow = F_Run;
 						break;
 					case F_Run:
 						CurrentEvent = Charge_Run();
@@ -662,6 +679,7 @@ int main () {
 				switch (CurrentFlow){
 					case F_Entry:
 						CurrentEvent = Batt_Full_Entry();
+						CurrentFlow = F_Run;
 						break;
 					case F_Run:
 						CurrentEvent = Batt_Full_Run();
@@ -688,6 +706,7 @@ int main () {
 				switch (CurrentFlow){
 					case F_Entry:
 						CurrentEvent = Shutdown_Entry();
+						CurrentFlow = F_Run;
 						break;
 					case F_Run:
 						CurrentEvent = Shutdown_Run();

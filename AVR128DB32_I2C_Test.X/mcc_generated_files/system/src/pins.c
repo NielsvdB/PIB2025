@@ -34,7 +34,7 @@
 
 #include "../pins.h"
 
-static void (*Lader_Input_InterruptHandler)(void);
+static void (*Lader_Output_InterruptHandler)(void);
 static void (*SCL_LTC2943_InterruptHandler)(void);
 static void (*SDA_LTC2943_InterruptHandler)(void);
 static void (*SCL_Slave_InterruptHandler)(void);
@@ -49,15 +49,15 @@ static void (*Temp_Cell_2_Pin_InterruptHandler)(void);
 static void (*Temp_Cell_1_Pin_InterruptHandler)(void);
 static void (*Check_3V3_Pin_InterruptHandler)(void);
 static void (*BFG_Alert_InterruptHandler)(void);
+static void (*Lader_Input_InterruptHandler)(void);
 static void (*EN_EXT_Balance_InterruptHandler)(void);
 static void (*Drain_Cell_1_InterruptHandler)(void);
 static void (*Drain_Cell_2_InterruptHandler)(void);
 static void (*Drain_Cell_3_InterruptHandler)(void);
 static void (*Drain_Cell_4_InterruptHandler)(void);
 static void (*EN_Buck_InterruptHandler)(void);
-static void (*EN_Lader_InterruptHandler)(void);
 static void (*EN_Batt_InterruptHandler)(void);
-static void (*Lader_Output_InterruptHandler)(void);
+static void (*EN_Lader_InterruptHandler)(void);
 static void (*LED_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize()
@@ -71,7 +71,7 @@ void PIN_MANAGER_Initialize()
 
   /* DIR Registers Initialization */
     PORTA.DIR = 0xEF;
-    PORTC.DIR = 0x3;
+    PORTC.DIR = 0x1;
     PORTD.DIR = 0x0;
     PORTF.DIR = 0x10;
 
@@ -85,7 +85,7 @@ void PIN_MANAGER_Initialize()
     PORTA.PIN6CTRL = 0x0;
     PORTA.PIN7CTRL = 0x0;
     PORTC.PIN0CTRL = 0x0;
-    PORTC.PIN1CTRL = 0x2;
+    PORTC.PIN1CTRL = 0x1;
     PORTC.PIN2CTRL = 0x0;
     PORTC.PIN3CTRL = 0x0;
     PORTC.PIN4CTRL = 0x0;
@@ -122,7 +122,7 @@ void PIN_MANAGER_Initialize()
     PORTMUX.ZCDROUTEA = 0x0;
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
-    Lader_Input_SetInterruptHandler(Lader_Input_DefaultInterruptHandler);
+    Lader_Output_SetInterruptHandler(Lader_Output_DefaultInterruptHandler);
     SCL_LTC2943_SetInterruptHandler(SCL_LTC2943_DefaultInterruptHandler);
     SDA_LTC2943_SetInterruptHandler(SDA_LTC2943_DefaultInterruptHandler);
     SCL_Slave_SetInterruptHandler(SCL_Slave_DefaultInterruptHandler);
@@ -137,30 +137,30 @@ void PIN_MANAGER_Initialize()
     Temp_Cell_1_Pin_SetInterruptHandler(Temp_Cell_1_Pin_DefaultInterruptHandler);
     Check_3V3_Pin_SetInterruptHandler(Check_3V3_Pin_DefaultInterruptHandler);
     BFG_Alert_SetInterruptHandler(BFG_Alert_DefaultInterruptHandler);
+    Lader_Input_SetInterruptHandler(Lader_Input_DefaultInterruptHandler);
     EN_EXT_Balance_SetInterruptHandler(EN_EXT_Balance_DefaultInterruptHandler);
     Drain_Cell_1_SetInterruptHandler(Drain_Cell_1_DefaultInterruptHandler);
     Drain_Cell_2_SetInterruptHandler(Drain_Cell_2_DefaultInterruptHandler);
     Drain_Cell_3_SetInterruptHandler(Drain_Cell_3_DefaultInterruptHandler);
     Drain_Cell_4_SetInterruptHandler(Drain_Cell_4_DefaultInterruptHandler);
     EN_Buck_SetInterruptHandler(EN_Buck_DefaultInterruptHandler);
-    EN_Lader_SetInterruptHandler(EN_Lader_DefaultInterruptHandler);
     EN_Batt_SetInterruptHandler(EN_Batt_DefaultInterruptHandler);
-    Lader_Output_SetInterruptHandler(Lader_Output_DefaultInterruptHandler);
+    EN_Lader_SetInterruptHandler(EN_Lader_DefaultInterruptHandler);
     LED_SetInterruptHandler(LED_DefaultInterruptHandler);
 }
 
 /**
-  Allows selecting an interrupt handler for Lader_Input at application runtime
+  Allows selecting an interrupt handler for Lader_Output at application runtime
 */
-void Lader_Input_SetInterruptHandler(void (* interruptHandler)(void)) 
+void Lader_Output_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    Lader_Input_InterruptHandler = interruptHandler;
+    Lader_Output_InterruptHandler = interruptHandler;
 }
 
-void Lader_Input_DefaultInterruptHandler(void)
+void Lader_Output_DefaultInterruptHandler(void)
 {
-    // add your Lader_Input interrupt custom code
-    // or set custom function using Lader_Input_SetInterruptHandler()
+    // add your Lader_Output interrupt custom code
+    // or set custom function using Lader_Output_SetInterruptHandler()
 }
 /**
   Allows selecting an interrupt handler for SCL_LTC2943 at application runtime
@@ -345,6 +345,19 @@ void BFG_Alert_DefaultInterruptHandler(void)
     // or set custom function using BFG_Alert_SetInterruptHandler()
 }
 /**
+  Allows selecting an interrupt handler for Lader_Input at application runtime
+*/
+void Lader_Input_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    Lader_Input_InterruptHandler = interruptHandler;
+}
+
+void Lader_Input_DefaultInterruptHandler(void)
+{
+    // add your Lader_Input interrupt custom code
+    // or set custom function using Lader_Input_SetInterruptHandler()
+}
+/**
   Allows selecting an interrupt handler for EN_EXT_Balance at application runtime
 */
 void EN_EXT_Balance_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -423,19 +436,6 @@ void EN_Buck_DefaultInterruptHandler(void)
     // or set custom function using EN_Buck_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for EN_Lader at application runtime
-*/
-void EN_Lader_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    EN_Lader_InterruptHandler = interruptHandler;
-}
-
-void EN_Lader_DefaultInterruptHandler(void)
-{
-    // add your EN_Lader interrupt custom code
-    // or set custom function using EN_Lader_SetInterruptHandler()
-}
-/**
   Allows selecting an interrupt handler for EN_Batt at application runtime
 */
 void EN_Batt_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -449,17 +449,17 @@ void EN_Batt_DefaultInterruptHandler(void)
     // or set custom function using EN_Batt_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for Lader_Output at application runtime
+  Allows selecting an interrupt handler for EN_Lader at application runtime
 */
-void Lader_Output_SetInterruptHandler(void (* interruptHandler)(void)) 
+void EN_Lader_SetInterruptHandler(void (* interruptHandler)(void)) 
 {
-    Lader_Output_InterruptHandler = interruptHandler;
+    EN_Lader_InterruptHandler = interruptHandler;
 }
 
-void Lader_Output_DefaultInterruptHandler(void)
+void EN_Lader_DefaultInterruptHandler(void)
 {
-    // add your Lader_Output interrupt custom code
-    // or set custom function using Lader_Output_SetInterruptHandler()
+    // add your EN_Lader interrupt custom code
+    // or set custom function using EN_Lader_SetInterruptHandler()
 }
 /**
   Allows selecting an interrupt handler for LED at application runtime
@@ -503,11 +503,11 @@ ISR(PORTA_PORT_vect)
     }
     if(VPORTA.INTFLAGS & PORT_INT6_bm)
     {
-       EN_Lader_InterruptHandler(); 
+       EN_Batt_InterruptHandler(); 
     }
     if(VPORTA.INTFLAGS & PORT_INT7_bm)
     {
-       EN_Batt_InterruptHandler(); 
+       EN_Lader_InterruptHandler(); 
     }
     /* Clear interrupt flags */
     VPORTA.INTFLAGS = 0xff;
@@ -516,9 +516,9 @@ ISR(PORTA_PORT_vect)
 ISR(PORTC_PORT_vect)
 { 
     // Call the interrupt handler for the callback registered at runtime
-    if(VPORTC.INTFLAGS & PORT_INT1_bm)
+    if(VPORTC.INTFLAGS & PORT_INT0_bm)
     {
-       Lader_Input_InterruptHandler(); 
+       Lader_Output_InterruptHandler(); 
     }
     if(VPORTC.INTFLAGS & PORT_INT3_bm)
     {
@@ -528,9 +528,9 @@ ISR(PORTC_PORT_vect)
     {
        SDA_Slave_InterruptHandler(); 
     }
-    if(VPORTC.INTFLAGS & PORT_INT0_bm)
+    if(VPORTC.INTFLAGS & PORT_INT1_bm)
     {
-       Lader_Output_InterruptHandler(); 
+       Lader_Input_InterruptHandler(); 
     }
     /* Clear interrupt flags */
     VPORTC.INTFLAGS = 0xff;

@@ -14,6 +14,10 @@ build/default/debug/main.o.d build/default/debug/main.o: main.c \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\fuse.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\lock.h \
  c:\program\ files\microchip\xc8\v3.10\avr\lib\gcc\avr\5.4.0\include\stdbool.h \
+ c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\sleep.h \
+ c:\program\ files\microchip\xc8\v3.10\avr\avr\include\util\delay.h \
+ c:\program\ files\microchip\xc8\v3.10\avr\avr\include\util\delay_basic.h \
+ c:\program\ files\microchip\xc8\v3.10\avr\avr\include\math.h \
  mcc_generated_files/adc/adc0.h \
  mcc_generated_files/adc/../system/utils/compiler.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\builtins.h \
@@ -58,8 +62,8 @@ build/default/debug/main.o.d build/default/debug/main.o: main.c \
  mcc_generated_files/system/../timer/./tca0_deprecated.h \
  mcc_generated_files/system/../timer/tcb0.h \
  mcc_generated_files/system/../timer/tcb0_deprecated.h \
- mcc_generated_files/power/power.h Libraries/I2C.h \
- Libraries/Timed_Functions.h
+ mcc_generated_files/power/power.h mcc_generated_files/system/pins.h \
+ Libraries/I2C.h Libraries/Timed_Functions.h
 
 c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\io.h:
 
@@ -90,6 +94,14 @@ c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\fuse.h:
 c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\lock.h:
 
 c:\program\ files\microchip\xc8\v3.10\avr\lib\gcc\avr\5.4.0\include\stdbool.h:
+
+c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\sleep.h:
+
+c:\program\ files\microchip\xc8\v3.10\avr\avr\include\util\delay.h:
+
+c:\program\ files\microchip\xc8\v3.10\avr\avr\include\util\delay_basic.h:
+
+c:\program\ files\microchip\xc8\v3.10\avr\avr\include\math.h:
 
 mcc_generated_files/adc/adc0.h:
 
@@ -180,6 +192,8 @@ mcc_generated_files/system/../timer/tcb0.h:
 mcc_generated_files/system/../timer/tcb0_deprecated.h:
 
 mcc_generated_files/power/power.h:
+
+mcc_generated_files/system/pins.h:
 
 Libraries/I2C.h:
 

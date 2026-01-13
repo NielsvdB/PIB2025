@@ -63,6 +63,8 @@ void Set_LTC2943_REG(uint8_t Address, uint16_t Data){
 
 void Write_Control_REG(){
     
+    LTC2943_Control_REG_Content = 0;
+    
     switch(Current_LTC2943_ADC_Mode){
         case Automatic_Mode:
             LTC2943_Control_REG_Content = LTC2943_Control_REG_Content + 0xC0;
@@ -119,7 +121,7 @@ void Write_Control_REG(){
     } else{
         LTC2943_Control_REG_Content = LTC2943_Control_REG_Content + 0x00;
     }
-    
+    Set_LTC2943_REG(Control_REG, LTC2943_Control_REG_Content);
 }
 
 //Read From Registers===============================================
@@ -184,6 +186,16 @@ void Get_Active_Alerts(){
     LTC2943_Error_Status_Array[1] = Full_Status_REG & 0x02; //Voltage Alert
     
     LTC2943_Error_Status_Array[0] = Full_Status_REG & 0x01; //Under Voltage Lockout Alert
+}
+
+void Clear_LTC2943_Alert(){
+    
+    uint8_t Return_Value = 0;
+    
+    while(!LTC2943_Read(LTC2943_ARA_ADDR, &Return_Value, 1));
+    while(LTC2943_IsBusy());
+    
+    return(Return_Value);
 }
 
 //Read converted Values=============================================
